@@ -16,6 +16,8 @@
 .main_menu_button_top_left {
     border: 2px solid blue;
     
+    padding-right: 5pt;
+    
     border-top-left-radius: 1.5in;
     border-top-right-radius: 15pt;
     border-bottom-right-radius: 15pt;
