@@ -8,14 +8,18 @@
     
     position: relative;
     
-    border: 3px solid red;
+    background: #242424;
+    
+    padding-left: 2%;
+    padding-right: 2%;
+    
     border-radius: 1.5in;
 }
 
 .main_menu_top {
     /*box-sizing: border-box;*/
     
-    height: 10%;
+    height: 16.5%;
     
     margin: 4%;
     margin-bottom: 2%;
@@ -78,7 +82,8 @@
     
     position: absolute;
     
-    border: 2px solid blue;
+    background: #36B824;
+    /*border: 2px solid #36B824;*/
     
     border-top-left-radius: 1.5in;
     border-top-right-radius: 15pt;
@@ -110,12 +115,26 @@
     
     right: 0;
     
-    border: 2px solid blue;
+    background: #2276D1;
+    /*border: 2px solid #2276D1;*/
     
     border-top-left-radius: 15pt;
     border-top-right-radius: 1.5in;
     border-bottom-right-radius: 15pt;
     border-bottom-left-radius: 15pt;
+}
+
+#friends {
+    height: 80%;
+    
+    position: absolute;
+    
+    right: 15%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    
+    margin: auto;
 }
 
 .main_menu_button_bottom_right {
@@ -129,12 +148,26 @@
     
     right: 0;
     
-    border: 2px solid blue;
+    background: #7E7E7E;
+    /*border: 2px solid #7E7E7E;*/
     
     border-top-left-radius: 15pt;
     border-top-right-radius: 15pt;
     border-bottom-right-radius: 1.5in;
     border-bottom-left-radius: 15pt;
+}
+
+#settings {
+    height: 80%;
+    
+    position: absolute;
+    
+    right: 15%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    
+    margin: auto;
 }
 
 .main_menu_button_bottom_left {
@@ -147,10 +180,24 @@
     
     position: absolute;
     
-    border: 2px solid blue;
+    background: #F0901B;
+    /*border: 2px solid #F0901B;*/
     
     border-top-left-radius: 15pt;
     border-top-right-radius: 15pt;
     border-bottom-right-radius: 15pt;
     border-bottom-left-radius: 1.5in;
+}
+
+#tickets {
+    height: 80%;
+    
+    position: absolute;
+    
+    right: 0;
+    left: 15%;
+    top: 0;
+    bottom: 0;
+    
+    margin: auto;
 }
