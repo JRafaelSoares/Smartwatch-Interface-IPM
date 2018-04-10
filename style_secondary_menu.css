@@ -1,22 +1,68 @@
 .main_menu {
-    width: 1.5in;
-    height: 1.5in;
-    border: 3px solid red;
-    border-radius: 1.5in;
-    table-layout: fixed;
+    box-sizing: border-box;
     
-    padding-left: 5pt;
-    padding-right: 5pt;
+    width: 1.5in;
+    max-width: 1.5in;
+    height: 1.5in;
+    max-height: 1.5in;
+    
+    position: relative;
+    
+    background: #2276D1;
+    
+    padding-left: 2%;
+    padding-right: 2%;
+    
+    border-radius: 1.5in;
 }
 
 .main_menu_top {
-    height: 15%;
+    /*box-sizing: border-box;*/
+    
+    height: 16.5%;
+    
+    margin: 4%;
+    margin-bottom: 2%;
+    
+    position: relative;
 }
 
-.main_menu_button_top {
-    border: 2px solid blue;
+.main_menu_middle {
+    /*box-sizing: border-box;*/
     
-    padding-right: 5pt;
+    height: 64%;
+    
+    margin: 4%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    
+    position: relative;
+}
+
+.main_menu_bottom {
+    /*box-sizing: border-box;*/
+    
+    height: 10%;
+    
+    margin: 4%;
+    margin-top: 2%;
+    
+    position: relative;
+}
+
+
+.main_menu_button_top {
+    box-sizing: border-box;
+    
+    height: 46.875%;
+    width: 100%;
+    
+    margin-bottom: 3.125%;
+    
+    position: absolute;
+    
+    background: #242424;
+    /*border: 2px solid #36B824;*/
     
     border-top-left-radius: 1.5in;
     border-top-right-radius: 1.5in;
@@ -24,12 +70,20 @@
     border-bottom-left-radius: 15pt;
 }
 
-.main_menu_bottom {
-    height: 15%;
-}
-
 .main_menu_button_bottom {
-    border: 2px solid blue;
+    box-sizing: border-box;
+    
+    height: 46.875%;
+    width: 100%;
+    
+    margin-top: 3.125%;
+    
+    bottom: 0;
+    
+    position: absolute;
+    
+    background: #242424;
+    /*border: 2px solid #36B824;*/
     
     border-top-left-radius: 15pt;
     border-top-right-radius: 15pt;
