@@ -38,25 +38,46 @@
     border-top-right-radius: 1.5in;
     border-bottom-right-radius: 1.5in;
     border-bottom-left-radius: 1.5in;
-    
-    overflow-y: scroll;
 }
 
-.entry {
-    height: 33.33%;
-    width: 100%;
-    
-    border-bottom: 2px solid white;
-    
-    display: flex;
-    
-    justify-content: center;
-    align-items: center;
-}
 
 .text {
     color: white;
+    
+    font-size: 12pt;
 }
+
+.name {
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 76.5625%;
+}
+
+.time {
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 23.4375%;
+    bottom: 29.6875%;
+    
+    margin-bottom: 2px solid #F0901B;
+}
+
+.tirar_bilhete {
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 70.3125%;
+    bottom: 0;
+    
+    margin-top: 2px solid #F0901B;
+}
+
 
 .main_menu_bottom {
     
