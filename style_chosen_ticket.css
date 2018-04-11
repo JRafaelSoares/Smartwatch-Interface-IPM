@@ -54,6 +54,10 @@
     right: 0;
     top: 0;
     bottom: 76.5625%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .time {
@@ -64,7 +68,11 @@
     top: 23.4375%;
     bottom: 29.6875%;
     
-    margin-bottom: 2px solid #F0901B;
+    border-bottom: 2px solid #F0901B;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .tirar_bilhete {
@@ -75,15 +83,19 @@
     top: 70.3125%;
     bottom: 0;
     
-    margin-top: 2px solid #F0901B;
+    border-top: 2px solid #F0901B;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .main_menu_bottom {
+    position: absolute;
     
+    top: 86%;
     right: 0;
     left: 0;
     bottom: 4%;
-    
-    position: absolute;
 }

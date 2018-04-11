@@ -40,6 +40,20 @@
     border-bottom-left-radius: 1.5in;
     
    
+    overflow: hidden;
+}
+
+.list {
+    position: absolute;
+    
+    padding-left: 10%;
+    padding-right: 10%;
+    
+    top: 0;
+    left: 0;
+    right: -17px;
+    bottom: 0;
+    
     overflow-y: scroll;
 }
 
@@ -60,10 +74,10 @@
 }
 
 .main_menu_bottom {
-    
-    right: 0;
-    left: 0;
-    bottom: 4%;
-    
     position: absolute;
+    
+    top: 86%;
+    right: 8%;
+    left: 8%;
+    bottom: 4%;
 }
