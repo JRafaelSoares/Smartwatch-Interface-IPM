@@ -1,4 +1,4 @@
-.main_menu {
+.main_menu { 
     box-sizing: border-box;
     
     width: 1.5in;
@@ -8,7 +8,7 @@
     
     position: relative;
     
-    background: #2276D1;
+    background: #F0901B;
     
     padding-left: 2%;
     padding-right: 2%;
