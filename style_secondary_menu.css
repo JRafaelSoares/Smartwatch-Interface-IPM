@@ -1,10 +1,10 @@
 .main_menu { 
     box-sizing: border-box;
     
-    width: 1.5in;
-    max-width: 1.5in;
-    height: 1.5in;
-    max-height: 1.5in;
+    width: 1.7859in;
+    max-width: 1.7859in;
+    height: 1.7859in;
+    max-height: 1.7859in;
     
     position: relative;
     
@@ -68,6 +68,11 @@
     border-top-right-radius: 1.5in;
     border-bottom-right-radius: 15pt;
     border-bottom-left-radius: 15pt;
+    
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
 }
 
 .main_menu_button_bottom {
@@ -89,4 +94,20 @@
     border-top-right-radius: 15pt;
     border-bottom-right-radius: 1.5in;
     border-bottom-left-radius: 1.5in;
+    
+        display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.entry {
+    height: 33.33%;
+    width: 100%;
+    
+
+}
+
+.text {
+    color: white;
 }

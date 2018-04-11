@@ -1,86 +1,72 @@
 .main_menu { 
     box-sizing: border-box;
     
-    width: 1.5in;
-    max-width: 1.5in;
-    height: 1.5in;
-    max-height: 1.5in;
+    width: 1.7859in;
+    max-width: 1.7859in;
+    height: 1.7859in;
+    max-height: 1.7859in;
     
     position: relative;
     
     background: #242424;
     
-    padding-left: 2%;
-    padding-right: 2%;
-    
     border-radius: 1.5in;
 }
 
 .main_menu_top {
-    /*box-sizing: border-box;*/
+    position: absolute;
     
-    height: 16.5%;
-    
-    margin: 4%;
-    margin-bottom: 2%;
-    
-    position: relative;
+    top: 4%;
+    left: 8%;
+    right: 8%;
+    bottom: 86%;
 }
 
 .main_menu_middle {
-    /*box-sizing: border-box;*/
+    position: absolute;
     
-    height: 64%;
-    
-    margin: 4%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    
-    position: relative;
+    top: 18%;
+    left: 8%;
+    right: 8%;
+    bottom: 18%;
 }
 
 .main_menu_bottom {
-    /*box-sizing: border-box;*/
+    position: absolute;
     
-    height: 10%;
-    
-    margin: 4%;
-    margin-top: 2%;
-    
-    position: relative;
+    top: 86%;
+    left: 8%;
+    right: 8%;
+    bottom: 4%;
 }
 
 
-.main_menu_button_top {
-    box-sizing: border-box;
+.main_menu_button_top {    
+    position: absolute;
     
-    height: 46.875%;
-    
-    margin-bottom: 3.125%;
-    
-    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 53.125%;
 }
 
 .main_menu_button_bottom {
-    box-sizing: border-box;
+    position: absolute;
     
-    height: 46.875%;
-    
-    margin-top: 3.125%;
-    
-    position: relative;
+    top: 53.125%;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 
 .main_menu_button_top_left {
-    box-sizing: border-box;
-    
-    height: 100%;
-    width: 46.875%;
-    
-    margin-right: 3.125%;
-    
     position: absolute;
+    
+    top: 0;
+    left: 0;
+    right: 52.38095238%;
+    bottom: 0;
     
     background: #36B824;
     /*border: 2px solid #36B824;*/
@@ -105,16 +91,13 @@
 }
 
 .main_menu_button_top_right {
-    box-sizing: border-box;
-    
-    height: 100%;
-    width: 46.875%;
-    margin-left: 3.125%;
-    
     position: absolute;
     
+    top: 0;
+    left: 52.38095238%;
     right: 0;
-    
+    bottom: 0;  
+        
     background: #2276D1;
     /*border: 2px solid #2276D1;*/
     
@@ -138,15 +121,12 @@
 }
 
 .main_menu_button_bottom_right {
-    box-sizing: border-box;
-    
-    height: 100%;
-    width: 46.875%;
-    margin-left: 3.125%;
-    
     position: absolute;
     
+    top: 0;
+    left: 52.38095238%;
     right: 0;
+    bottom: 0;  
     
     background: #7E7E7E;
     /*border: 2px solid #7E7E7E;*/
@@ -171,14 +151,12 @@
 }
 
 .main_menu_button_bottom_left {
-    box-sizing: border-box;
-    
-    height: 100%;
-    width: 46.875%;
-    
-    margin-right: 3.125%;
-    
     position: absolute;
+    
+    top: 0;
+    left: 0;
+    right: 52.38095238%;
+    bottom: 0;
     
     background: #F0901B;
     /*border: 2px solid #F0901B;*/
