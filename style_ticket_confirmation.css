@@ -48,12 +48,12 @@
     font-size: 12pt;
 }
 
-.name {
+.confirmation {
     position: absolute;
     
     left: 0;
     right: 0;
-    top: 0;
+    top: 40%;
     bottom: 76.5625%;
     
     display: flex;
@@ -61,31 +61,33 @@
     justify-content: center;
 }
 
-.time {
+.yes {
     position: absolute;
     
     left: 0;
-    right: 0;
-    top: 23.4375%;
-    bottom: 29.6875%;
+    right: 50%;
+    top: 70.3125%;
+    bottom: 0;
     
-    border-bottom: 2px solid #F0901B;
+    border-top: 2px solid #F0901B;
+    border-right: 2px solid #F0901B;
     
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.tirar_bilhete {
+.no {
     position: absolute;
     
-    left: 0;
+    left: 38%;
     right: 0;
     top: 70.3125%;
     bottom: 0;
     
     border-top: 2px solid #F0901B;
-    
+    border-left: 2px solid #F0901B;
+
     display: flex;
     align-items: center;
     justify-content: center;
