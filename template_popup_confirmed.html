@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <link rel="stylesheet" href="style_popup.css">
+        <style type="text/css"></style>
+    </head>
+    
+    <script>
+        function popupApear(){
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+        }
+    </script>
+    
+    <body style="font-family: sans-serif;">
+        <div class="main_menu">
+            <div class="main_menu_top"></div>
+
+            <div class="main_menu_middle">
+                <div class="name" align="center">
+                    <span class="text" align="center">Roda Gigante</span>
+                </div>
+                <div class="time" align="center">
+                    <span class="text" align="center">Hora est. 19:34</span>
+                </div>
+                <div class="tirar_bilhete" align="center" onclick="popupApear()">
+                    <span class="text" align="center">Tirar</span>
+                </div>
+            </div>
+            
+            <div class="popup" id="myPopup">
+                <div class = "confirmation">
+                    <span class="text">CONFIRMADO</span>
+                </div> 
+            </div>
+            <div class="main_menu_bottom" align="center" style="color: white;">
+                19:24
+            </div>
+        </div>
+        
+    </body>
+</html>
