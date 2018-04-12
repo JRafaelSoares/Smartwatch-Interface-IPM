@@ -16,9 +16,10 @@
 .main_menu_top {
     position: absolute;
     
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 4%;
+    left: 8%;
+    right: 8%;
+    bottom: 86%;
 }
 
 .main_menu_middle {
@@ -27,9 +28,9 @@
     
     position: absolute;
     
+    top: 18%;
     left: 8%;
     right: 8%;
-    top: 18%;
     bottom: 18%;
     
     background: #242424;
@@ -95,7 +96,7 @@
     position: absolute;
     
     top: 86%;
-    right: 0;
-    left: 0;
+    left: 8%;
+    right: 8%;
     bottom: 4%;
 }
