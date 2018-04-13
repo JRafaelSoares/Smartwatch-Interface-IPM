@@ -1,3 +1,10 @@
+/* Menus:
+    .main_menu: Frame principal.
+    .main_menu_top: Frame de cima, invisivel, usada para corar a circunferencia.
+    .main_menu_middle: Frame do meio, onde estara contido o conteudo do ecra.
+    .main_menu_bottom: Frame do fim, onde ira cortar a circunferencia e conter as horas.
+*/
+
 .main_menu { 
     box-sizing: border-box;
     
@@ -34,18 +41,48 @@
     bottom: 18%;
     
     background: #242424;
-    
+
     border-top-left-radius: 1.5in;
     border-top-right-radius: 1.5in;
     border-bottom-right-radius: 1.5in;
     border-bottom-left-radius: 1.5in;
 }
 
-
-.text {
-    color: white;
+.main_menu_bottom {
+    position: absolute;
     
-    font-size: 12pt;
+    top: 86%;
+    left: 8%;
+    right: 8%;
+    bottom: 4%;
+}
+
+/* Conteudos main_menu_middle:
+    .confirmation: Ecrã com o texto de confirmação.
+    .yes: Botão de confirmação.
+    .no: Botão de rejeição.
+*/
+
+.top_middle{
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 0%;
+    bottom: 29.6875%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /*
+    border-top-left-radius: 0.7in;
+    border-top-right-radius: 0.7in;
+    border-bottom-right-radius: 15pt;
+    border-bottom-left-radius: 15pt;
+    
+    background: #242424
+    */
 }
 
 .confirmation {
@@ -65,12 +102,11 @@
     position: absolute;
     
     left: 0;
-    right: 50%;
+    right: 52.38095238%;
     top: 70.3125%;
     bottom: 0;
     
     border-top: 2px solid #F0901B;
-    border-right: 2px solid #F0901B;
     
     display: flex;
     align-items: center;
@@ -80,28 +116,29 @@
 .no {
     position: absolute;
     
-    left: 38%;
+    left: 52.38095238%;
     right: 0;
     top: 70.3125%;
     bottom: 0;
     
     border-top: 2px solid #F0901B;
-    border-left: 2px solid #F0901B;
+    
+    
 
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-
-.main_menu_bottom {
+.bottom_background{
     position: absolute;
     
-    top: 86%;
-    left: 8%;
-    right: 8%;
-    bottom: 4%;
+    left: 47.61904762%;
+    right: 47.61904762%;
+    top: 70.3125%;
+    bottom: 0;
+    background: #F0901B;
 }
+/* Popup: Utilizado para confirmar que um bilhete foi retirado.*/
 
 .popup{
     display: none;
@@ -124,4 +161,34 @@
     
     overflow: hidden;
     
+}
+
+/* Tipos do texto:
+    .text: Texto generico, branco.
+    .text_yes: Texto posicionado para .yes .
+    .text_no: Texto posicionado para .no .
+*/
+
+.text {
+    color: white;
+    
+    font-size: 12pt;
+}
+
+.text_yes{
+    position:absolute;
+    
+    left:40%;
+    color: white;
+    
+    font-size: 12pt;
+}
+
+.text_no{
+    position:absolute;
+    
+    right:40%;
+    color: white;
+    
+    font-size: 12pt;
 }
