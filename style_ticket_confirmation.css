@@ -1,4 +1,4 @@
-.main_menu {
+.main_menu { 
     box-sizing: border-box;
     
     width: 1.7859in;
@@ -11,7 +11,6 @@
     background: #F0901B;
     
     border-radius: 1.5in;
-    overflow: hidden;
 }
 
 .main_menu_top {
@@ -33,46 +32,67 @@
     left: 8%;
     right: 8%;
     bottom: 18%;
+    
     background: #242424;
     
     border-top-left-radius: 1.5in;
     border-top-right-radius: 1.5in;
     border-bottom-right-radius: 1.5in;
     border-bottom-left-radius: 1.5in;
-    
-   
-    overflow: hidden;
 }
 
-.list {
-    position: absolute;
-    
-    padding-left: 10%;
-    padding-right: 10%;
-    
-    top: 0;
-    left: 0;
-    right: -17px;
-    bottom: 0;
-    
-    overflow-y: scroll;
-}
-
-.entry {
-    height: 33.33%;
-    width: 100%;
-    
-    border-bottom: 2px solid white;
-    
-    display: flex;
-    
-    justify-content: center;
-    align-items: center;
-}
 
 .text {
     color: white;
+    
+    font-size: 12pt;
 }
+
+.confirmation {
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 40%;
+    bottom: 76.5625%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yes {
+    position: absolute;
+    
+    left: 0;
+    right: 50%;
+    top: 70.3125%;
+    bottom: 0;
+    
+    border-top: 2px solid #F0901B;
+    border-right: 2px solid #F0901B;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no {
+    position: absolute;
+    
+    left: 38%;
+    right: 0;
+    top: 70.3125%;
+    bottom: 0;
+    
+    border-top: 2px solid #F0901B;
+    border-left: 2px solid #F0901B;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .main_menu_bottom {
     position: absolute;
