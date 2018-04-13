@@ -3,6 +3,18 @@
     <head>
         <link rel="stylesheet" href="style_ticket_confirmation.css">
         <style type="text/css"></style>
+        
+        <script src="jquery-3.3.1.min.js"></script>
+        
+        <script>
+            $(document).ready(function() {
+                $('#popActivator').click(function() {
+                    $('#myPopup').fadeIn(800);
+                    $('#myPopup').fadeOut();
+            });
+        });
+            
+        </script>
     </head>
     
     <body style="font-family: sans-serif;">
@@ -13,12 +25,18 @@
                 <div class="confirmation" align="center">
                     <span class="text" align="center">Retirar bilhete?</span>
                 </div>
-                <div class="yes" align="center">
+                <div class="yes" align="center" id="popActivator">
                     <span class="text" align="center">Sim</span>
                 </div>
                 <div class="no" align="center">
                     <span class="text" align="center">Não</span>
                 </div>
+            </div>
+            
+            <div class="popup" id="myPopup">
+                <div class = "confirmation">
+                    <span class="text">CONFIRMADO</span>
+                </div> 
             </div>
 
             <div class="main_menu_bottom" align="center" style="color: white;">
