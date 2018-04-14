@@ -5,6 +5,18 @@
     .main_menu_bottom: Frame do fim, onde ira cortar a circunferencia e conter as horas.
 */
 
+#return_button {
+    height: 2%;
+    
+    position: absolute;
+    
+    left: 20%;
+    top: 0;
+    bottom: 80%;
+    
+    margin: auto;
+}
+
 .main_menu { 
     box-sizing: border-box;
     
