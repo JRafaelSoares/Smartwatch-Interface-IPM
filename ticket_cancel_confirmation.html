@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <link rel="stylesheet" href="style_ticket_confirmation.css">
+        <style type="text/css"></style>
+        
+        <script src="jquery-3.3.1.min.js"></script>
+        <script src=divertimentos.js></script>
+        <script src=funcoes.js></script>
+        <script>
+            $(document).ready(function() {
+                $('#popActivator').click(function() {
+                    $('#myPopup').fadeIn(800);
+                    $('#myPopup').fadeOut();
+                    addBilhete();
+            });
+        });
+            
+        </script>
+    </head>
+    
+    <body style="font-family: sans-serif;">
+        <div class="return_button" onclick="window.location.href = 'chosen_ticket.html';">
+            <img src="icones-pretos/return-button.png" id="return_button">
+        </div>
+        
+        <div class="main_menu">
+            <div class="main_menu_top"></div>
+            
+            <div class="main_menu_middle">
+                <div class="top_middle">
+                    <span class="text" align="center">Cancelar bilhete?</span>
+                </div>
+                <div>
+                    <div class="yes" align="center" id="popActivator">
+                        <span class="text_yes" align="center">Sim</span>
+                    </div>
+                    
+                    <div class="bottom_background"></div>
+                    
+                    <div class="no" align="center" onclick="window.location.href = 'ticket_on_load.html';">
+                        <span class="text_no" align="center">Não</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="popup" id="myPopup">
+                <div class = "confirmation">
+                    <span class="text">Cancelado!</span>
+                </div> 
+            </div>
+
+            <div class="main_menu_bottom" align="center" style="color: white;">
+                19:24
+            </div>
+        </div>
+    </body>
+</html>

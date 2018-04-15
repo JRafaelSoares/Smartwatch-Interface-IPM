@@ -29,7 +29,7 @@ function displayBilhetes() {
     var i = 0;
     
     for (i; i < stuff.length; i++) {
-        lista.innerHTML += '<div class="entry" onclick="setStuffs(addStuff(' +i +'))"> <span class="text" align="center">' + stuff[i].nome + '</span> </div>';
+        lista.innerHTML += '<div class="entry" onclick="setStuffs(addStuff(' +i +')); window.location.href = \'cancel_ticket.html\';"> <span class="text" align="center">' + stuff[i].nome + '</span> </div>';
     }
 }
 function displayDivertimentos(){
