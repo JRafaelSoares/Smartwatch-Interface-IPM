@@ -3,9 +3,11 @@
     <head>
         <link rel="stylesheet" href="style_chosen_ticket.css">
         <style type="text/css"></style>
+        <script src=divertimentos.js></script>
+        <script src=funcoes.js></script>
     </head>
     
-    <body style="font-family: sans-serif;">
+    <body style="font-family: sans-serif;" onload="loadDivertimento()">
         <div class="return_button" onclick="window.location.href = 'template_list.html';">
             <img src="icones-pretos/return-button.png" id="return_button">
         </div>
@@ -14,11 +16,9 @@
             <div class="main_menu_top"></div>
             
             <div class="main_menu_middle">
-                <div class="name" align="center">
-                    <span class="text" align="center">Roda Gigante</span>
+                <div class="name" align="center" id="nome">
                 </div>
-                <div class="time" align="center">
-                    <span class="text" align="center">Hora est. 19:34</span>
+                <div class="time" align="center" id="hora">
                 </div>
                 <div class="margin">
                     <div class="tirar_bilhete" align="center" onclick="window.location.href = 'ticket_confirmation.html';">
