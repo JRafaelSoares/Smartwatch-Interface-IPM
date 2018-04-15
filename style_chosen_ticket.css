@@ -8,7 +8,7 @@
     
     background: #F0901B;
     
-    border-radius: 0.89295in;
+    border-radius: 50%;
 }
 
 .main_menu_top {
@@ -21,9 +21,6 @@
 }
 
 .main_menu_middle {
-    padding-left: 10%;
-    padding-right: 10%;
-    
     position: absolute;
     
     top: 18%;
@@ -33,10 +30,10 @@
     
     background: #242424;
     
-    border-top-left-radius: 0.89295in;
-    border-top-right-radius: 0.89295in;
-    border-bottom-right-radius: 0.89295in;
-    border-bottom-left-radius: 0.89295in;
+    border-top-left-radius: 38.095238% 50%;
+    border-top-right-radius: 38.095238% 50%;
+    border-bottom-right-radius: 38.095238% 50%;
+    border-bottom-left-radius: 38.095238% 50%;
 }
 
 
@@ -82,8 +79,8 @@
     
     background: #242424;
 
-    border-bottom-right-radius: 0.89295in;
-    border-bottom-left-radius: 0.89295in;
+    border-bottom-right-radius: 40% 112%;
+    border-bottom-left-radius: 40% 112%;
     
     display: flex;
     align-items: center;

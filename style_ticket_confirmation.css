@@ -42,10 +42,10 @@
     
     background: #242424;
 
-    border-top-left-radius: 1.5in;
-    border-top-right-radius: 1.5in;
-    border-bottom-right-radius: 1.5in;
-    border-bottom-left-radius: 1.5in;
+    border-top-left-radius: 38.095238% 50%;
+    border-top-right-radius: 38.095238% 50%;
+    border-bottom-right-radius: 38.095238% 50%;
+    border-bottom-left-radius: 38.095238% 50%;
 }
 
 .main_menu_bottom {
