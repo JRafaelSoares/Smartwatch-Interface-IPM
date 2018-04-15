@@ -3,11 +3,6 @@
 /* exported displayBilhetes */
 /* exported loadAllStuff */
 
-function loadAllBilhetes(allBilhetes) {
-    "use strict";
-    localStorage.setItem("Bilhetes", JSON.stringify(allBilhetes));
-}
-
 function loadAllStuff(allStuff) {
     "use strict";
     localStorage.setItem("Cenas", JSON.stringify(allStuff));
@@ -22,14 +17,16 @@ function displayBilhetes() {
     "use strict";
     var bilhetes, lista, stuff;
     
-    bilhetes = localStorage.getItem("Bilhetes");   
+    bilhetes = localStorage.getItem("Divertimentos");   
     stuff = JSON.parse(bilhetes);
     console.log(bilhetes);
     lista = document.getElementById("lista");
     var i = 0;
     
     for (i; i < stuff.length; i++) {
-        lista.innerHTML += '<div class="entry" onclick="addOnHoldBilhete(' +i +'); window.location.href = \'cancel_ticket.html\';"> <span class="text" align="center">' + stuff[i].nome + '</span> </div>';
+        if(stuff[i].tirado != 0){
+            lista.innerHTML += '<div class="entry" onclick="addOnHoldDivertimento(' +i +'); window.location.href = \'cancel_ticket.html\';"> <span class="text" align="center">' + stuff[i].nome + '</span> </div>';
+        }
     }
 }
 function displayDivertimentos(){
@@ -44,22 +41,10 @@ function displayDivertimentos(){
     var i = 0;
     
     for (i; i < stuff.length; i++) {
-        lista.innerHTML += '<div class="entry" onclick="addOnHoldDivertimento('+i+'); window.location.href = \'chosen_ticket.html\';"> <span class="text" align="center">'+stuff[i].nome+'</span></div>';
+        if(stuff[i].tirado == 0){
+            lista.innerHTML += '<div class="entry" onclick="addOnHoldDivertimento('+i+'); window.location.href = \'chosen_ticket.html\';"> <span class="text" align="center">'+stuff[i].nome+'</span></div>';
+        }
     }
-}
-
-function addOnHoldBilhete(i) {
-    var bilheteStr =localStorage.getItem("Bilhetes");
-    
-    var bilhete = JSON.parse(bilheteStr);
-    var cenasSTR = localStorage.getItem("Cenas");
-    
-    var cenas = JSON.parse(cenasSTR);
-    cenas[0]=bilhete[i];
-    
-    localStorage.setItem("Cenas", JSON.stringify(cenas));
-    
-    return cenas;
 }
 
 function addOnHoldDivertimento(i) {
@@ -96,22 +81,23 @@ function addBilhete() {
     
     var stuff = JSON.parse(stuffStr);
     
-    var bilhetesStr = localStorage.getItem("Bilhetes");
+    var bilhetesStr = localStorage.getItem("Divertimentos");
     
     var bilhetes = JSON.parse(bilhetesStr);
     
     var i = 0;
-    var flag=0;
-    for (i; i<bilhetes.length; i++){
-        if (bilhetes[i].nome == stuff[0].nome){
-            console.log("Ja existe bilhete!");
-            flag=1;
-        } 
+    
+    if (stuff[0].tirado == 0){
+        stuff[0].tirado =1;
+        
+        for (i; i<bilhetes.length; i++){
+            if (bilhetes[i].nome == stuff[0].nome){
+                bilhetes[i].tirado = 1;
+            } 
+        }
     }
-    if (flag !=1){
-        bilhetes.push(stuff[0]);
-        localStorage.setItem("Bilhetes", JSON.stringify(bilhetes));
-    }
+    
+    localStorage.setItem("Divertimentos", JSON.stringify(bilhetes));
 }
 
 function removeElement(){
@@ -119,19 +105,36 @@ function removeElement(){
     
     var stuff = JSON.parse(stuffStr);
     
-    var bilhetes= [];
+    var bilhetesStr = localStorage.getItem("Divertimentos");
     
-    var bilhetesStr = localStorage.getItem("Bilhetes");
+    var bilhetes = JSON.parse(bilhetesStr);
     
-    var oldBilhetes = JSON.parse(bilhetesStr);
     var i=0;
-    for(i; i<oldBilhetes.length;i++){
-        if (stuff[0].nome != oldBilhetes[i].nome){
-            bilhetes.push(oldBilhetes[i]);
-            console.log(oldBilhetes[i]);
+    
+    for(i; i<bilhetes.length;i++){
+        if (stuff[0].nome == bilhetes[i].nome){
+            stuff[0].tirado = 0;
+            bilhetes[i].tirado =0;
+            console.log(bilhetes[i]);
         }
     }
     
-    localStorage.setItem("Bilhetes", JSON.stringify(bilhetes));
+    localStorage.setItem("Divertimentos", JSON.stringify(bilhetes));
 }
+
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    m = checkTime(m);
+    document.getElementById('time').innerHTML =
+    h + ":" + m;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+
+
 

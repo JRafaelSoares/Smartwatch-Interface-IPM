@@ -5,11 +5,9 @@
 /* exported setStuffs */
 
 var diver = { divertimentos: [
-        { "nome": "Montanha Russa", "hora": "11:45"},
-        { "nome": "Carrosel", "hora": "15:45"},
-        { "nome": "Roda Gigante", "hora": "16:45"}]};
-
-var tickets = { bilhetes: []};
+        { "nome": "Montanha Russa", "hora": "11:45", "tirado": 0},
+        { "nome": "Carrosel", "hora": "15:45", tirado: 0},
+        { "nome": "Roda Gigante", "hora": "16:45", tirado: 0}]};
 
 var cancelarBilhete = { onHold: []};
 

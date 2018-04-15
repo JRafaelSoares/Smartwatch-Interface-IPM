@@ -7,7 +7,7 @@
         <script src=funcoes.js></script>
     </head>
     
-    <body style="font-family: sans-serif;" onload="loadDivertimento()">
+    <body style="font-family: sans-serif;" onload="loadDivertimento(); startTime();">
         <div class="return_button" onclick="window.location.href = 'ticket_on_load.html';">
             <img src="icones-pretos/return-button.png" id="return_button">
         </div>
@@ -27,8 +27,7 @@
                 </div>
             </div>
 
-            <div class="main_menu_bottom" align="center" style="color: white;">
-                19:24
+            <div class="main_menu_bottom" align="center" style="color: white;" id="time">
             </div>
         </div>
     </body>
