@@ -29,7 +29,7 @@ function displayBilhetes() {
     var i = 0;
     
     for (i; i < stuff.length; i++) {
-        lista.innerHTML += '<div class="entry" onclick="setStuffs(addStuff(' +i +')); window.location.href = \'cancel_ticket.html\';"> <span class="text" align="center">' + stuff[i].nome + '</span> </div>';
+        lista.innerHTML += '<div class="entry" onclick="addOnHoldBilhete(' +i +'); window.location.href = \'cancel_ticket.html\';"> <span class="text" align="center">' + stuff[i].nome + '</span> </div>';
     }
 }
 function displayDivertimentos(){
@@ -112,7 +112,26 @@ function addBilhete() {
         bilhetes.push(stuff[0]);
         localStorage.setItem("Bilhetes", JSON.stringify(bilhetes));
     }
+}
+
+function removeElement(){
+    var stuffStr = localStorage.getItem("Cenas");
     
+    var stuff = JSON.parse(stuffStr);
     
+    var bilhetes= [];
+    
+    var bilhetesStr = localStorage.getItem("Bilhetes");
+    
+    var oldBilhetes = JSON.parse(bilhetesStr);
+    var i=0;
+    for(i; i<oldBilhetes.length;i++){
+        if (stuff[0].nome != oldBilhetes[i].nome){
+            bilhetes.push(oldBilhetes[i]);
+            console.log(oldBilhetes[i]);
+        }
+    }
+    
+    localStorage.setItem("Bilhetes", JSON.stringify(bilhetes));
 }
 
