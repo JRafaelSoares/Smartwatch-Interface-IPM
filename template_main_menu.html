@@ -3,9 +3,11 @@
     <head>
         <link rel="stylesheet" href="style_main_menu.css">
         <style type="text/css"></style>
+        <script src=divertimentos.js></script>
+        <script src=funcoes.js></script>
     </head>
     
-    <body style="font-family: sans-serif">
+    <body style="font-family: sans-serif" onload="loadAllBilhetes(getTickets()); loadAllStuff(getCancelarBilhete()); loadAllDivertimentos(getDivertimentos());">
         <div class="main_menu">
             <div class="main_menu_top"></div>
             
