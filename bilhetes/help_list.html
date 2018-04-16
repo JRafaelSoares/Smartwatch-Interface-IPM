@@ -1,25 +1,27 @@
 <!DOCTYPE html> 
 <html>
     <head>
-        <link rel="stylesheet" href="style_list.css">
+        <link rel="stylesheet" href="style_help_list.css">
         <style type="text/css"></style>
         <script src=divertimentos.js></script>
         <script src=funcoes.js></script>
     </head>
     
     <body style="font-family: sans-serif" onload="displayDivertimentos(); startTime();">
-        <div class="return_button" onclick="window.location.href = 'template_secondary_menu.html';">
+        <div class="return_button" onclick="window.location.href = 'template_list.html';">
             <img src="icones-pretos/return-button.png" id="return_button">
         </div>
         
-        <div class="main_menu">
+        <div class="main_menu" onclick="window.location.href = 'template_list.html';">
             <div class="main_menu_top">
-                <div class="question_mark" onclick="window.location.href = 'help_list.html';"><img src="../icones-brancos/question.png" id="help"></div>
+                <div class="question_mark"><img src="../icones-brancos/question.png" id="help"></div>
             </div>
             
             <div class="main_menu_middle">
-                <div class="list" id="lista">
+                <div class="text_position"><span class="text">Lista de</span></div>
+                <div class="text_position2"><span class="text">divertimentos</span>
                 </div>
+                <div class="text_position3"><span class="text">no festival</span></div>
             </div>
 
             <div class="main_menu_bottom" align="center" style="color: white;" id="time">

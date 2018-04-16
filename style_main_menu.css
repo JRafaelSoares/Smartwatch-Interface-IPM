@@ -1,3 +1,16 @@
+#relogio {
+    height: 40%;
+    
+    position: absolute;
+    
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    
+    margin: auto;
+}
+
 .main_menu { 
     box-sizing: border-box;
     
@@ -6,7 +19,12 @@
     height: 1.7859in;
     max-height: 1.7859in;
     
-    position: relative;
+    position: absolute;
+    
+    top: 41%;
+    left: 40.5%;
+    right: 0;
+    bottom: 0;
     
     background: #242424;
     

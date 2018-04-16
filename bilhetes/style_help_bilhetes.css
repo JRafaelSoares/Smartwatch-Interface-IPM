@@ -89,8 +89,7 @@
     
     position: absolute;
     
-    background: #242424;
-    /*border: 2px solid #36B824;*/
+    border: 2px solid #242424;
     
     border-top-left-radius: 1.5in;
     border-top-right-radius: 1.5in;
@@ -123,7 +122,7 @@
     border-bottom-right-radius: 1.5in;
     border-bottom-left-radius: 1.5in;
     
-        display: flex;
+    display: flex;
     
     justify-content: center;
     align-items: center;
@@ -134,6 +133,16 @@
     width: 100%;
     
 
+}
+
+.text_position1 {
+    position: absolute;
+    top: 10%;
+}
+
+.text_position2 {
+    position: absolute;
+    bottom: 10%;
 }
 
 .text {
