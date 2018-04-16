@@ -1,0 +1,163 @@
+#return_button {
+    height: 2%;
+    
+    position: absolute;
+    
+    left: 25%;
+    top: 0;
+    bottom: 75%;
+    
+    margin: auto;
+}
+
+.main_menu {
+    width: 1.7859in;
+    max-width: 1.7859in;
+    height: 1.7859in;
+    max-height: 1.7859in;
+    
+    position: relative;
+    
+    background: #2276D1;
+    
+    border-radius: 50%;
+}
+
+.main_menu_top {
+    position: absolute;
+    
+    top: 4%;
+    left: 8%;
+    right: 8%;
+    bottom: 86%;
+}
+
+.main_menu_middle {
+    position: absolute;
+    
+    top: 18%;
+    left: 8%;
+    right: 8%;
+    bottom: 18%;
+    
+    background: #242424;
+    
+    border-top-left-radius: 38.095238% 50%;
+    border-top-right-radius: 38.095238% 50%;
+    border-bottom-right-radius: 38.095238% 50%;
+    border-bottom-left-radius: 38.095238% 50%;
+}
+
+
+.text {
+    color: white;
+    
+    font-size: 12pt;
+}
+
+.name {
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 12%;
+    bottom: 68.75%;
+    
+    
+    border-bottom: 2px solid #2276D1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time {
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 31.25%;
+    bottom: 37.5%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tirar_bilhete {
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 12%;
+    bottom: 0;
+    
+    background: #242424;
+
+    border-bottom-right-radius: 40% 112%;
+    border-bottom-left-radius: 40% 112%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.margin {
+    position: absolute;
+    
+    left: 2.283368%;
+    right: 2.283368%;
+    top: 62.5%;
+    bottom: 0;
+    
+    background: #2276D1;
+    
+    border-bottom-right-radius: 0.89295in;
+    border-bottom-left-radius: 0.89295in;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.confirmation {
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 40%;
+    bottom: 76.5625%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup{
+    display: none;
+    
+    padding-left: 10%;
+    padding-right: 10%;
+    
+    position: absolute;
+    
+    left: 8%;
+    right: 8%;
+    top: 18%;
+    bottom: 18%;
+    background: #242424;
+    
+    border-top-left-radius: 1.5in;
+    border-top-right-radius: 1.5in;
+    border-bottom-right-radius: 1.5in;
+    border-bottom-left-radius: 1.5in;
+    
+    overflow: hidden;
+    
+}
+
+.main_menu_bottom {
+    position: absolute;
+    
+    top: 86%;
+    left: 8%;
+    right: 8%;
+    bottom: 4%;
+}

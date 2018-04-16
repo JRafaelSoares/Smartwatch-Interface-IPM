@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style_friend.css">
+        <style type="text/css"></style>
+        <script src="jquery-3.3.1.min.js"></script>
+        <script src=divertimentos.js></script>
+        <script src=funcoes.js></script>
+        <script>
+            $(document).ready(function() {
+                $('#hora').click(function() {
+                    addFavorite();
+                    $('#myPopup').fadeIn(800);
+                    $('#myPopup').fadeOut('slow', function(){$(location).attr('href', 'favorites_list.html');});
+            });
+        });
+        </script>
+    </head>
+    
+    <body style="font-family: sans-serif;" onload="loadFriend(); startTime();">
+        <div class="return_button" onclick="window.location.href = 'favorites_list.html';">
+            <img src="icones-pretos/return-button.png" id="return_button">
+        </div>
+        
+        <div class="main_menu">
+            <div class="main_menu_top"></div>
+            
+            <div class="main_menu_middle">
+                <div class="name" align="center" id="nome">
+                </div>
+                <div class="time" align="center" id="hora" onclick="removeFavorite()">
+                    <span class="text"> Remover Favorito</span>
+                </div>
+                <div class="margin">
+                    <div class="tirar_bilhete" align="center" onclick="window.location.href = 'ticket_confirmation.html';">
+                        <span class="text" align="center">Encontrar</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="popup" id="myPopup">
+                <div class = "confirmation">
+                    <span class="text">CONFIRMADO</span>
+                </div> 
+            </div>
+            
+            <div class="main_menu_bottom" align="center" style="color: white;" id="time">
+            </div>
+        </div>
+    </body>
+</html>
