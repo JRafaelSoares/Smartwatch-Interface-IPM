@@ -69,18 +69,31 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 53.125%;
+    bottom: 50%;
 }
 
 .main_menu_button_bottom {
     position: absolute;
     
-    top: 53.125%;
+    top: 50%;
     left: 0;
     right: 0;
     bottom: 0;
 }
 
+.margin {
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    right: 46.2%;
+    bottom: 45.1%;
+    
+    border-right: 2px solid #36B824;
+    border-bottom: 2px solid #36B824;
+
+    border-bottom-right-radius: 15pt;
+}
 
 .main_menu_button_top_left {
     position: absolute;
@@ -88,7 +101,7 @@
     top: 0;
     left: 0;
     right: 52.38095238%;
-    bottom: 0;
+    bottom: 6.25%;
     
     background: #36B824;
     /*border: 2px solid #36B824;*/
@@ -119,85 +132,66 @@
     left: 52.38095238%;
     right: 0;
     bottom: 0;  
-        
-    background: #2276D1;
-    /*border: 2px solid #2276D1;*/
+    
+    border-left: 2px solid #36B824;
+    border-right: 2px solid #36B824;
+    border-top: 2px solid #36B824;
     
     border-top-left-radius: 15pt;
     border-top-right-radius: 1.5in;
-    border-bottom-right-radius: 15pt;
-    border-bottom-left-radius: 15pt;
-}
-
-#friends {
-    height: 80%;
-    
-    position: absolute;
-    
-    right: 15%;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    
-    margin: auto;
 }
 
 .main_menu_button_bottom_right {
     position: absolute;
     
     top: 0;
-    left: 52.38095238%;
+    left: 50%;
     right: 0;
     bottom: 0;  
     
-    background: #7E7E7E;
-    /*border: 2px solid #7E7E7E;*/
+    border-right: 2px solid #36B824;
+    border-bottom: 2px solid #36B824;
     
     border-top-left-radius: 15pt;
-    border-top-right-radius: 15pt;
     border-bottom-right-radius: 1.5in;
-    border-bottom-left-radius: 15pt;
-}
-
-#settings {
-    height: 80%;
-    
-    position: absolute;
-    
-    right: 15%;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    
-    margin: auto;
 }
 
 .main_menu_button_bottom_left {
     position: absolute;
     
-    top: 0;
+    top: 6.25%;
     left: 0;
-    right: 52.38095238%;
+    right: 50%;
     bottom: 0;
     
-    background: #F0901B;
-    /*border: 2px solid #F0901B;*/
+    border-top: 2px solid #36B824;
+    border-left: 2px solid #36B824;
+    border-bottom: 2px solid #36B824;
     
     border-top-left-radius: 15pt;
-    border-top-right-radius: 15pt;
-    border-bottom-right-radius: 15pt;
     border-bottom-left-radius: 1.5in;
 }
 
-#tickets {
-    height: 80%;
-    
+.text_position {
     position: absolute;
     
-    right: 0;
-    left: 15%;
-    top: 0;
-    bottom: 0;
+    top: 40%;
+    left: 10%;
     
-    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_position2 {
+    position: absolute;
+    
+    top: 15%;
+    left: 10%;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    color: white;
 }

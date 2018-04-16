@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style_main_menu.css">
+        <link rel="stylesheet" href="style_help_main_menu_top_left.css">
         <style type="text/css"></style>
         <script src=divertimentos.js></script>
         <script src=funcoes.js></script>
@@ -10,26 +10,24 @@
     <body style="font-family: sans-serif" onload="loadAllStuff(getCancelarBilhete()); loadAllDivertimentos(getDivertimentos()); startTime();">
         <div class="main_menu">
             <div class="main_menu_top">
-                <div class="question_mark" onclick="window.location.href = 'help_main_menu_top_left.html';"><img src="icones-brancos/question.png" id="help"></div>
+                <div class="question_mark"><img src="icones-brancos/question.png" id="help"></div>
             </div>
             
-            <div class="main_menu_middle">
+            <div class="main_menu_middle"> 
+                <div class="margin"></div>
                 <div class="main_menu_button_top">
                     <div class="main_menu_button_top_left" align="center">
                         <img src="icones-brancos/give-money.png" id="payments">
                     </div>
-                    <div class="main_menu_button_top_right" onclick="window.location.href = 'Friends/template_secondary_menu.html'">
-                        <img src="icones-brancos/friends.png" id="friends">
+                    <div class="main_menu_button_top_right" align="center">
+                        <div class="text_position"><span class="text">Pagar</span></div>
                     </div>
                 </div>
 
                 <div class="main_menu_button_bottom">
-                    <div class="main_menu_button_bottom_left" onclick="window.location.href = 'bilhetes/template_secondary_menu.html';">
-                        <img src="icones-brancos/tickets.png" id="tickets">
-                    </div>
-                    <div class="main_menu_button_bottom_right">
-                        <img src="icones-brancos/settings.png" id="settings">
-                    </div>
+                    <div class="text_position2"><span class="text">Uso em qualquer</span></div>
+                    <div class="main_menu_button_bottom_left" align="center"></div>
+                    <div class="main_menu_button_bottom_right"></div>
                 </div>
             </div>
 
