@@ -11,6 +11,7 @@ function loadAllStuff(allStuff) {
 function loadAllDivertimentos(allDivertimentos) {
     "use strict";
     localStorage.setItem("Divertimentos", JSON.stringify(allDivertimentos));
+    console.log(1);
 }
 
 function displayBilhetes() {
@@ -34,7 +35,7 @@ function displayDivertimentos(){
     var diverti, lista, stuff;
     
     diverti = localStorage.getItem("Divertimentos");
-        
+    console.log(diverti);
     stuff = JSON.parse(diverti);
     
     lista = document.getElementById("lista");
@@ -69,7 +70,6 @@ function loadDivertimento() {
     var name = document.getElementById("nome");
     var time = document.getElementById("hora");
     
-    console.log(diver);
     name.innerHTML = '<span class="text" align="center">' +stuff[0].nome + '</span>';
     
     time.innerHTML = '<span class="text" align="center"> Hora est. ' +stuff[0].hora + '</span>';
