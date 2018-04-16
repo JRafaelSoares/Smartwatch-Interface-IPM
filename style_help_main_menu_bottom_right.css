@@ -96,15 +96,16 @@
 .margin {
     position: absolute;
     
-    top: 50%;
-    left: 50%;
-    right: 46.2%;
-    bottom: 45.1%;
+    top: 45.1%;
+    left: 46.2%;
+    right: 50%;
+    bottom: 50%;
     
-    border-right: 2px solid #36B824;
-    border-bottom: 2px solid #36B824;
+    border-left: 2px solid #7E7E7E;
+    border-left: 2px solid #7E7E7E;
+    border-top: 2px solid #7E7E7E;
 
-    border-bottom-right-radius: 15pt;
+    border-top-left-radius: 15pt;
 }
 
 .main_menu_button_top_left {
@@ -112,76 +113,74 @@
     
     top: 0;
     left: 0;
-    right: 52.38095238%;
-    bottom: 6.25%;
-    
-    background: #36B824;
-    /*border: 2px solid #36B824;*/
-    
-    border-top-left-radius: 1.5in;
-    border-top-right-radius: 15pt;
-    border-bottom-right-radius: 15pt;
-    border-bottom-left-radius: 15pt;
-}
-
-#payments {
-    height: 80%;
-    
-    position: absolute;
-    
-    right: 0;
-    left: 15%;
-    top: 0;
+    right: 50%;
     bottom: 0;
     
-    margin: auto;
+    border-left: 2px solid #7E7E7E;
+    border-top: 2px solid #7E7E7E;
+    
+    border-top-left-radius: 1.5in;
 }
 
 .main_menu_button_top_right {
     position: absolute;
     
     top: 0;
-    left: 52.38095238%;
+    left: 50%;
     right: 0;
-    bottom: 0;  
+    bottom: 6.25%;  
     
-    border-left: 2px solid #36B824;
-    border-right: 2px solid #36B824;
-    border-top: 2px solid #36B824;
+    border-right: 2px solid #7E7E7E;
+    border-top: 2px solid #7E7E7E;
+    border-bottom: 2px solid #7E7E7E;
     
-    border-top-left-radius: 15pt;
     border-top-right-radius: 1.5in;
+    border-bottom-right-radius: 15pt;
 }
 
 .main_menu_button_bottom_right {
     position: absolute;
     
-    top: 0;
-    left: 50%;
+    top: 6.25%;
+    left: 52.38095238%;
     right: 0;
     bottom: 0;  
     
-    border-right: 2px solid #36B824;
-    border-bottom: 2px solid #36B824;
+    background: #7E7E7E;
     
     border-top-left-radius: 15pt;
+    border-top-right-radius: 15pt;
+    border-bottom-left-radius: 15pt;
     border-bottom-right-radius: 1.5in;
+}
+
+#settings {
+    height: 80%;
+    
+    position: absolute;
+    
+    right: 15%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    
+    margin: auto;
 }
 
 .main_menu_button_bottom_left {
     position: absolute;
     
-    top: 6.25%;
+    top: 0;
     left: 0;
-    right: 50%;
+    right: 52.38095238%;
     bottom: 0;
     
-    border-top: 2px solid #36B824;
-    border-left: 2px solid #36B824;
-    border-bottom: 2px solid #36B824;
+    border-left: 2px solid #7E7E7E;
+    border-bottom: 2px solid #7E7E7E;
+    border-right: 2px solid #7E7E7E;
     
-    border-top-left-radius: 15pt;
     border-bottom-left-radius: 1.5in;
+    border-bottom-right-radius: 15pt;
 }
 
 .text_position {
@@ -198,7 +197,7 @@
     position: absolute;
     
     top: 15%;
-    left: 15%;
+    left: 18%;
     
     justify-content: center;
     align-items: center;
