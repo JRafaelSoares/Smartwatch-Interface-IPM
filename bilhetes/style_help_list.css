@@ -10,7 +10,7 @@
     margin: auto;
 }
 
-.main_menu { 
+.main_menu {
     box-sizing: border-box;
     
     width: 1.7859in;
@@ -22,10 +22,8 @@
     
     background: #F0901B;
     
-    padding-left: 2%;
-    padding-right: 2%;
-    
     border-radius: 1.5in;
+    overflow: hidden;
 }
 
 .main_menu_top {
@@ -60,12 +58,81 @@
 }
 
 .main_menu_middle {
+    padding-left: 10%;
+    padding-right: 10%;
+    
     position: absolute;
     
     top: 18%;
     left: 8%;
     right: 8%;
     bottom: 18%;
+    background: #242424;
+    
+    border-top-left-radius: 1.5in;
+    border-top-right-radius: 1.5in;
+    border-bottom-right-radius: 1.5in;
+    border-bottom-left-radius: 1.5in;
+    
+   
+    overflow: hidden;
+}
+
+.list {
+    position: absolute;
+    
+    padding-left: 10%;
+    padding-right: 10%;
+    
+    top: 0;
+    left: 0;
+    right: -17px;
+    bottom: 0;
+    
+    overflow-y: scroll;
+}
+
+.entry {
+    height: 33.33%;
+    width: 100%;
+    
+    border-bottom: 2px solid white;
+    
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.text_position {
+    position: absolute;
+    
+    top:10%;
+    left: 30%;
+    right: 0;
+    bottom: 0;
+}
+
+.text_position2 {
+    position: absolute;
+    
+    top:30%;
+    left: 15%;
+    right: 0;
+    bottom: 0;
+}
+
+.text_position3 {
+    position: absolute;
+    
+    top:50%;
+    left: 20%;
+    right: 0;
+    bottom: 0;
+}
+
+.text {
+    color: white;
 }
 
 .main_menu_bottom {
@@ -75,76 +142,4 @@
     left: 8%;
     right: 8%;
     bottom: 4%;
-    bottom: 4%;
-}
-
-
-.main_menu_button_top {
-    box-sizing: border-box;
-    
-    height: 46.875%;
-    width: 100%;
-    
-    margin-bottom: 3.125%;
-    
-    position: absolute;
-    
-    border: 2px solid #242424;
-    
-    border-top-left-radius: 1.5in;
-    border-top-right-radius: 1.5in;
-    border-bottom-right-radius: 15pt;
-    border-bottom-left-radius: 15pt;
-    
-    display: flex;
-    
-    justify-content: center;
-    align-items: center;
-}
-
-.main_menu_button_bottom {
-    box-sizing: border-box;
-    
-    height: 46.875%;
-    width: 100%;
-    
-    margin-top: 3.125%;
-    
-    bottom: 0;
-    
-    position: absolute;
-    
-    background: #242424;
-    /*border: 2px solid #36B824;*/
-    
-    border-top-left-radius: 15pt;
-    border-top-right-radius: 15pt;
-    border-bottom-right-radius: 1.5in;
-    border-bottom-left-radius: 1.5in;
-    
-    display: flex;
-    
-    justify-content: center;
-    align-items: center;
-}
-
-.entry {
-    height: 33.33%;
-    width: 100%;
-    
-
-}
-
-.text_position1 {
-    position: absolute;
-    top: 10%;
-}
-
-.text_position2 {
-    position: absolute;
-    bottom: 10%;
-}
-
-.text {
-    color: white;
 }
