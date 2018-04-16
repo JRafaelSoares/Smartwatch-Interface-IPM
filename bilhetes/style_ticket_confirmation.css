@@ -118,8 +118,6 @@
     top: 70.3125%;
     bottom: 0;
     
-    border-top: 2px solid #F0901B;
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -132,10 +130,6 @@
     right: 0;
     top: 70.3125%;
     bottom: 0;
-    
-    border-top: 2px solid #F0901B;
-    
-    
 
     display: flex;
     align-items: center;
@@ -190,7 +184,7 @@
 .text_yes{
     position:absolute;
     
-    left:40%;
+    left: 40%;
     color: white;
     
     font-size: 12pt;
@@ -199,7 +193,7 @@
 .text_no{
     position:absolute;
     
-    right:40%;
+    right: 40%;
     color: white;
     
     font-size: 12pt;
