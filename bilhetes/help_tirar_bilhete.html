@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style_secondary_menu.css">
+        <link rel="stylesheet" href="style_help_tirar_bilhete.css">
         <style type="text/css"></style>
         <script src=funcoes.js></script>
     </head>
     
     <body style="font-family: sans-serif" onload="startTime();">
-        <div class="return_button" onclick="window.location.href = '../template_main_menu.html';">
+        <div class="return_button" onclick="window.location.href = 'template_secondary_menu.html';">
             <img src="icones-pretos/return-button.png" id="return_button">
         </div>
         
-        <div class="main_menu">
+        <div class="main_menu" onclick="window.location.href = 'help_bilhetes.html';">
             <div class="main_menu_top">
-                <div class="question_mark" onclick="window.location.href = 'help_tirar_bilhete.html';"><img src="../icones-brancos/question.png" id="help"></div>
+                <div class="question_mark"><img src="../icones-brancos/question.png" id="help"></div>
             </div>
             
             <div class="main_menu_middle">
-                <div class="main_menu_button_top" onclick="window.location.href = 'template_list.html';">
+                <div class="main_menu_button_top">
                     <span class="text"> Tirar Bilhete</span>
                 </div>
 
-                <div class="main_menu_button_bottom" onclick="window.location.href = 'ticket_on_load.html';">
-                    <span class="text">Bilhetes</span>
+                <div class="main_menu_button_bottom">
+                    <div class="text_position1"><span class="text">Permite reservar</span></div>
+                    <div class="text_position2"><span class="text">divertimentos</span></div>
                 </div>
             </div>
 
