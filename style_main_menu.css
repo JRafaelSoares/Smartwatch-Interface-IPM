@@ -22,6 +22,28 @@
     bottom: 86%;
 }
 
+.question_mark {
+    position: absolute;
+    
+    top: 5%;
+    left: 40%;
+    right: 40%;
+    bottom: 5%;
+}
+
+#help {
+    height: 100%;
+    
+    position: absolute;
+    
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    
+    margin: auto;
+}
+
 .main_menu_middle {
     position: absolute;
     
