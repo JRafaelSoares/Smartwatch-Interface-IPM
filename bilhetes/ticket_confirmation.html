@@ -10,9 +10,9 @@
         <script>
             $(document).ready(function() {
                 $('#popActivator').click(function() {
-                    $('#myPopup').fadeIn(800);
-                    $('#myPopup').fadeOut();
                     addBilhete();
+                    $('#myPopup').fadeIn(800);
+                    $('#myPopup').fadeOut('slow', function(){$(location).attr('href', 'template_list.html');});
             });
         });
             
