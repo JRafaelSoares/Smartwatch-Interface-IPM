@@ -36,11 +36,13 @@ function displayFavorites(){
         
     var amigos = JSON.parse(amigosStr);
     
+    console.log(amigos[0].favorito);
     var lista = document.getElementById("lista");
     var i = 0;
     
     for (i; i < amigos.length; i++) {
         if(amigos[i].favorito == 1){
+            console.log("ADICIONEI");
             lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend('+i+'); window.location.href = \'Favorite.html\';"> <span class="text" align="center">'+amigos[i].nome+'</span></div>';
         }
     }
@@ -86,10 +88,12 @@ function addFavorite() {
         for (i; i<friends.length; i++){
             if (friends[i].nome == display[0].nome){
                 friends[i].favorito = 1;
+                console.log(i);
             } 
         }
     }
     
+    console.log(friends[0].favorito);
     localStorage.setItem("Friends", JSON.stringify(friends));
 }
 

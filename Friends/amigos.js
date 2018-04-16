@@ -1,8 +1,3 @@
-/* exported getDivertimentos */
-/* exported getTickets */
-/* exported setTickets */
-/* exported getCancelarBilhete */
-/* exported setStuffs */
 
 var diver = { amigos: [
         { "nome": "Amelia", "favorito": 0},
