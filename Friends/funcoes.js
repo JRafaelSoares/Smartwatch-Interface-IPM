@@ -5,12 +5,16 @@
 
 function loadOnDisplay(onDisplay) {
     "use strict";
-    localStorage.setItem("Display", JSON.stringify(onDisplay));
+    if( localStorage.getItem("Display") == null){
+        localStorage.setItem("Display", JSON.stringify(onDisplay));
+    }
 }
 
 function loadAllFriends(allFriends) {
     "use strict";
-    localStorage.setItem("Friends", JSON.stringify(allFriends));
+    if(localStorage.getItem("Friends") == null){
+        localStorage.setItem("Friends", JSON.stringify(allFriends));
+    }
 }
 
 function displayFriends() {

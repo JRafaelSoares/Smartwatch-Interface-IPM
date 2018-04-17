@@ -4,14 +4,17 @@
 /* exported loadAllStuff */
 
 function loadAllStuff(allStuff) {
-    "use strict";
-    localStorage.setItem("Cenas", JSON.stringify(allStuff));
+    if(localStorage.getItem("Cenas") == null){
+        "use strict";
+        localStorage.setItem("Cenas", JSON.stringify(allStuff));
+    }
 }
 
 function loadAllDivertimentos(allDivertimentos) {
     "use strict";
-    localStorage.setItem("Divertimentos", JSON.stringify(allDivertimentos));
-    console.log(1);
+    if(localStorage.getItem("Divertimentos")==null){
+        localStorage.setItem("Divertimentos", JSON.stringify(allDivertimentos));
+    }
 }
 
 function displayBilhetes() {
