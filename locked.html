@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style_locked.css">
+        <style type="text/css"></style>
+        <script src=bilhetes/divertimentos.js></script>
+        <script src=bilhetes/funcoes.js></script>
+        <script src=Friends/amigos.js></script>
+        <script src=Friends/funcoes.js></script>
+    </head>
+    <body style="font-family: sans-serif" onload="loadAllStuff(getCancelarBilhete()); loadAllDivertimentos(getDivertimentos()); startTime();loadOnDisplay(getOnDisplay()); loadAllFriends(getAllFriends());">
+        <img src="relogio.jpg" id="relogio">
+        <img src="icones-pretos/house-outline.png" id="home">
+        <img src="icones-pretos/power.png" id="power">
+        
+        <div class="main_menu">
+            <img src="icones-brancos/padlock.png" id="padlock">
+            <div class="main_menu_top"></div>
+            <div class="main_menu_middle">
+                <div align="center" style="color: white;" id="time"></div>
+                <div class="text_position" align="center"><span class="text">Deslizar ecrâ >></span></div>
+            </div>
+            <div class="main_menu_bottom"></div>
+        </div>
+    </body>
+</html>
