@@ -92,16 +92,28 @@
     overflow-y: scroll;
 }
 
-.entry {
-    height: 33.33%;
-    width: 100%;
-    
-    border-bottom: 2px solid white;
-    
-    display: flex;
-    
-    justify-content: center;
-    align-items: center;
+.text_position1 {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+}
+
+.text_position2 {
+    position: absolute;
+    top: 30%;
+    left: 7%;
+}
+
+.text_position3 {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+
+.text_position4 {
+    position: absolute;
+    top: 70%;
+    left: 21%;
 }
 
 .text {

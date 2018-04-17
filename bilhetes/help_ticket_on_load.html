@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <link rel="stylesheet" href="style_help_ticket_on_load.css">
+        <style type="text/css"></style>
+        <script src=divertimentos.js></script>
+        <script src=funcoes.js></script>
+    </head>
+    
+    <body style="font-family: sans-serif" onload="displayBilhetes(); startTime();">
+        <div class="return_button" onclick="window.location.href = 'ticket_on_load.html';">
+            <img src="icones-pretos/return-button.png" id="return_button">
+        </div>
+        
+        <div class="main_menu" onclick="window.location.href = 'ticket_on_load.html';">
+            <div class="main_menu_top">
+                <div class="question_mark"><img src="../icones-brancos/question.png" id="help"></div>
+            </div>
+            
+            <div class="main_menu_middle">
+                <div class="text_position1"><span class="text">Visualizar</span></div>
+                <div class="text_position2"><span class="text">bilhetes retirados:</span></div>
+                <div class="text_position3"><span class="text">Ver hora estimada</span></div>
+                <div class="text_position4"><span class="text">ou cancelar.</span></div>
+            </div>
+
+            <div class="main_menu_bottom" align="center" style="color: white;" id="time">
+            </div>
+        </div>
+    </body>
+</html>
