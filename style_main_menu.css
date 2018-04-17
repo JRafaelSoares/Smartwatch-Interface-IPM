@@ -1,5 +1,6 @@
+/* Outer Icons */
 #relogio {
-    height: 40%;
+    height: 50%;
     
     position: absolute;
     
@@ -11,6 +12,31 @@
     margin: auto;
 }
 
+#home {
+    height: 4%;
+    
+    position: absolute;
+    
+    left: 64%;
+    top: 0;
+    bottom: 0%;
+    
+    margin: auto;
+}
+
+#power {
+    height: 4%;
+    
+    position: absolute;
+    
+    left: 62%;
+    top: 0;
+    bottom: -15%;
+    
+    margin: auto;
+}
+/* Menus */
+
 .main_menu { 
     box-sizing: border-box;
     
@@ -21,8 +47,8 @@
     
     position: absolute;
     
-    top: 41%;
-    left: 40.5%;
+    top: 38.5%;
+    left: 38%;
     right: 0;
     bottom: 0;
     
@@ -39,6 +65,109 @@
     right: 8%;
     bottom: 86%;
 }
+
+.main_menu_middle {
+    position: absolute;
+    
+    top: 18%;
+    left: 8%;
+    right: 8%;
+    bottom: 18%;
+}
+
+.main_menu_button_top {    
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 53.125%;
+}
+
+.main_menu_button_top_left {
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    right: 52.38095238%;
+    bottom: 0;
+    
+    background: #36B824;
+    
+    border-top-left-radius: 1.5in;
+    border-top-right-radius: 15pt;
+    border-bottom-right-radius: 15pt;
+    border-bottom-left-radius: 15pt;
+}
+
+.main_menu_button_top_right {
+    position: absolute;
+    
+    top: 0;
+    left: 52.38095238%;
+    right: 0;
+    bottom: 0;  
+        
+    background: #2276D1;
+    
+    border-top-left-radius: 15pt;
+    border-top-right-radius: 1.5in;
+    border-bottom-right-radius: 15pt;
+    border-bottom-left-radius: 15pt;
+}
+
+.main_menu_button_bottom {
+    position: absolute;
+    
+    top: 53.125%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.main_menu_button_bottom_right {
+    position: absolute;
+    
+    top: 0;
+    left: 52.38095238%;
+    right: 0;
+    bottom: 0;  
+    
+    background: #7E7E7E;
+    /*border: 2px solid #7E7E7E;*/
+    
+    border-top-left-radius: 15pt;
+    border-top-right-radius: 15pt;
+    border-bottom-right-radius: 1.5in;
+    border-bottom-left-radius: 15pt;
+}
+
+.main_menu_button_bottom_left {
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    right: 52.38095238%;
+    bottom: 0;
+    
+    background: #F0901B;
+    
+    border-top-left-radius: 15pt;
+    border-top-right-radius: 15pt;
+    border-bottom-right-radius: 15pt;
+    border-bottom-left-radius: 1.5in;
+}
+
+.main_menu_bottom {
+    position: absolute;
+    
+    top: 86%;
+    left: 8%;
+    right: 8%;
+    bottom: 4%;
+}
+
+/* Menu Icons */
 
 .question_mark {
     position: absolute;
@@ -62,60 +191,6 @@
     margin: auto;
 }
 
-.main_menu_middle {
-    position: absolute;
-    
-    top: 18%;
-    left: 8%;
-    right: 8%;
-    bottom: 18%;
-}
-
-.main_menu_bottom {
-    position: absolute;
-    
-    top: 86%;
-    left: 8%;
-    right: 8%;
-    bottom: 4%;
-}
-
-
-.main_menu_button_top {    
-    position: absolute;
-    
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 53.125%;
-}
-
-.main_menu_button_bottom {
-    position: absolute;
-    
-    top: 53.125%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-
-.main_menu_button_top_left {
-    position: absolute;
-    
-    top: 0;
-    left: 0;
-    right: 52.38095238%;
-    bottom: 0;
-    
-    background: #36B824;
-    
-    border-top-left-radius: 1.5in;
-    border-top-right-radius: 15pt;
-    border-bottom-right-radius: 15pt;
-    border-bottom-left-radius: 15pt;
-}
-
 #payments {
     height: 80%;
     
@@ -127,22 +202,6 @@
     bottom: 0;
     
     margin: auto;
-}
-
-.main_menu_button_top_right {
-    position: absolute;
-    
-    top: 0;
-    left: 52.38095238%;
-    right: 0;
-    bottom: 0;  
-        
-    background: #2276D1;
-    
-    border-top-left-radius: 15pt;
-    border-top-right-radius: 1.5in;
-    border-bottom-right-radius: 15pt;
-    border-bottom-left-radius: 15pt;
 }
 
 #friends {
@@ -158,23 +217,6 @@
     margin: auto;
 }
 
-.main_menu_button_bottom_right {
-    position: absolute;
-    
-    top: 0;
-    left: 52.38095238%;
-    right: 0;
-    bottom: 0;  
-    
-    background: #7E7E7E;
-    /*border: 2px solid #7E7E7E;*/
-    
-    border-top-left-radius: 15pt;
-    border-top-right-radius: 15pt;
-    border-bottom-right-radius: 1.5in;
-    border-bottom-left-radius: 15pt;
-}
-
 #settings {
     height: 80%;
     
@@ -186,22 +228,6 @@
     bottom: 0;
     
     margin: auto;
-}
-
-.main_menu_button_bottom_left {
-    position: absolute;
-    
-    top: 0;
-    left: 0;
-    right: 52.38095238%;
-    bottom: 0;
-    
-    background: #F0901B;
-    
-    border-top-left-radius: 15pt;
-    border-top-right-radius: 15pt;
-    border-bottom-right-radius: 15pt;
-    border-bottom-left-radius: 1.5in;
 }
 
 #tickets {
@@ -216,3 +242,4 @@
     
     margin: auto;
 }
+
