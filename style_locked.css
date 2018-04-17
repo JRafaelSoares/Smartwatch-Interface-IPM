@@ -1,0 +1,116 @@
+#relogio {
+    height: 40%;
+    
+    position: absolute;
+    
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    
+    margin: auto;
+}
+
+#home {
+    height: 4%;
+    
+    position: absolute;
+    
+    left: 64%;
+    top: 0;
+    bottom: 0%;
+    
+    margin: auto;
+}
+
+#power {
+    height: 4%;
+    
+    position: absolute;
+    
+    left: 62%;
+    top: 0;
+    bottom: -15%;
+    
+    margin: auto;
+}
+
+#time {
+    position: absolute;
+    top: 10%;
+    left: 12%;
+    
+    font-size: 32pt;
+}
+
+#padlock {
+    height: 20%;
+    
+    position: absolute;
+    
+    left: 40%;
+    bottom: 10%;
+    
+    margin: auto;
+}
+
+.text_position {
+    position: absolute;
+    
+    top: 60%;
+    left: 11%;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    color: white;
+}
+
+.main_menu { 
+    box-sizing: border-box;
+    
+    width: 1.7859in;
+    max-width: 1.7859in;
+    height: 1.7859in;
+    max-height: 1.7859in;
+    
+    position: absolute;
+    
+    top: 41%;
+    left: 40.5%;
+    right: 0;
+    bottom: 0;
+    
+    background: #242424;
+    
+    border-radius: 50%;
+}
+
+.main_menu_top {
+    position: absolute;
+    
+    top: 4%;
+    left: 8%;
+    right: 8%;
+    bottom: 86%;
+}
+
+.main_menu_middle {
+    position: absolute;
+    
+    top: 18%;
+    left: 8%;
+    right: 8%;
+    bottom: 18%;
+}
+
+.main_menu_bottom {
+    position: absolute;
+    
+    top: 86%;
+    left: 8%;
+    right: 8%;
+    bottom: 4%;
+}
