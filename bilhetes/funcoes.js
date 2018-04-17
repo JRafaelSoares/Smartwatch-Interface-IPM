@@ -26,7 +26,7 @@ function displayBilhetes() {
     
     for (i; i < stuff.length; i++) {
         if(stuff[i].tirado != 0){
-            lista.innerHTML += '<div class="entry" onclick="addOnHoldDivertimento(' +i +'); window.location.href = \'cancel_ticket.html\';"> <span class="text" align="center">' + stuff[i].nome + '</span> </div>';
+            lista.innerHTML += '<div class="entry" onclick="addOnHoldDivertimento(' +i +'); window.location.href = \'ticket_cancel.html\';"> <span class="text" align="center">' + stuff[i].nome + '</span> </div>';
         }
     }
 }
@@ -43,7 +43,7 @@ function displayDivertimentos(){
     
     for (i; i < stuff.length; i++) {
         if(stuff[i].tirado == 0){
-            lista.innerHTML += '<div class="entry" onclick="addOnHoldDivertimento('+i+'); window.location.href = \'chosen_ticket.html\';"> <span class="text" align="center">'+stuff[i].nome+'</span></div>';
+            lista.innerHTML += '<div class="entry" onclick="addOnHoldDivertimento('+i+'); window.location.href = \'ticket_chosen.html\';"> <span class="text" align="center">'+stuff[i].nome+'</span></div>';
         }
     }
 }

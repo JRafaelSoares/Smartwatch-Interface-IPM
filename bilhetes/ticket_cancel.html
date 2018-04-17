@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style_chosen_ticket.css">
+        <link rel="stylesheet" href="css_files/style_chosen_ticket.css">
         <style type="text/css"></style>
         <script src=divertimentos.js></script>
         <script src=funcoes.js></script>
     </head>
     
     <body style="font-family: sans-serif;" onload="loadDivertimento(); startTime();">
-        <div class="return_button" onclick="window.location.href = 'template_list.html';">
-            <img src="icones-pretos/return-button.png" id="return_button">
+        <img src="icones-pretos/relogio.jpg" id="relogio">
+        <img src="icones-pretos/house-outline.png" id="home">
+        <img src="icones-pretos/power.png" id="power">
+        <div class="return_button" onclick="window.location.href = 'ticket_on_load.html';">
+            <img src="icones-pretos/return.png" id="return_button">
         </div>
         
         <div class="main_menu">
-            <div class="main_menu_top" onclick="window.location.href = 'help_chosen_ticket.html';">
-                <div class="question_mark" onclick="window.location.href = 'help_main_menu_top_left.html';"><img src="../icones-brancos/question.png" id="help"></div>
-            </div>
+            <div class="main_menu_top"></div>
             
             <div class="main_menu_middle">
                 <div class="top_margin"></div>
@@ -26,8 +27,8 @@
                 <div class="time" align="center" id="hora"></div>
                 
                 <div class="bottom_margin">
-                    <div class="tirar_bilhete" align="center" onclick="window.location.href = 'ticket_confirmation.html';">
-                        <span class="text" align="center">Tirar Bilhete</span>
+                    <div class="tirar_bilhete" align="center" onclick="window.location.href = 'ticket_cancel_confirmation.html';">
+                        <span class="text" align="center">Cancelar Bilhete</span>
                     </div>
                 </div>
             </div>

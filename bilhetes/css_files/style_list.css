@@ -1,51 +1,7 @@
-#return_button {
-    height: 2%;
-    
-    position: absolute;
-    
-    left: 25%;
-    top: 0;
-    bottom: 75%;
-    
-    margin: auto;
-}
+/* Outer Icons*/
 
-.main_menu {
-    box-sizing: border-box;
-    
-    width: 1.7859in;
-    max-width: 1.7859in;
-    height: 1.7859in;
-    max-height: 1.7859in;
-    
-    position: relative;
-    
-    background: #F0901B;
-    
-    border-radius: 1.5in;
-    overflow: hidden;
-}
-
-.main_menu_top {
-    position: absolute;
-    
-    top: 4%;
-    left: 8%;
-    right: 8%;
-    bottom: 86%;
-}
-
-.question_mark {
-    position: absolute;
-    
-    top: 0;
-    left: 45%;
-    right: 45%;
-    bottom: 0;
-}
-
-#help {
-    height: 100%;
+#relogio {
+    height: 50%;
     
     position: absolute;
     
@@ -55,6 +11,72 @@
     bottom: 0;
     
     margin: auto;
+}
+
+
+#home {
+    height: 4%;
+    
+    position: absolute;
+    
+    left: 64%;
+    top: 0;
+    bottom: 0%;
+    
+    margin: auto;
+}
+
+#power {
+    height: 4%;
+    
+    position: absolute;
+    
+    left: 62%;
+    top: 0;
+    bottom: -15%;
+    
+    margin: auto;
+}
+#return_button {
+    height: 3%;
+    
+    position: absolute;
+    
+    left: 62%;
+    top: 0;
+    bottom: 15%;
+    
+    margin: auto;
+}
+
+/* Menus */
+.main_menu { 
+    box-sizing: border-box;
+    
+    width: 1.7859in;
+    max-width: 1.7859in;
+    height: 1.7859in;
+    max-height: 1.7859in;
+    
+    position: absolute;
+    
+    top: 38.5%;
+    left: 38%;
+    right: 0;
+    bottom: 0;
+    
+    background: #F0901B;
+    
+    border-radius: 50%;
+}
+
+.main_menu_top {
+    position: absolute;
+    
+    top: 4%;
+    left: 8%;
+    right: 8%;
+    bottom: 86%;
 }
 
 .main_menu_middle {
@@ -92,6 +114,15 @@
     overflow-y: scroll;
 }
 
+.main_menu_bottom {
+    position: absolute;
+    
+    top: 86%;
+    left: 8%;
+    right: 8%;
+    bottom: 4%;
+}
+
 .entry {
     height: 33.33%;
     width: 100%;
@@ -104,15 +135,32 @@
     align-items: center;
 }
 
+/* Inner Icons*/
+
+.question_mark {
+    position: absolute;
+    
+    top: 0;
+    left: 45%;
+    right: 45%;
+    bottom: 0;
+}
+
+#help {
+    height: 100%;
+    
+    position: absolute;
+    
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    
+    margin: auto;
+}
+
+/* Text Definition*/
 .text {
     color: white;
 }
 
-.main_menu_bottom {
-    position: absolute;
-    
-    top: 86%;
-    left: 8%;
-    right: 8%;
-    bottom: 4%;
-}

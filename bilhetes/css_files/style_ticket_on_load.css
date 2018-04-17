@@ -1,16 +1,55 @@
-#return_button {
-    height: 2%;
+/* Outer Icons */
+#relogio {
+    height: 50%;
     
     position: absolute;
     
-    left: 25%;
+    right: 0;
+    left: 0;
     top: 0;
-    bottom: 75%;
+    bottom: 0;
     
     margin: auto;
 }
 
-.main_menu {
+#home {
+    height: 4%;
+    
+    position: absolute;
+    
+    left: 64%;
+    top: 0;
+    bottom: 0%;
+    
+    margin: auto;
+}
+
+#power {
+    height: 4%;
+    
+    position: absolute;
+    
+    left: 62%;
+    top: 0;
+    bottom: -15%;
+    
+    margin: auto;
+}
+
+#return_button {
+    height: 3%;
+    
+    position: absolute;
+    
+    left: 62%;
+    top: 0;
+    bottom: 15%;
+    
+    margin: auto;
+}
+
+/* Menus */
+.main_menu { 
     box-sizing: border-box;
     
     width: 1.7859in;
@@ -18,12 +57,16 @@
     height: 1.7859in;
     max-height: 1.7859in;
     
-    position: relative;
+    position: absolute;
+    
+    top: 38.5%;
+    left: 38%;
+    right: 0;
+    bottom: 0;
     
     background: #F0901B;
     
-    border-radius: 1.5in;
-    overflow: hidden;
+    border-radius: 50%;
 }
 
 .main_menu_top {
