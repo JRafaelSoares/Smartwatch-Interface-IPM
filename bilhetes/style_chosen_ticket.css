@@ -64,10 +64,10 @@
     
     background: #F0901B;
     
-    border-top-left-radius: 36.195336% 50%;
-    border-top-right-radius: 36.195336% 50%;
-    border-bottom-right-radius: 36.195336% 50%;
-    border-bottom-left-radius: 36.195336% 50%;
+    border-top-left-radius: 38.095238% 50%;
+    border-top-right-radius: 38.095238% 50%;
+    border-bottom-right-radius: 38.095238% 50%;
+    border-bottom-left-radius: 38.095238% 50%;
 }
 
 .top_margin {
@@ -80,8 +80,8 @@
     
     background: #242424;
     
-    border-top-left-radius: 36.195336% 100%;
-    border-top-right-radius: 36.195336% 100%;
+    border-top-left-radius: 38.095238% 100%;
+    border-top-right-radius: 38.095238% 100%;
 }
 
 .middle_margin {
@@ -90,22 +90,22 @@
     top: 50%;
     left: 0;
     right: 0;
-    bottom: calc(37.5% + 3pt);
+    bottom: calc(37.5% + 2pt);
     
     background: #242424;
     
-    border-bottom-left-radius: 1.587708% 100%;
-    border-bottom-right-radius: 1.587708% 100%;
+    border-bottom-left-radius: 1.016133% 100%;
+    border-bottom-right-radius: 1.016133% 100%;
 }
 
-.middle_margin_curved_edges {
+.middle_margin_rounded_corners {
     position: absolute;
     
     top: calc(62.5% - 3pt);
-    left: 0;
-    right: 0;
+    left: 0.570%;
+    right: 0.570%;
     bottom: 37.5%;
-    
+
     background: #242424;
     
     border-bottom-left-radius: 3pt;
@@ -147,8 +147,8 @@
 .tirar_bilhete {
     position: absolute;
     
-    left: 1.587708%;
-    right: 1.587708%;
+    left: 1.209682%;
+    right: 1.209682%;
     top: 12%;
     bottom: 0;
     
@@ -156,8 +156,8 @@
 
     border-top-left-radius: 3pt;
     border-top-right-radius: 3pt;
-    border-bottom-right-radius: 38.276259% 100%;
-    border-bottom-left-radius: 38.276259% 100%;
+    border-bottom-right-radius: 37.173576% 100%;
+    border-bottom-left-radius: 37.173576% 100%;
     
     display: flex;
     align-items: center;
