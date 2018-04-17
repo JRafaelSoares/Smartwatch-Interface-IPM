@@ -35,6 +35,19 @@
     
     margin: auto;
 }
+
+#return_button {
+    height: 3%;
+    
+    position: absolute;
+    
+    left: 62%;
+    top: 0;
+    bottom: 15%;
+    
+    margin: auto;
+}
+
 /* Menus */
 
 .main_menu { 
