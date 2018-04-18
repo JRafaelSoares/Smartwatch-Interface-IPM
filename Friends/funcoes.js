@@ -47,7 +47,7 @@ function displayFavorites(){
     for (i; i < amigos.length; i++) {
         if(amigos[i].favorito == 1){
             console.log("ADICIONEI");
-            lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend('+i+'); window.location.href = \'Favorite.html\';"> <span class="text" align="center">'+amigos[i].nome+'</span></div>';
+            lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend('+i+'); window.location.href = \'friend_favorite.html\';"> <span class="text" align="center">'+amigos[i].nome+'</span></div>';
         }
     }
 }

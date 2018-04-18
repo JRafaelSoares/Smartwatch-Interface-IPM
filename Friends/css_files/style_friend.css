@@ -1,22 +1,82 @@
-#return_button {
-    height: 2%;
+/* Outer Icons */
+#relogio {
+    height: 4in;
+    max-height: 4in;
     
     position: absolute;
     
-    left: 25%;
+    right: 0;
+    left: 0;
     top: 0;
-    bottom: 75%;
+    bottom: 0;
     
     margin: auto;
 }
 
-.main_menu {
+#home {
+    height: 10%;
+    
+    position: absolute;
+    
+    left: 106%;
+    top: 0;
+    bottom: 0%;
+    
+    margin: auto;
+}
+
+#power {
+    height: 10%;
+    
+    position: absolute;
+    
+    left: 100%;
+    top: 35%;
+    bottom: 0;
+    
+    margin: auto;
+}
+
+#return_button {
+    height: 10%;
+    
+    position: absolute;
+    
+    left: 100%;
+    top: 0;
+    bottom: 35%;
+    
+    margin: auto;
+}
+
+.main {
+    width: 3in;
+    max-width: 3in;
+    height: 3.5in;
+    max-height: 3.5in;
+    
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.main_menu { 
+    box-sizing: border-box;
+    
     width: 1.7859in;
     max-width: 1.7859in;
     height: 1.7859in;
     max-height: 1.7859in;
     
-    position: relative;
+    position: absolute;
+    
+    top: 25%;
+    left: 35%;
+    right: 0;
+    bottom: 0;
     
     background: #2276D1;
     
@@ -160,4 +220,25 @@
     left: 8%;
     right: 8%;
     bottom: 4%;
+}
+
+.confirmation_container {
+    
+    padding-left: 10%;
+    padding-right: 10%;
+    
+    position: absolute;
+    
+    left: 8%;
+    right: 8%;
+    top: 18%;
+    bottom: 18%;
+    background: green;/*#242424*/
+    
+    border-top-left-radius: 1.5in;
+    border-top-right-radius: 1.5in;
+    border-bottom-right-radius: 1.5in;
+    border-bottom-left-radius: 1.5in;
+    
+    overflow: hidden;
 }

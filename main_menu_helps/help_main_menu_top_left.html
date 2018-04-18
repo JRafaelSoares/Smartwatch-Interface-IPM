@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style_help_main_menu_top_right.css">
+        <link rel="stylesheet" href="style_help_main_menu_top_left.css">
         <style type="text/css"></style>
-        <script src=divertimentos.js></script>
         <script src=funcoes.js></script>
     </head>
     
-    <body style="font-family: sans-serif" onload="loadAllStuff(getCancelarBilhete()); loadAllDivertimentos(getDivertimentos()); startTime();">
+    <body style="font-family: sans-serif" onload="startTime();">
         <div class="main">
             <img src="relogio.jpg" id="relogio">
-            <img onclick = "window.location.href='template_main_menu.html'" src="icones-pretos/house-outline.png" id="home">
-            <img src="icones-pretos/power.png" id="power" onclick="window.location.href = 'locked.html'">
-            <div class="return_button" onclick="window.location.href = 'help_main_menu_top_left.html';">
+            <img onclick = "window.location.href='../template_main_menu.html'" src="icones-pretos/house-outline.png" id="home">
+            <img src="icones-pretos/power.png" id="power" onclick="window.location.href = '../locked.html'">
+            <div class="return_button" onclick="window.location.href = '../template_main_menu.html';">
                 <img src="icones-pretos/return.png" id="return_button">
             </div>
-            <div class="main_menu" onclick="window.location.href = 'help_main_menu_bottom_left.html';">
+            <div class="main_menu" onclick="window.location.href = 'help_main_menu_top_right.html';">
                 <div class="main_menu_top">
                     <div class="question_mark"><img src="icones-brancos/question.png" id="help"></div>
                 </div>
@@ -24,16 +23,16 @@
                     <div class="margin"></div>
                     <div class="main_menu_button_top">
                         <div class="main_menu_button_top_left" align="center">
-                            <div class="text_position"><span class="text">Amigos</span></div>
+                            <img src="icones-brancos/give-money.png" id="payments">
                         </div>
                         <div class="main_menu_button_top_right" align="center">
-                            <img src="icones-brancos/friends.png" id="friends">
+                            <div class="text_position"><span class="text">Pagar</span></div>
                         </div>
                     </div>
 
                     <div class="main_menu_button_bottom">
-                        <div class="text_position2"><span class="text">Encontrar ou</span></div>
-                        <div class="text_position3"><span class="text">adicionar</span></div>
+                        <div class="text_position2"><span class="text">Pagamentos e</span></div>
+                        <div class="text_position3"><span class="text">transações</span></div>
                         <div class="main_menu_button_bottom_left" align="center"></div>
                         <div class="main_menu_button_bottom_right"></div>
                     </div>
