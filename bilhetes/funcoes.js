@@ -26,11 +26,15 @@ function displayBilhetes() {
     console.log(bilhetes);
     lista = document.getElementById("lista");
     var i = 0;
-    
+    var empty = 0;
     for (i; i < stuff.length; i++) {
         if(stuff[i].tirado != 0){
             lista.innerHTML += '<div class="entry" onclick="addOnHoldDivertimento(' +i +'); window.location.href = \'ticket_cancel.html\';"> <span class="text" align="center">' + stuff[i].nome + '</span> </div>';
+            empty = 1;
         }
+    }
+    if(empty == 0){
+        lista.innerHTML = '<div class="text_position"><span class="text">Nao existem</span></div><div class="text_position2"><span class="text">bilhetes reservados</span></div>'
     }
 }
 function displayDivertimentos(){
