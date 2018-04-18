@@ -10,41 +10,41 @@
     </head>
     <body style="font-family: sans-serif" onload="loadAllStuff(getCancelarBilhete()); loadAllDivertimentos(getDivertimentos()); startTime();loadOnDisplay(getOnDisplay()); loadAllFriends(getAllFriends());">
         <div class="main">
-        <img src="relogio.jpg" id="relogio">
-        <img src="icones-pretos/house-outline.png" id="home">
-        <img src="icones-pretos/power.png" id="power">
-        <div class="return_button">
-            <img src="icones-pretos/return.png" id="return_button">
-        </div>
-        
-        <div class="main_menu">
-            <div class="main_menu_top">
-                <div class="question_mark" onclick="window.location.href = 'help_main_menu_top_left.html';"><img src="icones-brancos/question.png" id="help"></div>
+            <img src="relogio.jpg" id="relogio">
+            <img src="icones-pretos/house-outline.png" id="home">
+            <img src="icones-pretos/power.png" id="power">
+            <div class="return_button">
+                <img src="icones-pretos/return.png" id="return_button">
             </div>
-            
-            <div class="main_menu_middle">
-                <div class="main_menu_button_top">
-                    <div class="main_menu_button_top_left" align="center">
-                        <img src="icones-brancos/give-money.png" id="payments">
+
+            <div class="main_menu">
+                <div class="main_menu_top">
+                    <div class="question_mark" onclick="window.location.href = 'help_main_menu_top_left.html';"><img src="icones-brancos/question.png" id="help"></div>
+                </div>
+
+                <div class="main_menu_middle">
+                    <div class="main_menu_button_top">
+                        <div class="main_menu_button_top_left" align="center">
+                            <img src="icones-brancos/give-money.png" id="payments">
+                        </div>
+                        <div class="main_menu_button_top_right" onclick="window.location.href = 'Friends/template_secondary_menu.html'">
+                            <img src="icones-brancos/friends.png" id="friends">
+                        </div>
                     </div>
-                    <div class="main_menu_button_top_right" onclick="window.location.href = 'Friends/template_secondary_menu.html'">
-                        <img src="icones-brancos/friends.png" id="friends">
+
+                    <div class="main_menu_button_bottom">
+                        <div class="main_menu_button_bottom_left" onclick="window.location.href = 'bilhetes/ticket_menu.html';">
+                            <img src="icones-brancos/tickets.png" id="tickets">
+                        </div>
+                        <div class="main_menu_button_bottom_right" onclick="window.location.href='Definicoes/template_secondary_menu.html'">
+                            <img src="icones-brancos/settings.png" id="settings">
+                        </div>
                     </div>
                 </div>
 
-                <div class="main_menu_button_bottom">
-                    <div class="main_menu_button_bottom_left" onclick="window.location.href = 'bilhetes/ticket_menu.html';">
-                        <img src="icones-brancos/tickets.png" id="tickets">
-                    </div>
-                    <div class="main_menu_button_bottom_right" onclick="window.location.href='Definicoes/template_secondary_menu.html'">
-                        <img src="icones-brancos/settings.png" id="settings">
-                    </div>
+                <div class="main_menu_bottom" align="center" style="color: white;" id="time">
                 </div>
             </div>
-
-            <div class="main_menu_bottom" align="center" style="color: white;" id="time">
-            </div>
-        </div>
         </div>
     </body>
 </html>

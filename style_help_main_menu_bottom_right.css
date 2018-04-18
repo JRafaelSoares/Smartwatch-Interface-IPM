@@ -1,6 +1,7 @@
 /* Outer Icons */
 #relogio {
-    height: 50%;
+    height: 4in;
+    max-height: 4in;
     
     position: absolute;
     
@@ -13,11 +14,11 @@
 }
 
 #home {
-    height: 4%;
+    height: 10%;
     
     position: absolute;
     
-    left: 64%;
+    left: 106%;
     top: 0;
     bottom: 0%;
     
@@ -25,28 +26,45 @@
 }
 
 #power {
-    height: 4%;
+    height: 10%;
     
     position: absolute;
     
-    left: 62%;
-    top: 0;
-    bottom: -15%;
+    left: 100%;
+    top: 35%;
+    bottom: 0;
     
     margin: auto;
 }
 
 #return_button {
-    height: 3%;
+    height: 10%;
     
     position: absolute;
     
-    left: 62%;
+    left: 100%;
     top: 0;
-    bottom: 15%;
+    bottom: 35%;
     
     margin: auto;
 }
+
+.main {
+    width: 3in;
+    max-width: 3in;
+    height: 3.5in;
+    max-height: 3.5in;
+    
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Menus */
+
 .main_menu { 
     box-sizing: border-box;
     
@@ -57,14 +75,14 @@
     
     position: absolute;
     
-    top: 38.5%;
-    left: 38%;
+    top: 25%;
+    left: 35%;
     right: 0;
     bottom: 0;
     
     background: #242424;
     
-    border-radius: 1.5in;
+    border-radius: 50%;
 }
 
 .main_menu_top {
@@ -238,8 +256,8 @@
 .text_position2 {
     position: absolute;
     
-    top: 15%;
-    left: 18%;
+    top:35%;
+    left: 20%;
     
     justify-content: center;
     align-items: center;

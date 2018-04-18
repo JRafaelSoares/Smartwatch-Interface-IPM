@@ -8,37 +8,40 @@
     </head>
     
     <body style="font-family: sans-serif" onload="loadAllStuff(getCancelarBilhete()); loadAllDivertimentos(getDivertimentos()); startTime();">
-        <img src="relogio.jpg" id="relogio">
-        <img onclick = "window.location.href='../template_main_menu.html'" src="icones-pretos/house-outline.png" id="home">
-        <img src="icones-pretos/power.png" id="power">
-        <div class="return_button" onclick="window.location.href = 'template_main_menu.html';">
-            <img src="icones-pretos/return.png" id="return_button">
-        </div>
-        <div class="main_menu" onclick="window.location.href = 'template_main_menu.html';">
-            <div class="main_menu_top">
-                <div class="question_mark"><img src="icones-brancos/question.png" id="help"></div>
+        <div class="main">
+            <img src="relogio.jpg" id="relogio">
+            <img onclick = "window.location.href='template_main_menu.html'" src="icones-pretos/house-outline.png" id="home">
+            <img src="icones-pretos/power.png" id="power">
+            <div class="return_button" onclick="window.location.href = 'template_main_menu.html';">
+                <img src="icones-pretos/return.png" id="return_button">
             </div>
-            
-            <div class="main_menu_middle"> 
-                <div class="margin"></div>
-                <div class="main_menu_button_top">
-                    <div class="main_menu_button_top_left" align="center">
+            <div class="main_menu" onclick="window.location.href = 'template_main_menu.html';">
+                <div class="main_menu_top">
+                    <div class="question_mark"><img src="icones-brancos/question.png" id="help"></div>
+                </div>
+
+                <div class="main_menu_middle"> 
+                    <div class="margin"></div>
+                    <div class="main_menu_button_top">
+                        <div class="text_position2"><span class="text">to be defined</span></div>
+                        <div class="main_menu_button_top_left" align="center">
+                        </div>
+                        <div class="main_menu_button_top_right" align="center">
+                        </div>
                     </div>
-                    <div class="main_menu_button_top_right" align="center">
+
+                    <div class="main_menu_button_bottom">
+                        <div class="main_menu_button_bottom_left" align="center">
+
+                        </div>
+                        <div class="main_menu_button_bottom_right">
+                            <img src="icones-brancos/settings.png" id="settings">
+                        </div>
                     </div>
                 </div>
 
-                <div class="main_menu_button_bottom">
-                    <div class="main_menu_button_bottom_left" align="center">
-                        
-                    </div>
-                    <div class="main_menu_button_bottom_right">
-                        <img src="icones-brancos/settings.png" id="settings">
-                    </div>
+                <div class="main_menu_bottom" align="center" style="color: white;" id="time">
                 </div>
-            </div>
-
-            <div class="main_menu_bottom" align="center" style="color: white;" id="time">
             </div>
         </div>
     </body>
