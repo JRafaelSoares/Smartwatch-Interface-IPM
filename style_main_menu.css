@@ -1,6 +1,7 @@
 /* Outer Icons */
 #relogio {
-    height: 50%;
+    height: 4in;
+    max-height: 4in;
     
     position: absolute;
     
@@ -48,6 +49,22 @@
     margin: auto;
 }
 
+.main {
+    width: 3in;
+    max-width: 3in;
+    height: 3.5in;
+    max-height: 3.5in;
+    
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    border: 2px solid #242424;
+}
+
 /* Menus */
 
 .main_menu { 
@@ -60,8 +77,8 @@
     
     position: absolute;
     
-    top: 38.5%;
-    left: 38%;
+    top: 25%;
+    left: 35%;
     right: 0;
     bottom: 0;
     
