@@ -5,6 +5,16 @@
         <style type="text/css"></style>
         <script src=divertimentos.js></script>
         <script src=funcoes.js></script>
+        <script src=jquery-3.3.1.min.js></script>
+        <script>
+            $(document).ready(function() {
+                $('#PopUp').click(function() {
+                    console.log("ola");
+                    $('#myPopup').fadeIn(800);
+                    $('#myPopup').fadeOut('slow');
+            });
+        });
+        </script>
     </head>
     
     <body style="font-family: sans-serif" onload="displayDivertimentos(); startTime();">
@@ -23,6 +33,14 @@
 
                 <div class="main_menu_middle">
                     <div class="list" id="lista">
+                    </div>
+                </div>
+                
+                <div class="popup" id="myPopup">
+                    <div class="confirmation_container">
+                        <div class = "confirmation">
+                            <span class="text">Confirmado</span>
+                        </div> 
                     </div>
                 </div>
 

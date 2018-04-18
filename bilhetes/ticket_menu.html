@@ -6,7 +6,7 @@
         <script src=funcoes.js></script>
     </head>
     
-    <body style="font-family: sans-serif" onload="startTime();">
+    <body style="font-family: sans-serif" onload="startTime(); loadTicketNumber();">
         <div class="main">
             <img src="icones-pretos/relogio.jpg" id="relogio">
             <img onclick = "window.location.href='../template_main_menu.html'" src="icones-pretos/house-outline.png" id="home">
@@ -21,12 +21,11 @@
                 </div>
 
                 <div class="main_menu_middle">
-                    <div class="main_menu_button_top" onclick="window.location.href = 'ticket_list.html';">
-                        <span class="text"> Tirar Bilhete</span>
+                    <div class="main_menu_button_top" id="atividade" onclick="window.location.href = 'ticket_list.html';">
+                        <span class="text">Atividades</span>
                     </div>
 
-                    <div class="main_menu_button_bottom" onclick="window.location.href = 'ticket_on_load.html';">
-                        <span class="text">Bilhetes</span>
+                    <div class="main_menu_button_bottom" id="bilhete" onclick="window.location.href = 'ticket_on_load.html';">
                     </div>
                 </div>
 

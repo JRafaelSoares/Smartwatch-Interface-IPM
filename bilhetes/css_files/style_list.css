@@ -180,3 +180,55 @@
     color: white;
 }
 
+.popup{
+    display: none;
+    
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #F0901B;/*#242424*/
+    
+    border-top-left-radius: 1.5in;
+    border-top-right-radius: 1.5in;
+    border-bottom-right-radius: 1.5in;
+    border-bottom-left-radius: 1.5in;
+    
+    overflow: hidden;
+}
+
+.confirmation {
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirmation_container {
+    
+    padding-left: 10%;
+    padding-right: 10%;
+    
+    position: absolute;
+    
+    left: 8%;
+    right: 8%;
+    top: 18%;
+    bottom: 18%;
+    background: green;/*#242424*/
+    
+    border-top-left-radius: 1.5in;
+    border-top-right-radius: 1.5in;
+    border-bottom-right-radius: 1.5in;
+    border-bottom-left-radius: 1.5in;
+    
+    overflow: hidden;
+}

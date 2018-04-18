@@ -49,8 +49,11 @@ function displayDivertimentos(){
     var i = 0;
     
     for (i; i < stuff.length; i++) {
-        if(stuff[i].tirado == 0){
+        if(stuff[i].tirado==0){
             lista.innerHTML += '<div class="entry" onclick="addOnHoldDivertimento('+i+'); window.location.href = \'ticket_chosen.html\';"> <span class="text" align="center">'+stuff[i].nome+'</span></div>';
+        }
+        if(stuff[i].tirado!=0){
+            lista.innerHTML += '<div class="entry" id="PopUp"> <span class="text" align="center">'+stuff[i].nome+'</span></div>';
         }
     }
 }
@@ -83,7 +86,6 @@ function loadDivertimento() {
 }
 
 function addBilhete() {
-    console.log("ola");
     var stuffStr = localStorage.getItem("Cenas");
     
     var stuff = JSON.parse(stuffStr);
@@ -100,6 +102,7 @@ function addBilhete() {
         for (i; i<bilhetes.length; i++){
             if (bilhetes[i].nome == stuff[0].nome){
                 bilhetes[i].tirado = 1;
+                bilhetes[i].hora = stuff[0].hora;
             } 
         }
     }
@@ -141,6 +144,59 @@ function startTime() {
 function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
+}
+
+function loadTicketNumber(){    
+    var bilhetes = document.getElementById('bilhete');
+    
+    var numBilhetesStr = localStorage.getItem("Divertimentos");
+    
+    var numBilhetes = JSON.parse(numBilhetesStr);
+    
+    var i = 0;
+    var count = 0;
+    for(i; i<numBilhetes.length; i++){
+        if(numBilhetes[i].tirado == 1){ count++;}
+    }
+    
+    bilhetes.innerHTML = "<span class='text'>Bilhetes (" + count + ")</span>";
+    
+}
+
+function divertimentoTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    if(h < 19){
+        h+= Math.floor(Math.random() * 3);
+    }
+    var k = Math.floor(Math.random() * 60)
+    m+=k;
+    if ( m >=60){
+        h++;
+        m-=60;
+    }
+    m = checkTime(m);
+    
+    var j = h + ":" + m;
+    
+    return j;
+}
+
+function loadTime(){
+    var time = divertimentoTime();
+    
+    var stuffStr = localStorage.getItem("Cenas");
+    
+    var stuff = JSON.parse(stuffStr);
+    
+    var bilhetesStr = localStorage.getItem("Divertimentos");
+    
+    var bilhetes = JSON.parse(bilhetesStr);
+    
+    stuff[0].hora= time;
+    
+    localStorage.setItem("Cenas", JSON.stringify(stuff));
 }
 
 
