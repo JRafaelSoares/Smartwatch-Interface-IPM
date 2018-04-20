@@ -195,3 +195,12 @@
     right: 8%;
     bottom: 4%;
 }
+
+#warning {
+    height: 50%;    
+    
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}

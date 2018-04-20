@@ -29,13 +29,40 @@ function displayBilhetes() {
     var empty = 0;
     for (i; i < stuff.length; i++) {
         if(stuff[i].tirado != 0){
-            lista.innerHTML += '<div class="entry" onclick="addOnHoldDivertimento(' +i +'); window.location.href = \'ticket_cancel.html\';"> <span class="text" align="center">' + stuff[i].nome + '</span> </div>';
+            
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var hora = parseInt(stuff[i].hora[0] + stuff[i].hora[1]);
+            var min = parseInt(stuff[i].hora[3] + stuff[i].hora[4]);
+            
+            console.log(min < m);
+            console.log(hora == h);
+            
+            if(hora < h || (hora == h && min < m)){//missed it!
+                stuff[i].tirado = 0;
+                continue;
+            }
             empty = 1;
+
+            if((hora == h && min-m < 15) || (hora > h && min+60-m < 15)){ //red
+                lista.innerHTML += '<div class="entry" onclick="addOnHoldDivertimento(' +i +'); window.location.href = \'ticket_cancel.html\';"> <span class="text" align="center">' + stuff[i].nome + "\xa0" + '</span><img src="../icones-cores/warning_red.png" id="warning"></div>';
+            }
+            else
+                if((hora == h && min-m < 30) || (hora > h && min+60-m < 30)){//yellow
+                    lista.innerHTML += '<div class="entry" onclick="addOnHoldDivertimento(' +i +'); window.location.href = \'ticket_cancel.html\';"> <span class="text" align="center">' + stuff[i].nome + "\xa0" + '</span><img src="../icones-cores/warning_yellow.png" id="warning"></div>';
+                }
+                 else{//green
+                     lista.innerHTML += '<div class="entry" onclick="addOnHoldDivertimento(' +i +'); window.location.href = \'ticket_cancel.html\';"> <span class="text" align="center">' + stuff[i].nome + "\xa0" + '</span></div>';
+                 }   
         }
     }
+    console.log(bilhetes);
+    localStorage.setItem("Divertimentos", JSON.stringify(stuff));
     if(empty == 0){
         lista.innerHTML = '<div class="text_position"><span class="text">Nao existem</span></div><div class="text_position2"><span class="text">bilhetes reservados</span></div>'
     }
+    console.log(bilhetes);
 }
 function displayDivertimentos(){
     "use strict";
@@ -50,6 +77,7 @@ function displayDivertimentos(){
     
     for (i; i < stuff.length; i++) {
         if(stuff[i].tirado==0){
+            console.log(i);
             lista.innerHTML += '<div class="entry" onclick="addOnHoldDivertimento('+i+'); window.location.href = \'ticket_chosen.html\';"> <span class="text" align="center">'+stuff[i].nome+'</span></div>';
         }
         if(stuff[i].tirado!=0){
