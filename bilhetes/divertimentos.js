@@ -6,7 +6,7 @@
 
 var divertis = { divertimentos: [
         { "nome": "Slide", "hora": "11:45", tirado: 0},
-        { "nome": "Carrosel", "hora": "15:45", tirado: 0},
+        { "nome": "Carrossel", "hora": "15:45", tirado: 0},
         { "nome": "Roda Gigante", "hora": "16:45", tirado: 0},
         { "nome": "Rapel", "hora": "23:50", tirado: 0}]};
 
