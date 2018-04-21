@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html>
     <head>
-        <link rel="stylesheet" href="css_files/style_help_ticket_on_load.css">
+        <link rel="stylesheet" href="css_files/style_help_ticket_on_load_part2.css">
         <style type="text/css"></style>
         <script src=divertimentos.js></script>
         <script src=funcoes.js></script>
@@ -12,20 +12,21 @@
             <img src="icones-pretos/relogio.jpg" id="relogio">
             <img onclick = "window.location.href='../template_main_menu.html'" src="icones-pretos/house-outline.png" id="home">
             <img src="icones-pretos/power.png" id="power" onclick="window.location.href = '../locked.html'">
-            <div class="return_button" onclick="window.location.href = 'ticket_on_load.html';">
+            <div class="return_button" onclick="window.location.href = 'help_ticket_on_load.html';">
                 <img src="icones-pretos/return.png" id="return_button">
             </div>
 
-            <div class="main_menu" onclick="window.location.href = 'help_ticket_on_load_part2.html';">
+            <div class="main_menu" onclick="window.location.href = 'ticket_on_load.html';">
                 <div class="main_menu_top">
                     <div class="question_mark"><img src="../icones-brancos/question.png" id="help"></div>
                 </div>
 
                 <div class="main_menu_middle">
-                    <div class="text_position1"><span class="text">Visualizar</span></div>
-                    <div class="text_position2"><span class="text">bilhetes retirados:</span></div>
-                    <div class="text_position3"><span class="text">Ver hora estimada</span></div>
-                    <div class="text_position4"><span class="text">ou cancelar.</span></div>
+                    <div class="text_position"><span class="text">Aviso de tempo:</span></div>
+                    <img src="../icones-cores/warning_red.png" id="warning_red">
+                    <div class="text_position1"><span class="text">15 min</span></div>
+                    <img src="../icones-cores/warning_yellow.png" id="warning_yellow">
+                    <div class="text_position2"><span class="text">30 min</span></div>
                 </div>
 
                 <div class="main_menu_bottom" align="center" style="color: white;" id="time">
