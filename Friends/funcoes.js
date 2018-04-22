@@ -30,7 +30,6 @@ function displayFriends() {
     
     for (i; i < amigos.length; i++) {
             lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend(' +i +'); window.location.href = \'Friend.html\';"> <span class="text" align="center">' + amigos[i].nome + '</span> </div>';
-        
     }
 }
 function displayFavorites(){
@@ -40,15 +39,21 @@ function displayFavorites(){
         
     var amigos = JSON.parse(amigosStr);
     
+    var empty = 0;
+    
     console.log(amigos[0].favorito);
     var lista = document.getElementById("lista");
     var i = 0;
     
     for (i; i < amigos.length; i++) {
         if(amigos[i].favorito == 1){
+            empty = 1;
             console.log("ADICIONEI");
             lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend('+i+'); window.location.href = \'friend_favorite.html\';"> <span class="text" align="center">'+amigos[i].nome+'</span></div>';
         }
+    }
+    if(empty == 0){
+        lista.innerHTML = '<div class="text_position"><span class="text">Nao existem</span></div><div class="text_position2"><span class="text">bilhetes reservados</span></div>'
     }
 }
 
