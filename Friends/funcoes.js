@@ -98,7 +98,7 @@ function loadFindFriend() {
     
     var name = document.getElementById("nome");
     
-    name.innerHTML = '<span class="text" align="center">' +friend[0].nome + '</span>';
+    name.innerHTML = '<span class="text" align="center">' +friend[0].nome + ' ' + friend[0].km + 'km</span>';
 }
 
 function addFavorite() {
