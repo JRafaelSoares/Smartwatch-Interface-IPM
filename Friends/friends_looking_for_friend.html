@@ -7,7 +7,7 @@
         <script src=funcoes.js></script>
     </head>
     
-    <body style="font-family: sans-serif" onload="displayFriends(); startTime();">
+    <body style="font-family: sans-serif" onload="startTime();">
         <div class="main">
             <img src="relogio.jpg" id="relogio">
             <img src="icones-pretos/house-outline.png" id="home" onclick="window.location.href = '../template_main_menu.html'">
@@ -19,10 +19,8 @@
             <div class="main_menu">
                 <div class="main_menu<_top"></div>
 
-                <div class="main_menu_middle">
-                    <div class="list" id="lista">
-                        <div class="entry" onclick="window.location.href = 'friends_looking_for_friend.html';"> <span class="text" align="center">Adicionar Amigo</span> </div>
-                    </div>
+                <div class="main_menu_middle" onclick="window.location.href = 'friend_confirmation.html'">
+                    <span class="text" align="center">Aproxime relogio ao do seu amigo para adicionar</span>
                 </div>
 
                 <div class="main_menu_bottom" align="center" style="color: white;" id="time">

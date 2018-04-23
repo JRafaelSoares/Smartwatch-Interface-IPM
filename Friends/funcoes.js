@@ -27,9 +27,15 @@ function displayFriends() {
     var lista = document.getElementById("lista");
     
     var i = 0;
-    
+    var j = 0;
     for (i; i < amigos.length; i++) {
+        if(amigos[i].added == 1){
+            j++;
             lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend(' +i +'); window.location.href = \'Friend.html\';"> <span class="text" align="center">' + amigos[i].nome + '</span> </div>';
+        }
+    }
+    if(j==0){
+        lista.innerHTML += '<span class="text" align="center">Nenhum amigo adicionado!</span>';
     }
 }
 function displayFavorites(){
@@ -53,7 +59,7 @@ function displayFavorites(){
         }
     }
     if(empty == 0){
-        lista.innerHTML = '<div class="text_position"><span class="text">Nao existem</span></div><div class="text_position2"><span class="text">bilhetes reservados</span></div>'
+        lista.innerHTML = '<div class="text_position"><span class="text">Nao existem</span></div><div class="text_position2"><span class="text">favoritos</span></div>'
     }
 }
 
@@ -71,6 +77,16 @@ function addOnHoldFriend(i) {
 }
 
 function loadFriend() {
+    var friendStr = localStorage.getItem("Display");
+    
+    var friend = JSON.parse(friendStr);
+    
+    var name = document.getElementById("nome");
+    
+    name.innerHTML = '<span class="text" align="center">' +friend[0].nome + '</span>';
+}
+
+function loadFindFriend() {
     var friendStr = localStorage.getItem("Display");
     
     var friend = JSON.parse(friendStr);
@@ -124,6 +140,50 @@ function removeFavorite(){
     }
     
     localStorage.setItem("Friends", JSON.stringify(friends));
+}
+
+function addFriend() {
+    var displayStr = localStorage.getItem("Display");
+    
+    var display = JSON.parse(displayStr);
+    
+    var friendsStr = localStorage.getItem("Friends");
+    
+    var friends = JSON.parse(friendsStr);
+    
+    var i = 0;
+    
+    for (i; i<friends.length; i++){
+        if (friends[i].nome == display[0].nome){
+            friends[i].added = 1;
+        } 
+    }
+    
+    localStorage.setItem("Friends", JSON.stringify(friends));
+}
+
+function loadUnaddedFriend(){
+    var friendsStr = localStorage.getItem("Friends");
+    
+    var friends = JSON.parse(friendsStr);
+    
+    var i=0;
+    var j=0;
+    
+    var name = document.getElementById("nome");
+    
+    for(i;i<friends.length;i++){
+        if(friends[i].added == 0){
+            addOnHoldFriend(i);
+            j++;
+            loadFindFriend();
+            break;
+        }
+    }
+    if(j==0){
+        console.log("lol");
+        name.innerHTML = '<span class="text" align="center">Não ha mais amigos a adicionar...</span>';
+    }
 }
 
 function startTime() {

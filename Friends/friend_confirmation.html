@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <link rel="stylesheet" href="css_files/style_friend_confirmation.css">
+        <style type="text/css"></style>
+        
+        <script src="jquery-3.3.1.min.js"></script>
+        <script src=amigos.js></script>
+        <script src=funcoes.js></script>
+        <script>
+            $(document).ready(function() {
+                $('#popActivator').click(function() {
+                    addFriend();
+                    $('#myPopup').fadeIn(800);
+                    $('#myPopup').fadeOut('slow', function(){$(location).attr('href', 'friends_menu.html');});
+            });
+        });
+            
+        </script>
+    </head>
+    
+    <body style="font-family: sans-serif;" onload="loadUnaddedFriend();startTime();">
+        <div class="main">
+            <img src="icones-pretos/relogio.jpg" id="relogio">
+            <img onclick = "window.location.href='../template_main_menu.html'" src="icones-pretos/house-outline.png" id="home">
+            <img src="icones-pretos/power.png" id="power" onclick="window.location.href = '../locked.html'">
+            <div class="return_button" onclick="window.location.href = 'friends_looking_for_friend.html';">
+                <img src="icones-pretos/return.png" id="return_button">
+            </div>
+
+            <div class="main_menu">
+                <div class="main_menu_top"></div>
+
+                <div class="main_menu_middle">
+                    <div class="top_margin"></div>
+                    <div class="middle_margin"></div>
+                    <div class="middle_margin_rounded_corners"></div>
+
+                    <div class="top_middle" id="nome">
+                        <span class="text" align="center">Retirar bilhete?</span>
+                    </div>
+
+                    <div class="yes" align="center" id="popActivator">
+                        <span class="text_yes" align="center">Sim</span>
+                    </div>
+
+                    <div class="no" align="center" onclick="window.location.href = 'friends_list.html';">
+                        <span class="text_no" align="center">Não</span>
+                    </div>
+
+                </div>
+
+                <div class="popup" id="myPopup">
+                    <div class="confirmation_container">
+                        <div class = "confirmation">
+                            <span class="text">Confirmado</span>
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="main_menu_bottom" align="center" style="color: white;" id="time">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
