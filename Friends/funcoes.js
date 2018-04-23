@@ -31,7 +31,12 @@ function displayFriends() {
     for (i; i < amigos.length; i++) {
         if(amigos[i].added == 1){
             j++;
-            lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend(' +i +'); window.location.href = \'Friend.html\';"> <span class="text" align="center">' + amigos[i].nome + '</span> </div>';
+            if(amigos[i].favorito == 0){
+                lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend(' +i +'); window.location.href = \'Friend.html\';"> <span class="text" align="center">' + amigos[i].nome + '</span> </div>';
+            }
+            else{
+                lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend(' +i +'); window.location.href = \'friend_favorite.html\';"> <span class="text" align="center">' + amigos[i].nome + '</span> </div>';
+            }
         }
     }
     if(j==0){
