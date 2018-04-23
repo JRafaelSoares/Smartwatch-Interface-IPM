@@ -181,9 +181,24 @@ function loadUnaddedFriend(){
         }
     }
     if(j==0){
-        console.log("lol");
         name.innerHTML = '<span class="text" align="center">Não ha mais amigos a adicionar...</span>';
     }
+}
+
+function check_add_friend(){
+    var friendsStr = localStorage.getItem("Friends");
+    
+    var friends = JSON.parse(friendsStr);
+    
+    var i=0;
+    var j=0;
+    
+    for(i;i<friends.length;i++){
+        if(friends[i].added == 0){
+            j=1;
+        }
+    }
+    return j;
 }
 
 function startTime() {
