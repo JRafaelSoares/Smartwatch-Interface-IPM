@@ -100,7 +100,7 @@
     right: 8%;
     bottom: 18%;
     
-    background: #242424;
+    background: #2276D1;
     
     border-top-left-radius: 38.095238% 50%;
     border-top-right-radius: 38.095238% 50%;
@@ -120,22 +120,7 @@
     
     left: 0;
     right: 0;
-    top: 12%;
-    bottom: 68.75%;
-    
-    
-    border-bottom: 2px solid #2276D1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.time {
-    position: absolute;
-    
-    left: 0;
-    right: 0;
-    top: 31.25%;
+    top: 0;
     bottom: 37.5%;
     
     display: flex;
@@ -143,7 +128,7 @@
     justify-content: center;
 }
 
-.tirar_bilhete {
+.encontrar {
     position: absolute;
     
     left: 0;
@@ -153,8 +138,10 @@
     
     background: #242424;
 
-    border-bottom-right-radius: 40% 112%;
-    border-bottom-left-radius: 40% 112%;
+    border-top-left-radius: 3pt;
+    border-top-right-radius: 3pt;
+    border-bottom-right-radius: 38.095238% 100%;
+    border-bottom-left-radius: 38.095238% 100%;
     
     display: flex;
     align-items: center;
@@ -178,6 +165,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .confirmation {
     position: absolute;
     
@@ -190,6 +178,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .popup{
     display: none;
     
@@ -241,4 +230,53 @@
     border-bottom-left-radius: 1.5in;
     
     overflow: hidden;
+}
+
+
+ /***************************************\
+|                                         |
+|            Margin Correction            |
+|                                         |
+ \***************************************/
+
+.top_margin {
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    
+    background: #242424;
+    
+    border-top-left-radius: 38.095238% 100%;
+    border-top-right-radius: 38.095238% 100%;
+}
+
+.middle_margin {
+    position: absolute;
+    
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: calc(37.5% + 2pt);
+
+    background: #242424;
+    
+    border-bottom-left-radius: 1.209682% 100%;
+    border-bottom-right-radius: 1.209682% 100%;
+}
+
+.middle_margin_rounded_corners {
+    position: absolute;
+    
+    top: calc(62.5% - 3pt);
+    left: 0.6942937673%;
+    right: 0.6942937672%;/*0.59678%*/
+    bottom: 37.5%;
+
+    background: #242424;
+    
+    border-bottom-left-radius: 3pt;
+    border-bottom-right-radius: 3pt;
 }
