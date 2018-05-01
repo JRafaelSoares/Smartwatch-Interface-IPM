@@ -36,7 +36,13 @@
     
     margin: auto;
 }
-
+#favorite {
+    height: 60%;
+    
+    position: absolute;
+    
+    margin: auto;
+}
 #return_button {
     height: 10%;
     

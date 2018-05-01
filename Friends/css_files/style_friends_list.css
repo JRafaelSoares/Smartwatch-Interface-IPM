@@ -70,7 +70,13 @@
     
     margin: auto;
 }
-
+#favorite {
+    height: 20%;
+    right:10%;
+    position: absolute;
+    
+    margin: auto;
+}
 .main {
     width: 3in;
     max-width: 3in;
