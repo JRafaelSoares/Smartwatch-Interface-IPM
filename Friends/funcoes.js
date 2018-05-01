@@ -1,13 +1,13 @@
 function loadOnDisplay(onDisplay) {
     "use strict";
-    if( localStorage.getItem("Display") == null){
+    if( localStorage.getItem("Display") != null){
         localStorage.setItem("Display", JSON.stringify(onDisplay));
     }
 }
 
 function loadAllFriends(allFriends) {
     "use strict";
-    if(localStorage.getItem("Friends") == null){
+    if(localStorage.getItem("Friends") != null){
         localStorage.setItem("Friends", JSON.stringify(allFriends));
     }
 }
@@ -30,11 +30,11 @@ function toggleFavorite() {
         if(amigos[i].nome == display[0].nome && amigos[i].surname == display[0].surname){
             if(amigos[i].favorito == 0){
                 amigos[i].favorito = 1;
-                nome.innerHTML = '<span class="text" align="center">' +display[0].nome + "." + display[0].surname.charAt(0) + "<img src='icones-pretos/favorite_blue.png' id= 'favorite'></span>";
+                nome.innerHTML = '<span class="text" align="center">' +display[0].nome + "." + display[0].surname.charAt(0) + "<img src='icones-pretos/favorite_blue.png' id= 'favorite'><p>" + display[0].place + "</p></span>";
             }
             else{
                 amigos[i].favorito = 0;
-                nome.innerHTML = '<span class="text" align="center">' +display[0].nome + "." + display[0].surname.charAt(0) + '<img src="icones-pretos/unfavorite.png" id="favorite"></span>';
+                nome.innerHTML = '<span class="text" align="center">' +display[0].nome + "." + display[0].surname.charAt(0) + '<img src="icones-pretos/unfavorite.png" id="favorite"><p>' + display[0].place +'</span>';
             }
         }
     }
@@ -58,7 +58,7 @@ function displayFriends() {
                 lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend(' +i +'); window.location.href = \'Friend.html\';"> <span class="text" align="center">' + amigos[i].nome + "." + amigos[i].surname.charAt(0) + '</span>  </div>';
             }
             else{
-                lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend(' +i +'); window.location.href = \'friend_favorite.html\';"> <span class="text" align="center">' + amigos[i].nome + "." + amigos[i].surname.charAt(0) + '</span> <img src="icones-pretos/favorite_blue.png" id="favorite"></div>';
+                lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend(' +i +'); window.location.href = \'Friend.html\';"> <span class="text" align="center">' + amigos[i].nome + "." + amigos[i].surname.charAt(0) + '</span> <img src="icones-pretos/favorite_blue.png" id="favorite"></div>';
             }
         }
     }
@@ -119,11 +119,11 @@ function loadFriend() {
         if(amigos[i].nome == friend[0].nome && amigos[i].surname == friend[0].surname){
             if(amigos[i].favorito == 0){
                 console.log("poop");
-                name.innerHTML = '<span class="text" align="center">' +friend[0].nome + "." + friend[0].surname.charAt(0) + "<img src='icones-pretos/unfavorite.png' id= 'favorite'></span>";
+                name.innerHTML = '<span class="text" align="center">' +friend[0].nome + "." + friend[0].surname.charAt(0) + "<img src='icones-pretos/unfavorite.png' id= 'favorite'><p>" + friend[0].place + "</span>";
             }
             else{
                 console.log("notpoop");
-                name.innerHTML = '<span class="text" align="center">' +friend[0].nome + "." + friend[0].surname.charAt(0) + '<img src="icones-pretos/favorite_blue.png" id="favorite"></span>';}
+                name.innerHTML = '<span class="text" align="center">' +friend[0].nome + "." + friend[0].surname.charAt(0) + '<img src="icones-pretos/favorite_blue.png" id="favorite"><p>' + friend[0].place + '</p></span>';}
         }
            
 }
