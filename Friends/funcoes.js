@@ -32,10 +32,10 @@ function displayFriends() {
         if(amigos[i].added == 1){
             j++;
             if(amigos[i].favorito == 0){
-                lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend(' +i +'); window.location.href = \'Friend.html\';"> <span class="text" align="center">' + amigos[i].nome + '</span> </div>';
+                lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend(' +i +'); window.location.href = \'Friend.html\';"> <span class="text" align="center">' + amigos[i].nome + "." + amigos[i].surname.charAt(0) + '</span> </div>';
             }
             else{
-                lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend(' +i +'); window.location.href = \'friend_favorite.html\';"> <span class="text" align="center">' + amigos[i].nome + '</span> </div>';
+                lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend(' +i +'); window.location.href = \'friend_favorite.html\';"> <span class="text" align="center">' + amigos[i].nome + "." + amigos[i].surname.charAt(0) + '</span> </div>';
             }
         }
     }
