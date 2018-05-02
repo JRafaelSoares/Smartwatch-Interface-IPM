@@ -1,13 +1,13 @@
 function loadOnDisplay(onDisplay) {
     "use strict";
-    if( localStorage.getItem("Display") == null){
+    if( localStorage.getItem("Display") != null){
         localStorage.setItem("Display", JSON.stringify(onDisplay));
     }
 }
 
 function loadAllFriends(allFriends) {
     "use strict";
-    if(localStorage.getItem("Friends") == null){
+    if(localStorage.getItem("Friends") != null){
         localStorage.setItem("Friends", JSON.stringify(allFriends));
     }
 }
@@ -29,12 +29,16 @@ function toggleFavorite() {
     for(i; i<tam; i++){
         if(amigos[i].nome == display[0].nome && amigos[i].surname == display[0].surname){
             if(amigos[i].favorito == 0){
-                amigos[i].favorito = 1;
-                nome.innerHTML = '<span class="text" align="center">' +display[0].nome + "." + display[0].surname.charAt(0) + "<img src='icones-pretos/star_yellow.png' id= 'favorite'><p>" + display[0].place + "</p></span>";
+                amigos[i].favorito=1;
+                console.log("wut");
+                nome.innerHTML = '<div class="name_position"> <span class="text" align="center">' +display[0].nome + " " + display[0].surname.charAt(0) + ". " + "<img src='icones-pretos/star_yellow.png' id= 'favorite'>" +'</span> </div>';
+                nome.innerHTML += '<div class = "Location" > <span class="text" align="center">' +  display[0].place + '</span></div>';
             }
             else{
-                amigos[i].favorito = 0;
-                nome.innerHTML = '<span class="text" align="center">' +display[0].nome + "." + display[0].surname.charAt(0) + '<img src="icones-pretos/unfavorite_color.png" id="favorite"><p>' + display[0].place +'</span>';
+                amigos[i].favorito=0;
+                console.log("why");
+                nome.innerHTML = '<div class="name_position"> <span class="text" align="center">' +display[0].nome + " " + display[0].surname.charAt(0) + ". " + "<img src='icones-pretos/unfavorite_color.png' id= 'favorite'>" +'</span> </div>';
+                nome.innerHTML += '<div class = "Location" > <span class="text" align="center">' +  display[0].place + '</span></div>';
             }
         }
     }
@@ -138,7 +142,7 @@ function loadFindFriend() {
     
     var name = document.getElementById("nome");
     
-    name.innerHTML = '<span class="text" align="center">' +friend[0].nome + '.' + friend[0].surname.charAt(0) + " " + friend[0].km + 'km</span>';
+    name.innerHTML += '<span class="text" align="center">' +friend[0].nome + '.' + friend[0].surname.charAt(0) + " " + friend[0].km + 'km</span>';
 }
 
 function addFavorite() {
@@ -218,9 +222,11 @@ function loadUnaddedFriend(){
     
     for(i;i<friends.length;i++){
         if(friends[i].added == 0){
+            name.innerHTML += "<span class='text' align='center'>Adicionar ";
             addOnHoldFriend(i);
             j++;
             loadFindFriend();
+            name.innerHTML += "</span>"
             break;
         }
     }
