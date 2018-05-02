@@ -1,4 +1,25 @@
 /* Outer Icons */
+.question_mark {
+    position: absolute;
+    
+    top: 0;
+    left: 45%;
+    right: 45%;
+    bottom: 0;
+}
+
+#help {
+    height: 100%;
+    
+    position: absolute;
+    
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    
+    margin: auto;
+}
 #relogio {
     height: 4in;
     max-height: 4in;
