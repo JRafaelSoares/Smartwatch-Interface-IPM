@@ -235,6 +235,21 @@
     bottom: 4%;
 }
 
+
+
+.aproxime {
+    position: absolute;
+    
+    background: #242424;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+
  /***************************************\
 |                                         |
 |            Margin Correction            |
