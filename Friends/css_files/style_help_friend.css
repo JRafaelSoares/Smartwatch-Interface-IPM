@@ -171,6 +171,18 @@
     align-items: center;
     justify-content: center;
 }
+.help_position {
+    position: absolute;
+    
+    left: 0;
+    right: 20%;
+    top: 5%;
+    bottom: 37.5%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .Location {
     position: absolute;
     
