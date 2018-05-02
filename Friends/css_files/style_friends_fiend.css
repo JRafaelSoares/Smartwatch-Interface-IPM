@@ -70,13 +70,7 @@
     
     margin: auto;
 }
-#favorite {
-    height: 20%;
-    right:10%;
-    position: absolute;
-    
-    margin: auto;
-}
+
 .main {
     width: 3in;
     max-width: 3in;
@@ -121,99 +115,12 @@
 }
 
 .main_menu_middle {
-    padding-left: 10%;
-    padding-right: 10%;
-    
     position: absolute;
     
     top: 18%;
     left: 8%;
     right: 8%;
     bottom: 18%;
-    background: #242424;
-    
-    border-top-left-radius: 1.5in;
-    border-top-right-radius: 1.5in;
-    border-bottom-right-radius: 1.5in;
-    border-bottom-left-radius: 1.5in;
-    
-   
-    overflow: hidden;
-}
-
-.list {
-    position: absolute;
-    
-    padding-left: 10%;
-    padding-right: 10%;
-    
-    top: 0;
-    left: 0;
-    right: -17px;
-    bottom: 0;
-    
-    overflow-y: scroll;
-}
-
-.entry {
-    height: 33.33%;
-    width: 100%;
-    
-    border-bottom: 2px solid white;
-    
-    display: flex;
-    
-    justify-content: center;
-    align-items: center;
-}
-.addFriend {
-    height: 33.33%;
-    width: 100%;
-    
-    border-bottom: 2px solid #2276D1;
-    
-    display: flex;
-    
-    justify-content: center;
-    align-items: center;
-}
-
-.text_position {
-    position: absolute;
-    
-    text-align: center;
-    
-    top: 35%;
-    left: 0;
-    bottom:0;
-    right:0;
-    
-    justify-content: center;
-    align-items: center;
-}
-
-.text_position2 {
-    position: absolute;
-    
-    top: 50%;
-    left: 2%;
-    
-    justify-content: center;
-    align-items: center;
-}
-
-#text_position3 {
-    position: absolute;
-    
-    top: 25%;
-    left: 2%;
-    
-    justify-content: center;
-    align-items: center;
-}
-
-.text {
-    color: white;
 }
 
 .main_menu_bottom {
@@ -223,4 +130,78 @@
     left: 8%;
     right: 8%;
     bottom: 4%;
+    bottom: 4%;
 }
+
+
+.main_menu_button_top {
+    box-sizing: border-box;
+    
+    height: 46.875%;
+    width: 100%;
+    
+    margin-bottom: 3.125%;
+    
+    position: absolute;
+    
+    background: #242424;
+    
+    border-top-left-radius: 1.5in;
+    border-top-right-radius: 1.5in;
+    border-bottom-right-radius: 15pt;
+    border-bottom-left-radius: 15pt;
+    
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.main_menu_button_bottom {
+    box-sizing: border-box;
+    
+    height: 46.875%;
+    width: 100%;
+    
+    margin-top: 3.125%;
+    
+    bottom: 0;
+    
+    position: absolute;
+    
+    background: #242424;
+    
+    border-top-left-radius: 15pt;
+    border-top-right-radius: 15pt;
+    border-bottom-right-radius: 1.5in;
+    border-bottom-left-radius: 1.5in;
+    
+        display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.entry {
+    height: 33.33%;
+    width: 100%;
+    
+
+}
+
+.text {
+    color: white;
+}
+.image {
+    position: absolute;
+    top: 131%;
+    left: 80%;
+    width: 35px;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

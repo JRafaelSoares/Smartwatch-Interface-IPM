@@ -56,6 +56,32 @@
     margin: auto;
 }
 
+.asd {
+    position: absolute;
+    
+    left: 0;
+    right:0;
+    top: 5%;
+    bottom: 37.5%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dsa {
+    position: absolute;
+    
+    left: 0;
+    right:0;
+    top: 70%;
+    bottom: 37.5%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .main {
     width: 3in;
     max-width: 3in;

@@ -1,13 +1,13 @@
 function loadOnDisplay(onDisplay) {
     "use strict";
-    if( localStorage.getItem("Display") != null){
+    if( localStorage.getItem("Display") == null){
         localStorage.setItem("Display", JSON.stringify(onDisplay));
     }
 }
 
 function loadAllFriends(allFriends) {
     "use strict";
-    if(localStorage.getItem("Friends") != null){
+    if(localStorage.getItem("Friends") == null){
         localStorage.setItem("Friends", JSON.stringify(allFriends));
     }
 }
@@ -59,10 +59,10 @@ function displayFriends() {
         if(amigos[i].added == 1){
             j++;
             if(amigos[i].favorito == 0){
-                lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend(' +i +'); window.location.href = \'Friend.html\';"> <span class="text" align="center">' + amigos[i].nome + "." + amigos[i].surname.charAt(0) + '</span>  </div>';
+                lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend(' +i +'); window.location.href = \'Friend.html\';"> <span class="text" align="center">' + amigos[i].nome + " " + amigos[i].surname.charAt(0) + '.</span>  </div>';
             }
             else{
-                lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend(' +i +'); window.location.href = \'Friend.html\';"> <span class="text" align="center">' + amigos[i].nome + "." + amigos[i].surname.charAt(0) + '</span> <img src="icones-pretos/star_yellow.png" id="favorite"></div>';
+                lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend(' +i +'); window.location.href = \'Friend.html\';"> <span class="text" align="center">' + amigos[i].nome + " " + amigos[i].surname.charAt(0) + '.</span> <img src="icones-pretos/star_yellow.png" id="favorite"></div>';
             }
         }
     }
@@ -90,7 +90,7 @@ function displayFavorites(){
         }
     }
     if(empty == 0){
-        lista.innerHTML = '<div class="text_position"><span class="text">Nao existem</span></div><div class="text_position2"><span class="text">favoritos</span></div>'
+        lista.innerHTML = '<div class="text_position"><span class="text">Não existem<br>favoritos</span></div>'
     }
 }
 
@@ -142,7 +142,17 @@ function loadFindFriend() {
     
     var name = document.getElementById("nome");
     
-    name.innerHTML += '<span class="text" align="center">' +friend[0].nome + '.' + friend[0].surname.charAt(0) + " " + friend[0].km + 'km</span>';
+    name.innerHTML += '<div class="asd"><span class="text" align="center">' +friend[0].nome + ' ' + friend[0].surname.charAt(0) + ". " + friend[0].km + 'km</span></div>';
+}
+
+function loadFriendConfirmation() {
+    var friendStr = localStorage.getItem("Display");
+    
+    var friend = JSON.parse(friendStr);
+    
+    var name = document.getElementById("nome");
+    
+    name.innerHTML += '<div class="asd"><span class="text" align="center">Adicionar </span></div><div class="dsa"><span class="text" align="center">' +friend[0].nome + ' ' + friend[0].surname.charAt(0) + ". ?"+ '</span></div>';
 }
 
 function addFavorite() {
@@ -222,11 +232,10 @@ function loadUnaddedFriend(){
     
     for(i;i<friends.length;i++){
         if(friends[i].added == 0){
-            name.innerHTML += "<span class='text' align='center'>Adicionar ";
             addOnHoldFriend(i);
             j++;
-            loadFindFriend();
-            name.innerHTML += "</span>"
+            loadFriendConfirmation();
+            name.innerHTML += "</span></div>"
             break;
         }
     }
