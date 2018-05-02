@@ -171,18 +171,32 @@
     align-items: center;
     justify-content: center;
 }
-.help_position {
+.pos1 {
     position: absolute;
     
     left: 0;
-    right: 20%;
-    top: 5%;
+    right: 0%;
+    top: 15%;
     bottom: 37.5%;
     
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.pos2 {
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 70%;
+    bottom: 37.5%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .Location {
     position: absolute;
     
