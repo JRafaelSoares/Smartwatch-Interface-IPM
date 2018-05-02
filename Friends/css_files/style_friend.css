@@ -41,6 +41,11 @@
     
     position: absolute;
     
+    top:0;
+    bottom:0;
+    left: 85%;
+    right:0;
+    
     margin: auto;
 }
 #return_button {
@@ -133,7 +138,30 @@
     align-items: center;
     justify-content: center;
 }
-
+.name_position {
+    position: absolute;
+    
+    left: 0;
+    right: 20%;
+    top: 5%;
+    bottom: 37.5%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Location {
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 70%;
+    bottom: 37.5%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .encontrar {
     position: absolute;
     

@@ -119,11 +119,14 @@ function loadFriend() {
         if(amigos[i].nome == friend[0].nome && amigos[i].surname == friend[0].surname){
             if(amigos[i].favorito == 0){
                 console.log("poop");
-                name.innerHTML = '<span class="text" align="center">' +friend[0].nome + "." + friend[0].surname.charAt(0) + "<img src='icones-pretos/unfavorite_color.png' id= 'favorite'><p>" + friend[0].place + "</span>";
+                name.innerHTML = '<div class="name_position"> <span class="text" align="center">' +friend[0].nome + " " + friend[0].surname.charAt(0) + ". " + "<img src='icones-pretos/unfavorite_color.png' id= 'favorite'>" +'</span> </div>';
+                name.innerHTML += '<div class = "Location" > <span class="text" align="center">' +  friend[0].place + '</span></div>';
             }
             else{
                 console.log("notpoop");
-                name.innerHTML = '<span class="text" align="center">' +friend[0].nome + "." + friend[0].surname.charAt(0) + '<img src="icones-pretos/star_yellow.png" id="favorite"><p>' + friend[0].place + '</p></span>';}
+                name.innerHTML = '<div class="name_position"> <span class="text" align="center">' +friend[0].nome + " " + friend[0].surname.charAt(0) + ". " + "<img src='icones-pretos/star_yellow.png' id= 'favorite'>" +'</span> </div>';
+                name.innerHTML += '<div class = "Location" > <span class="text" align="center">' +  friend[0].place + '</span></div>';
+            }
         }
            
 }
