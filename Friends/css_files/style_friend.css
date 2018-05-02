@@ -1,4 +1,25 @@
 /* Outer Icons */
+.question_mark {
+    position: absolute;
+    
+    top: 0;
+    left: 45%;
+    right: 45%;
+    bottom: 0;
+}
+
+#help {
+    height: 100%;
+    
+    position: absolute;
+    
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    
+    margin: auto;
+}
 #relogio {
     height: 4in;
     max-height: 4in;
@@ -40,6 +61,11 @@
     height: 60%;
     
     position: absolute;
+    
+    top:0;
+    bottom:0;
+    left: 85%;
+    right:0;
     
     margin: auto;
 }
@@ -133,7 +159,30 @@
     align-items: center;
     justify-content: center;
 }
-
+.name_position {
+    position: absolute;
+    
+    left: 0;
+    right: 20%;
+    top: 5%;
+    bottom: 37.5%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Location {
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 70%;
+    bottom: 37.5%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .encontrar {
     position: absolute;
     
