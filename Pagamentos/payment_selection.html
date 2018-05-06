@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css_files/style_ticket_chosen.css">
+        <link rel="stylesheet" href="css_files/style_payment_selection.css">
         <style type="text/css"></style>
-        <script src=divertimentos.js></script>
         <script src=funcoes.js></script>
     </head>
     
-    <body style="font-family: sans-serif;" onload="loadTime(); loadDivertimento(); startTime(); ">
+    <body style="font-family: sans-serif;" onload="startTime(); ">
         <div class="main">
             <img src="icones-pretos/relogio.jpg" id="relogio">
             <img onclick = "window.location.href='../template_main_menu.html'" src="icones-pretos/house-outline.png" id="home">
             <img src="icones-pretos/power.png" id="power" onclick="window.location.href = '../locked.html'">
-            <div class="return_button" onclick="window.location.href = 'ticket_list.html';">
+            <div class="return_button" onclick="window.location.href = 'payment_menu.html';">
                 <img src="icones-pretos/return.png" id="return_button">
             </div>
 
@@ -20,16 +19,16 @@
                 <div class="main_menu_top"></div>
 
                 <div class="main_menu_middle">
-                    <div class="top_margin"></div>
+                    <div class="top_margin"> 
+                        <span class="text"> Aproxime o dispositivo ao sensor</span>
+                    </div>
                     <div class="middle_margin"></div>
                     <div class="middle_margin_rounded_corners"></div>
 
-                    <div class="name" align="center" id="nome"></div>
-                    <div class="time" align="center" id="hora"></div>
 
                     <div class="bottom_margin">
-                        <div class="tirar_bilhete" align="center" onclick="window.location.href = 'ticket_confirmation.html';">
-                            <span class="text" align="center">Tirar Bilhete</span>
+                        <div class="tirar_bilhete" align="center" onclick="window.location.href = 'payment_qr.html';">
+                            <span class="text" align="center">QR code<img src="icones-pretos/qr-code-green.png" id="qr"></span>
                         </div>
                     </div>
                 </div>

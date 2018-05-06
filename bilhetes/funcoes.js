@@ -23,7 +23,6 @@ function displayBilhetes() {
     
     bilhetes = localStorage.getItem("Divertimentos");   
     stuff = JSON.parse(bilhetes);
-    console.log(bilhetes);
     lista = document.getElementById("lista");
     var i = 0;
     var empty = 0;
@@ -35,9 +34,6 @@ function displayBilhetes() {
             var m = today.getMinutes();
             var hora = parseInt(stuff[i].hora[0] + stuff[i].hora[1]);
             var min = parseInt(stuff[i].hora[3] + stuff[i].hora[4]);
-            
-            console.log(min < m);
-            console.log(hora == h);
             
             if(hora < h || (hora == h && min < m)){//missed it!
                 stuff[i].tirado = 0;
@@ -57,19 +53,16 @@ function displayBilhetes() {
                  }   
         }
     }
-    console.log(bilhetes);
     localStorage.setItem("Divertimentos", JSON.stringify(stuff));
     if(empty == 0){
         lista.innerHTML = '<div class="text_position"><span class="text">Nao existem</span></div><div class="text_position2"><span class="text">bilhetes reservados</span></div>'
     }
-    console.log(bilhetes);
 }
 function displayDivertimentos(){
     "use strict";
     var diverti, lista, stuff;
     
     diverti = localStorage.getItem("Divertimentos");
-    console.log(diverti);
     stuff = JSON.parse(diverti);
     
     lista = document.getElementById("lista");
@@ -77,7 +70,6 @@ function displayDivertimentos(){
     
     for (i; i < stuff.length; i++) {
         if(stuff[i].tirado==0){
-            console.log(i);
             lista.innerHTML += '<div class="entry" onclick="addOnHoldDivertimento('+i+'); window.location.href = \'ticket_chosen.html\';"> <span class="text" align="center">'+stuff[i].nome+'</span></div>';
         }
         if(stuff[i].tirado!=0){
@@ -95,7 +87,6 @@ function addOnHoldDivertimento(i) {
     var cenas = JSON.parse(cenasSTR);
     cenas[0]=divertimento[i];
     
-    console.log(divertimento[i]);
     localStorage.setItem("Cenas", JSON.stringify(cenas));
     return cenas;
 }
@@ -153,7 +144,6 @@ function removeElement(){
         if (stuff[0].nome == bilhetes[i].nome){
             stuff[0].tirado = 0;
             bilhetes[i].tirado =0;
-            console.log(bilhetes[i]);
         }
     }
     

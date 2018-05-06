@@ -1,0 +1,265 @@
+/* Outer Icons */
+#relogio {
+    height: 4in;
+    max-height: 4in;
+    
+    position: absolute;
+    
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    
+    margin: auto;
+}
+
+#home {
+    height: 10%;
+    
+    position: absolute;
+    
+    left: 106%;
+    top: 0;
+    bottom: 0%;
+    
+    margin: auto;
+}
+
+#power {
+    height: 10%;
+    
+    position: absolute;
+    
+    left: 100%;
+    top: 35%;
+    bottom: 0;
+    
+    margin: auto;
+}
+
+#return_button {
+    height: 10%;
+    
+    position: absolute;
+    
+    left: 100%;
+    top: 0;
+    bottom: 35%;
+    
+    margin: auto;
+}
+
+#qr {
+    height: 90%;
+    
+    position: absolute;
+    top:10%;
+    
+}
+
+.main {
+    width: 3in;
+    max-width: 3in;
+    height: 3.5in;
+    max-height: 3.5in;
+    
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Menus */
+
+.main_menu { 
+    box-sizing: border-box;
+    
+    width: 1.7859in;
+    max-width: 1.7859in;
+    height: 1.7859in;
+    max-height: 1.7859in;
+    
+    position: absolute;
+    
+    top: 25%;
+    left: 35%;
+    right: 0;
+    bottom: 0;
+    
+    background: #36B824;
+    
+    border-radius: 50%;
+}
+
+.main_menu_top {
+    position: absolute;
+    
+    top: 4%;
+    left: 8%;
+    right: 8%;
+    bottom: 86%;
+}
+
+.main_menu_middle {
+    position: absolute;
+    
+    top: 18%;
+    left: 8%;
+    right: 8%;
+    bottom: 18%;
+    
+    background: #36B824;
+    
+    border-top-left-radius: 38.095238% 50%;
+    border-top-right-radius: 38.095238% 50%;
+    border-bottom-right-radius: 38.095238% 50%;
+    border-bottom-left-radius: 38.095238% 50%;
+}
+
+.top_margin {
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    
+    background: #242424;
+    
+    border-top-left-radius: 38.095238% 100%;
+    border-top-right-radius: 38.095238% 100%;
+}
+
+.middle_margin {
+    position: absolute;
+    
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: calc(37.5% + 2pt);
+    
+    background: #242424;
+    
+    border-bottom-left-radius: 1.016133% 100%;
+    border-bottom-right-radius: 1.016133% 100%;
+}
+
+.middle_margin_rounded_corners {
+    position: absolute;
+    
+    top: calc(62.5% - 3pt);
+    left: 0.570%;
+    right: 0.570%;
+    bottom: 37.5%;
+
+    background: #242424;
+    
+    border-bottom-left-radius: 3pt;
+    border-bottom-right-radius: 3pt;
+}
+
+.name {
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 12%;
+    bottom: 68.75%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time {
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 31.25%;
+    bottom: 37.5%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tirar_bilhete {
+    position: absolute;
+        
+    left: 2.780007%;
+    right: 2.780007%;
+    top: 12%;
+    bottom: 0;
+    
+    background: #242424;
+
+    border-top-left-radius: 3pt;
+    border-top-right-radius: 3pt;
+    border-bottom-right-radius: 37.173576% 100%;
+    border-bottom-left-radius: 37.173576% 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom_margin {
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 62.5%;
+    bottom: 0;
+    
+    background: #36B824;
+    
+    border-bottom-right-radius: 0.89295in;
+    border-bottom-left-radius: 0.89295in;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main_menu_bottom {
+    position: absolute;
+    
+    top: 86%;
+    left: 8%;
+    right: 8%;
+    bottom: 4%;
+}
+
+/* Inner Icons*/
+.question_mark {
+    position: absolute;
+    
+    top: 0;
+    left: 45%;
+    right: 45%;
+    bottom: 0;
+}
+
+#help {
+    height: 100%;
+    
+    position: absolute;
+    
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    
+    margin: auto;
+}
+
+/* Text Definitions */
+.text {
+    color: white;
+    
+    font-size: 12pt;
+}
