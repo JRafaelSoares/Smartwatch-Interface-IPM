@@ -116,7 +116,7 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 50%;
+    bottom: 65.325%;
     
     background: #242424;
     
@@ -127,7 +127,7 @@
 .middle_margin {
     position: absolute;
     
-    top: 50%;
+    top: 37.5%;
     left: 0;
     right: 0;
     bottom: calc(37.5% + 2pt);
@@ -157,7 +157,7 @@
     
     left: 0;
     right: 0;
-    top: 12%;
+    top: 0;
     bottom: 68.75%;
     
     display: flex;
