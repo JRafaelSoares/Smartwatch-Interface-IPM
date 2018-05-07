@@ -155,22 +155,9 @@
 .name {
     position: absolute;
     
-    left: 0;
-    right: 0;
-    top: 12%;
-    bottom: 68.75%;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.time {
-    position: absolute;
-    
-    left: 0;
-    right: 0;
-    top: 31.25%;
+    left: 0%;
+    right: 0%;
+    top: 0%;
     bottom: 37.5%;
     
     display: flex;
