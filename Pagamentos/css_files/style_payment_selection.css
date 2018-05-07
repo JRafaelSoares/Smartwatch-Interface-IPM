@@ -50,11 +50,12 @@
 }
 
 #qr {
-    height: 90%;
+    height: 80%;
     
     position: absolute;
-    top:10%;
     
+    top:10%;
+    bottom: 10%;
 }
 
 .main {
@@ -158,6 +159,19 @@
     
     border-bottom-left-radius: 3pt;
     border-bottom-right-radius: 3pt;
+}
+
+.top_middle{
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 0%;
+    bottom: 37.5%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .name {
