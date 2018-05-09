@@ -25,12 +25,14 @@ function displayPayments() {
     var i = 0;
     
     for (i; i < payment.length; i++) {
-        if(payment[i].type == "Restaurante"){
-            lista.innerHTML += '<div class="entry" onclick="addDisplayPayment(' +i +'); window.location.href = \'payment_restaurante.html\';"> <span class="text" align="center">' + payment[i].nome + " " + payment[i].preco + '</span> </div>';
-        }
-        
-        if(payment[i].type == "Divertimento"){
-            lista.innerHTML += '<div class="entry" onclick="addDisplayPayment(' +i +'); window.location.href = \'payment_divertimento.html\';"> <span class="text" align="center">' + payment[i].nome + " " + payment[i].preco + '</span> </div>';
+        if(payment[i].flag != 0){
+            if(payment[i].type == "Restaurante"){
+                lista.innerHTML += '<div class="entry" onclick="addDisplayPayment(' +i +'); window.location.href = \'payment_restaurante.html\';"> <span class="text" align="center">' + payment[i].nome + " " + payment[i].preco + '</span> </div>';
+            }
+
+            if(payment[i].type == "Divertimento"){
+                lista.innerHTML += '<div class="entry" onclick="addDisplayPayment(' +i +'); window.location.href = \'payment_divertimento.html\';"> <span class="text" align="center">' + payment[i].nome + " " + payment[i].preco + '</span> </div>';
+            }
         }
     }
 }
@@ -95,64 +97,55 @@ function displayProductsPayments() {
         
     }
 }
-////////RANDOM CRAP HERE /////////
 
-function loadFriend() {
-    var friendStr = localStorage.getItem("Display");
-    
-    var friend = JSON.parse(friendStr);
-    
-    var name = document.getElementById("nome");
-    
-    name.innerHTML = '<span class="text" align="center">' +friend[0].nome + '</span>';
-}
 
-function addFavorite() {
-    var displayStr = localStorage.getItem("Display");
+/////////PROTOTIPOS///////
+function loadUnpaidPayment() {
     
-    var display = JSON.parse(displayStr);
+    var paymentStr = localStorage.getItem("Payments");   
     
-    var friendsStr = localStorage.getItem("Friends");
-    
-    var friends = JSON.parse(friendsStr);
+    var payment = JSON.parse(paymentStr);
+
+    var lista = document.getElementById("lista");
     
     var i = 0;
     
-    if (display[0].favorito == 0){
-        display[0].favorito =1;
-        
-        for (i; i<friends.length; i++){
-            if (friends[i].nome == display[0].nome){
-                friends[i].favorito = 1;
-                console.log(i);
-            } 
+    for (i; i < payment.length; i++) {
+        if(payment[i].flag == 0){
+            localStorage.setItem("Display", JSON.stringify(payment[i]));
+            break;
         }
     }
-    
-    console.log(friends[0].favorito);
-    localStorage.setItem("Friends", JSON.stringify(friends));
 }
 
-function removeFavorite(){
+function loadUnpaidRestaurant() {
+    var stuffStr = localStorage.getItem("Display");
+    
+    var stuff = JSON.parse(stuffStr);
+    
+    var mid = document.getElementById("middle");
+    console.log("lol");
+    
+    mid.innerHTML = '<div id="nome" onclick="window.location.href = \'payment_product_list.html\';"> <span class="text" align="center">Listar produtos</span></div><div id="total"><span class="text" align="center"> Total: ' + stuff.preco + '</span></div>';
+    
+    }
+
+function chooseDisplayLoad() {
+    
     var displayStr = localStorage.getItem("Display");
     
     var display = JSON.parse(displayStr);
-    
-    var friendsStr = localStorage.getItem("Friends");
-    
-    var friends = JSON.parse(friendsStr);
-    
-    var i=0;
-    
-    for(i; i<friends.length;i++){
-        if (display[0].nome == friends[i].nome){
-            friends[i].favorito =0;
-        }
+    console.log(display);
+    if(display.type == "Restaurante"){
+        loadUnpaidRestaurant();
     }
     
-    localStorage.setItem("Friends", JSON.stringify(friends));
+    else{
+        loadPaymentDivertimento();
+    }
 }
 
+//Clock functions//
 function startTime() {
     var today = new Date();
     var h = today.getHours();
