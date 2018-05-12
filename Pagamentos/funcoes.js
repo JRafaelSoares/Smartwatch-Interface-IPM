@@ -58,11 +58,11 @@ function loadPaymentDivertimento() {
     
     var name = document.getElementById("nome");
     
-    var total = document.getElementById("total");
+    var total = document.getElementById("hora");
     
-    name.innerHTML = '<span class="text" align="center">' +stuff[0].nome + '</span>';
+    name.innerHTML = '<span class="text" align="center">' +stuff.nome + '</span>';
     
-    total.innerHTML = '<span class="text" align="center"> Total: ' + stuff[0].preco + '</span>';
+    total.innerHTML = '<span class="text" align="center"> Total: ' + stuff.preco + '</span>';
 }
 
 function loadPaymentRestaurante() {
@@ -124,7 +124,6 @@ function loadUnpaidRestaurant() {
     
     console.log(stuff);
     var total = document.getElementById("hora");
-    console.log(stuff.preco);
     
     total.innerHTML += '<span class="text" align="center">Total: ' + stuff.preco + '</span>';
     
@@ -142,6 +141,25 @@ function chooseDisplayLoad() {
     else{
         loadPaymentDivertimento();
     }
+}
+
+function addPayment() {
+    var pagamentosStr = localStorage.getItem("Payments");
+    
+    var pagamentos = JSON.parse(pagamentosStr);
+    
+    var displayStr = localStorage.getItem("Display");
+    
+    var display = JSON.parse(displayStr);
+    
+    var i =0;
+    
+    for(i; i< pagamentos.length;i++){
+        if(display.nome == pagamentos[i].nome){
+            pagamentos[i].flag=1;
+        }
+    }
+    localStorage.setItem("Payments", JSON.stringify(pagamentos));
 }
 
 //Clock functions//

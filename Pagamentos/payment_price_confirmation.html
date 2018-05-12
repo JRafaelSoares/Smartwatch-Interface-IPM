@@ -10,12 +10,11 @@
         <script>
             $(document).ready(function() {
                 $('#popActivator').click(function() {
-                    addFriend();
+                    addPayment();
                     $('#myPopup').fadeIn(800);
-                    $('#myPopup').fadeOut('slow', function(){$(location).attr('href', 'friends_menu.html');});
+                    $('#myPopup').fadeOut('slow', function(){$(location).attr('href', 'payment_menu.html');});
             });
         });
-            
         </script>
     </head>
     
@@ -36,7 +35,7 @@
                     <div class="middle_margin"></div>
                     <div class="middle_margin_rounded_corners"></div>
 
-                    <div class="top_middle" id="nome">
+                    <div class="top_middle" id="hora">
                         <span class="text" align="center">Confimar pagamento?</span>
                     </div>
 
