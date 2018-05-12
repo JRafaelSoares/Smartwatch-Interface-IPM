@@ -48,9 +48,9 @@ function displayFriends() {
     "use strict";
     
     var amigosStr = localStorage.getItem("Friends");   
-    
-    var amigos = JSON.parse(amigosStr);
 
+    var amigos = JSON.parse(amigosStr);
+    
     var lista = document.getElementById("lista");
     
     var i = 0;

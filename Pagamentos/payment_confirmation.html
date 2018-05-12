@@ -1,25 +1,13 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css_files/style_payment_confirmation.css">
+        <link rel="stylesheet" href="css_files/style_payment_restaurante.css">
         <style type="text/css"></style>
-        
-        <script src="jquery-3.3.1.min.js"></script>
         <script src=pagamentos.js></script>
         <script src=funcoes.js></script>
-        <script>
-            $(document).ready(function() {
-                $('#popActivator').click(function() {
-                    addFriend();
-                    $('#myPopup').fadeIn(800);
-                    $('#myPopup').fadeOut('slow', function(){$(location).attr('href', 'friends_menu.html');});
-            });
-        });
-            
-        </script>
     </head>
     
-    <body style="font-family: sans-serif;" onload="startTime(); chooseDisplayLoad()">
+    <body style="font-family: sans-serif;" onload="chooseDisplayLoad(); startTime(); ">
         <div class="main">
             <img src="icones-pretos/relogio.jpg" id="relogio">
             <img onclick = "window.location.href='../template_main_menu.html'" src="icones-pretos/house-outline.png" id="home">
@@ -32,31 +20,22 @@
                 <div class="main_menu_top"></div>
 
                 <div class="main_menu_middle">
-                    <div class="top_margin" id="middle">
-                        
-                        
-                    </div>
+                    <div class="top_margin"></div>
                     <div class="middle_margin"></div>
                     <div class="middle_margin_rounded_corners"></div>
 
-                    <div class="top_middle" id="nome">
+                    <div class="name" align="center" id="nome" onclick="window.location.href = 'payment_onhold_product_list.html'">
+                        <span class="text" align="center">Listar Produtos</span> 
+                    </div>
+                    <div class="time" align="center" id="hora">
+                        
                     </div>
 
-                    <div class="yes" align="center" id="popActivator">
-                        <span class="text_yes" align="center">Sim</span>
-                    </div>
-
-                    <div class="no" align="center" onclick="window.location.href = 'friends_list.html';">
-                        <span class="text_no" align="center">Não</span>
-                    </div>
-
-                </div>
-
-                <div class="popup" id="myPopup">
-                    <div class="confirmation_container">
-                        <div class = "confirmation">
-                            <span class="text">Confirmado</span>
-                        </div> 
+                    <div class="bottom_margin">
+                        <div class="tirar_bilhete" align="center" id="total" onclick="window.location.href = 'payment_price_confirmation.html'">
+                            <span class="text" align="center">
+                            Confirmar</span>
+                        </div>
                     </div>
                 </div>
 
