@@ -1,3 +1,19 @@
+.teste {
+    position: absolute;
+    
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    
+    background: re;
+    
+    border-top-left-radius: 38.095238% 50%;
+    border-top-right-radius: 38.095238% 50%;
+    border-bottom-right-radius: 38.095238% 50%;
+    border-bottom-left-radius: 38.095238% 50%;
+}
+
 /* Outer Icons */
 #relogio {
     height: 4in;
@@ -114,9 +130,9 @@
     position: absolute;
     
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 65.325%;
+    bottom: 71.875%;
+    left: 2.780007%;
+    right: 2.780007%;
     
     background: #242424;
     
@@ -127,22 +143,24 @@
 .middle_margin {
     position: absolute;
     
-    top: 37.5%;
+    top: 34.375%;
     left: 0;
     right: 0;
     bottom: calc(37.5% + 2pt);
     
     background: #242424;
     
-    border-bottom-left-radius: 1.016133% 100%;
-    border-bottom-right-radius: 1.016133% 100%;
+    border-top-left-radius: 2.504112% 55.555556%;
+    border-top-right-radius: 2.504112% 55.555556%;
+    border-bottom-left-radius: 1.587708% 44.444444%;
+    border-bottom-right-radius: 1.587708% 44.444444%;
 }
 
 .middle_margin_rounded_corners {
     position: absolute;
     
     top: calc(62.5% - 3pt);
-    left: 0.570%;
+    left: 1%;
     right: 0.570%;
     bottom: 37.5%;
 
@@ -158,7 +176,7 @@
     left: 0;
     right: 0;
     top: 0;
-    bottom: 68.75%;
+    bottom: 71.875%;
     
     display: flex;
     align-items: center;
@@ -170,7 +188,7 @@
     
     left: 0;
     right: 0;
-    top: 31.25%;
+    top: 34.375%;
     bottom: 37.5%;
     
     display: flex;
@@ -183,15 +201,15 @@
         
     left: 2.780007%;
     right: 2.780007%;
-    top: 12%;
+    top: 16.666667%;
     bottom: 0;
     
     background: #242424;
 
     border-top-left-radius: 3pt;
     border-top-right-radius: 3pt;
-    border-bottom-right-radius: 37.173576% 100%;
-    border-bottom-left-radius: 37.173576% 100%;
+    border-bottom-right-radius: 38.095238% 100%;
+    border-bottom-left-radius: 38.095238% 100%;
     
     display: flex;
     align-items: center;
