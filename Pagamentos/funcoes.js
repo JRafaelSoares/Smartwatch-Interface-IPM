@@ -55,14 +55,14 @@ function loadPaymentDivertimento() {
     var stuffStr = localStorage.getItem("Display");
     
     var stuff = JSON.parse(stuffStr);
-    
+    console.log(stuff);
     var name = document.getElementById("nome");
     
-    var total = document.getElementById("hora");
+    var total = document.getElementById("total");
     
-    name.innerHTML = '<span class="text" align="center">' +stuff.nome + '</span>';
+    name.innerHTML = '<span class="text" align="center">' +stuff[0].nome + '</span>';
     
-    total.innerHTML = '<span class="text" align="center"> Total: ' + stuff.preco + '</span>';
+    total.innerHTML = '<span class="text" align="center"> Total: ' + stuff[0].preco + '</span>';
 }
 
 function loadPaymentRestaurante() {
@@ -84,15 +84,13 @@ function displayProductsPayments() {
     var displayStr = localStorage.getItem("Display");   
     
     var display = JSON.parse(displayStr);
-
-    var lista = document.getElementById("lista");
-    
-    var i = 0;
-    
     console.log(display);
-    
-    for (i; i < display.pedido.length; i++) {
-        lista.innerHTML += '<div class="entry"> <span class="text" align="center">' + display.pedido[i].produto + " " + display.pedido[i].preco + '</span> </div>';
+    var lista = document.getElementById("lista");
+    var size = display[0].pedido.length;
+    var i = 0;
+        
+    for (i; i < size; i++) {
+        lista.innerHTML += '<div class="entry"> <span class="text" align="center">' + display[0].pedido[i].produto + " " + display[0].pedido[i].preco + '</span> </div>';
         
     }
 }
@@ -104,14 +102,21 @@ function loadUnpaidPayment() {
     var paymentStr = localStorage.getItem("Payments");   
     
     var payment = JSON.parse(paymentStr);
-
+    
+    var displayStr = localStorage.getItem("Display");
+    
+    var display = JSON.parse(displayStr);
+    console.log(display);
     var lista = document.getElementById("lista");
     
     var i = 0;
     
     for (i; i < payment.length; i++) {
         if(payment[i].flag == 0){
-            localStorage.setItem("Display", JSON.stringify(payment[i]));
+            
+            display[0] = payment[i];
+            console.log(display);
+            localStorage.setItem("Display", JSON.stringify(display));
             break;
         }
     }
@@ -125,7 +130,7 @@ function loadUnpaidRestaurant() {
     console.log(stuff);
     var total = document.getElementById("hora");
     
-    total.innerHTML += '<span class="text" align="center">Total: ' + stuff.preco + '</span>';
+    total.innerHTML += '<span class="text" align="center">Total: ' + stuff[0].preco + '</span>';
     
     }
 
@@ -134,12 +139,13 @@ function chooseDisplayLoad() {
     var displayStr = localStorage.getItem("Display");
     
     var display = JSON.parse(displayStr);
-    if(display.type == "Restaurante"){
+    console.log(display);
+    if(display[0].type == "Restaurante"){
         loadUnpaidRestaurant();
     }
     
     else{
-        loadPaymentDivertimento();
+        loadUnpaidDivertimento();
     }
 }
 
@@ -155,11 +161,26 @@ function addPayment() {
     var i =0;
     
     for(i; i< pagamentos.length;i++){
-        if(display.nome == pagamentos[i].nome){
+        if(display[0].nome == pagamentos[i].nome){
+            console.log("found it");
             pagamentos[i].flag=1;
         }
     }
     localStorage.setItem("Payments", JSON.stringify(pagamentos));
+}
+
+function loadUnpaidDivertimento() {
+    var stuffStr = localStorage.getItem("Display");
+    
+    var stuff = JSON.parse(stuffStr);
+    console.log(stuff);
+    var name = document.getElementById("nome");
+    
+    var total = document.getElementById("hora");
+    
+    name.innerHTML = '<span class="text" align="center">' +stuff[0].nome + '</span>';
+    
+    total.innerHTML = '<span class="text" align="center"> Total: ' + stuff[0].preco + '</span>';
 }
 
 //Clock functions//
