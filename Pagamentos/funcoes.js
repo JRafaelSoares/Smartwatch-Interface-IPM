@@ -112,9 +112,9 @@ function loadUnpaidPayment() {
     var i = 0;
     
     for (i; i < payment.length; i++) {
-        if(payment[i].flag == 0){
+        if(payment[i].flag == 1){
             
-            display[0] = payment[i];
+            display[0] = payment[i-1];
             console.log(display);
             localStorage.setItem("Display", JSON.stringify(display));
             break;
