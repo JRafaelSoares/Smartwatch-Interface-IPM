@@ -341,3 +341,21 @@
     border-bottom-left-radius: 3pt;
     border-bottom-right-radius: 3pt;
 }
+
+#question {
+    position: absolute;
+    bottom: 63%;
+    
+}
+
+#question2 {
+    position: absolute;
+    bottom: 35%;
+    
+}
+
+#hora {
+    position: absolute;
+    left: 30%;
+    bottom: 7%;
+}
