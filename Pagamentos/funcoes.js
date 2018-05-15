@@ -10,7 +10,9 @@ function loadOnDisplay(onDisplay) {
 
 function loadAllPayments(allPayments) {
     "use strict";
-    localStorage.setItem("Payments", JSON.stringify(allPayments));
+    if(localStorage.getItem("Payments")== null){
+        localStorage.setItem("Payments", JSON.stringify(allPayments));
+    }
 }
 
 function displayPayments() {
