@@ -57,7 +57,6 @@ function loadPaymentDivertimento() {
     var stuffStr = localStorage.getItem("Display");
     
     var stuff = JSON.parse(stuffStr);
-    console.log(stuff);
     var name = document.getElementById("nome");
     
     var total = document.getElementById("total");
@@ -86,7 +85,6 @@ function displayProductsPayments() {
     var displayStr = localStorage.getItem("Display");   
     
     var display = JSON.parse(displayStr);
-    console.log(display);
     var lista = document.getElementById("lista");
     var size = display[0].pedido.length;
     var i = 0;
@@ -108,7 +106,6 @@ function loadUnpaidPayment() {
     var displayStr = localStorage.getItem("Display");
     
     var display = JSON.parse(displayStr);
-    console.log(display);
     var lista = document.getElementById("lista");
     
     var i = 0;
@@ -117,7 +114,6 @@ function loadUnpaidPayment() {
         if(payment[i].flag == 1){
             
             display[0] = payment[i-1];
-            console.log(display);
             localStorage.setItem("Display", JSON.stringify(display));
             break;
         }
@@ -129,7 +125,6 @@ function loadUnpaidRestaurant() {
     
     var stuff = JSON.parse(stuffStr);
     
-    console.log(stuff);
     var total = document.getElementById("hora");
     
     total.innerHTML += '<span class="text total" align="left">Total: ' + stuff[0].preco + '</span> <img src="icones-cores/restaurant.png" id="restaurant" align="right">';
@@ -140,7 +135,6 @@ function chooseDisplayLoad() {
     var displayStr = localStorage.getItem("Display");
     
     var display = JSON.parse(displayStr);
-    console.log(display);
     if(display[0].type == "Restaurante"){
         loadUnpaidRestaurant();
     }
@@ -163,7 +157,6 @@ function addPayment() {
     
     for(i; i< pagamentos.length;i++){
         if(display[0].nome == pagamentos[i].nome){
-            console.log("found it");
             pagamentos[i].flag=1;
         }
     }
@@ -174,7 +167,6 @@ function loadUnpaidDivertimento() {
     var stuffStr = localStorage.getItem("Display");
     
     var stuff = JSON.parse(stuffStr);
-    console.log(stuff);
     var name = document.getElementById("nome");
     
     var total = document.getElementById("hora");

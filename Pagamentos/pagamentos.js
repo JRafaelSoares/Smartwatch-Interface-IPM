@@ -1,6 +1,6 @@
 
 
-var diver = { payments: [
+var pay = { payments: [
     {"type": "Restaurante", "nome": "Res3", "preco": "10€", "flag": 0, "pedido": [{"produto": "Costeleta", "preco": "7€"}, {"produto": "Coca-cola", "preco": "1€"}, {"produto": "Gelado", "preco": "2€"}]},
     {"type": "Divertimento", "nome": "Carrosel", "preco": "3€", "flag": 0},
     {"type": "Divertimento", "nome": "Rapel", "preco": "2€", "flag": 0},
@@ -13,7 +13,7 @@ var onDisplay = { onHold: []};
 
 function getAllPayments() {
     "use strict";
-    return diver.payments;
+    return pay.payments;
 }
 
 function getOnDisplay() {

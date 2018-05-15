@@ -7,7 +7,7 @@ function loadOnDisplay(onDisplay) {
 
 function loadAllFriends(allFriends) {
     "use strict";
-    if(localStorage.getItem("Friends") == null){
+    if(localStorage.getItem("Friends") == null || localStorage.getItem("Friends") == 'undefined'){
         localStorage.setItem("Friends", JSON.stringify(allFriends));
     }
 }
@@ -30,13 +30,11 @@ function toggleFavorite() {
         if(amigos[i].nome == display[0].nome && amigos[i].surname == display[0].surname){
             if(amigos[i].favorito == 0){
                 amigos[i].favorito=1;
-                console.log("wut");
                 nome.innerHTML = '<div class="name_position"> <span class="text" align="center">' +display[0].nome + " " + display[0].surname.charAt(0) + ". " + "<img src='icones-pretos/star_yellow.png' id= 'favorite'>" +'</span> </div>';
                 nome.innerHTML += '<div class = "Location" > <span class="text" align="center">' +  display[0].place + '</span></div>';
             }
             else{
                 amigos[i].favorito=0;
-                console.log("why");
                 nome.innerHTML = '<div class="name_position"> <span class="text" align="center">' +display[0].nome + " " + display[0].surname.charAt(0) + ". " + "<img src='icones-pretos/unfavorite_color.png' id= 'favorite'>" +'</span> </div>';
                 nome.innerHTML += '<div class = "Location" > <span class="text" align="center">' +  display[0].place + '</span></div>';
             }
@@ -48,7 +46,6 @@ function displayFriends() {
     "use strict";
     
     var amigosStr = localStorage.getItem("Friends");   
-
     var amigos = JSON.parse(amigosStr);
     
     var lista = document.getElementById("lista");
@@ -79,7 +76,6 @@ function displayFavorites(){
     
     var empty = 0;
     
-    console.log(amigos[0].favorito);
     var lista = document.getElementById("lista");
     var i = 0;
     
@@ -122,12 +118,10 @@ function loadFriend() {
     for(i; i<amigos.length; i++)
         if(amigos[i].nome == friend[0].nome && amigos[i].surname == friend[0].surname){
             if(amigos[i].favorito == 0){
-                console.log("poop");
                 name.innerHTML = '<div class="name_position"> <span class="text" align="center">' +friend[0].nome + " " + friend[0].surname.charAt(0) + ". " + "<img src='icones-pretos/unfavorite_color.png' id= 'favorite'>" +'</span> </div>';
                 name.innerHTML += '<div class = "Location" > <span class="text" align="center">' +  friend[0].place + '</span></div>';
             }
             else{
-                console.log("notpoop");
                 name.innerHTML = '<div class="name_position"> <span class="text" align="center">' +friend[0].nome + " " + friend[0].surname.charAt(0) + ". " + "<img src='icones-pretos/star_yellow.png' id= 'favorite'>" +'</span> </div>';
                 name.innerHTML += '<div class = "Location" > <span class="text" align="center">' +  friend[0].place + '</span></div>';
             }
@@ -172,7 +166,6 @@ function addFavorite() {
         for (i; i<friends.length; i++){
             if (friends[i].nome == display[0].nome){
                 friends[i].favorito = 1;
-                console.log(i);
             } 
         }
     }
