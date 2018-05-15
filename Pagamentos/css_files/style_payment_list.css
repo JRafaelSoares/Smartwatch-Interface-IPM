@@ -49,6 +49,19 @@
     margin: auto;
 }
 
+#restaurant {
+    height: 120%;
+    
+    position: absolute;
+    bottom: 0;
+    left: 110%;
+}
+
+.total {
+    position: absolute;
+    left: 20%;
+}
+
 .main {
     width: 3in;
     max-width: 3in;
@@ -149,6 +162,8 @@
     
     justify-content: center;
     align-items: center;
+    
+    overflow: hidden;
 }
 
 /* Inner Icons*/

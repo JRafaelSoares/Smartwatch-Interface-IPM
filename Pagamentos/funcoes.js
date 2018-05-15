@@ -27,11 +27,11 @@ function displayPayments() {
     for (i; i < payment.length; i++) {
         if(payment[i].flag != 0){
             if(payment[i].type == "Restaurante"){
-                lista.innerHTML += '<div class="entry" onclick="addDisplayPayment(' +i +'); window.location.href = \'payment_restaurante.html\';"> <span class="text" align="center">' + payment[i].nome + " " + payment[i].preco + '</span> </div>';
+                lista.innerHTML += '<div class="entry" onclick="addDisplayPayment(' +i +'); window.location.href = \'payment_restaurante.html\';"> <span class="text total" align="center">' + payment[i].nome + " " + payment[i].preco + '<img src="icones-cores/restaurant.png" id="restaurant" align="right"></span></div>';
             }
 
             if(payment[i].type == "Divertimento"){
-                lista.innerHTML += '<div class="entry" onclick="addDisplayPayment(' +i +'); window.location.href = \'payment_divertimento.html\';"> <span class="text" align="center">' + payment[i].nome + " " + payment[i].preco + '</span> </div>';
+                lista.innerHTML += '<div class="entry" onclick="addDisplayPayment(' +i +'); window.location.href = \'payment_divertimento.html\';"> <span class="text total" align="center">' + payment[i].nome + " " + payment[i].preco + '<img src="icones-cores/circus.png" id="restaurant" align="right"></span></div>';
             }
         }
     }
