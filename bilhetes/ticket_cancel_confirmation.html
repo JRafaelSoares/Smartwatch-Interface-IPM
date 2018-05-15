@@ -11,8 +11,8 @@
             $(document).ready(function() {
                 $('#popActivator').click(function() {
                     removeElement();
-                    $('#myPopup').fadeIn(800);
-                    $('#myPopup').fadeOut('slow', function(){$(location).attr('href', 'ticket_on_load.html');});
+                    $('#myPopup').fadeIn(1500);
+                    $('#myPopup').fadeOut(1000, function(){$(location).attr('href', 'ticket_on_load.html');});
             });
         });
             
