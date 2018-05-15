@@ -130,8 +130,7 @@ function loadUnpaidRestaurant() {
     console.log(stuff);
     var total = document.getElementById("hora");
     
-    total.innerHTML += '<span class="text" align="center">Total: ' + stuff[0].preco + '</span>';
-    
+    total.innerHTML += '<span class="text total" align="left">Total: ' + stuff[0].preco + '</span> <img src="icones-cores/restaurant.png" id="restaurant" align="right">';
     }
 
 function chooseDisplayLoad() {
@@ -180,7 +179,7 @@ function loadUnpaidDivertimento() {
     
     name.innerHTML = '<span class="text" align="center">' +stuff[0].nome + '</span>';
     
-    total.innerHTML = '<span class="text" align="center"> Total: ' + stuff[0].preco + '</span>';
+    total.innerHTML = '<span class="text total" align="left"> Total: ' + stuff[0].preco + '</span><img src="icones-cores/circus.png" id="restaurant" align="right">';
 }
 
 //Clock functions//
