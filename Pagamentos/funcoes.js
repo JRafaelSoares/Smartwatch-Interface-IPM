@@ -10,7 +10,7 @@ function loadOnDisplay(onDisplay) {
 
 function loadAllPayments(allPayments) {
     "use strict";
-    if(localStorage.getItem("Payments")== null){
+    if(localStorage.getItem("Payments") == null){
         localStorage.setItem("Payments", JSON.stringify(allPayments));
     }
 }
@@ -111,7 +111,7 @@ function loadUnpaidPayment() {
     var i = 0;
     
     for (i; i < payment.length; i++) {
-        if(payment[i].flag == 1){
+        if(payment[i].flag == 1 && i != 0){
             
             display[0] = payment[i-1];
             localStorage.setItem("Display", JSON.stringify(display));
@@ -126,7 +126,9 @@ function loadUnpaidRestaurant() {
     var stuff = JSON.parse(stuffStr);
     
     var total = document.getElementById("hora");
+    var name = document.getElementById("nome");
     
+    name.innerHTML += '<span class="text" align="center" onclick="window.location.href = \'payment_onhold_product_list.html\'">Listar Produtos</span>' 
     total.innerHTML += '<span class="text total" align="left">Total: ' + stuff[0].preco + '</span> <img src="icones-cores/restaurant.png" id="restaurant" align="right">';
     }
 
