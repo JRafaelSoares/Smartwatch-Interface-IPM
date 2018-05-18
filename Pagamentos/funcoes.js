@@ -25,9 +25,10 @@ function displayPayments() {
     var lista = document.getElementById("lista");
     
     var i = 0;
-    
+    var tot = 0;
     for (i; i < payment.length; i++) {
         if(payment[i].flag != 0){
+            tot += payment[i].preco;
             if(payment[i].type == "Restaurante"){
                 lista.innerHTML += '<div class="entry" onclick="addDisplayPayment(' +i +'); window.location.href = \'payment_restaurante.html\';"> <span class="text total" align="center">' + payment[i].nome + " " + payment[i].preco + '<img src="icones-cores/restaurant.png" id="restaurant" align="right"></span></div>';
             }
@@ -37,6 +38,7 @@ function displayPayments() {
             }
         }
     }
+    document.getElementById("Total")= tot + "€";
 }
 
 function addDisplayPayment(i) {
