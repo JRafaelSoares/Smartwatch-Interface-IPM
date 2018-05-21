@@ -253,6 +253,22 @@ function check_add_friend(){
     return j;
 }
 
+function popUpSignal(){
+    localStorage.setItem("popup",1);
+}
+
+function checkPopUp(){
+    var popUp = localStorage.getItem("popup");
+    
+    var popDiv = document.getElementById("myPopup");
+    if(popUp==1){
+        localStorage.setItem("popup", 0);
+        $('#myPopup').css("display", "block");
+        $('#myPopup').fadeOut(1500);
+        
+    }
+}
+
 function startTime() {
     var today = new Date();
     var h = today.getHours();

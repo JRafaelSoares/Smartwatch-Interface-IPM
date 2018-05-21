@@ -3,11 +3,12 @@
     <head>
         <link rel="stylesheet" href="css_files/style_ticket_on_load.css">
         <style type="text/css"></style>
+        <script src=jquery-3.3.1.min.js></script>
         <script src=divertimentos.js></script>
         <script src=funcoes.js></script>
     </head>
     
-    <body style="font-family: sans-serif" onload="displayBilhetes(); startTime();">
+    <body style="font-family: sans-serif" onload="checkPopUp();startTime(); displayBilhetes();">
         <div class="main">
             <img src="icones-pretos/relogio.jpg" id="relogio">
             <img onclick = "window.location.href='../template_main_menu.html'" src="icones-pretos/house-outline.png" id="home">
@@ -27,6 +28,14 @@
                 </div>
 
                 <div class="main_menu_bottom" align="center" style="color: white;" id="time">
+                </div>
+                
+                <div class="popup" id="myPopup">
+                    <div class="confirmation_container">
+                        <div class = "confirmation">
+                            <span class="text">Cancelado</span>
+                        </div> 
+                    </div>
                 </div>
             </div>
         </div>

@@ -180,6 +180,21 @@ function loadUnpaidDivertimento() {
     total.innerHTML = '<span class="text total" align="left"> Total: ' + stuff[0].preco + '</span><img src="icones-cores/circus.png" id="restaurant" align="right">';
 }
 
+function popUpSignal(){
+    localStorage.setItem("popup",1);
+}
+
+function checkPopUp(){
+    var popUp = localStorage.getItem("popup");
+    
+    var popDiv = document.getElementById("myPopup");
+    if(popUp==1){
+        localStorage.setItem("popup", 0);
+        $('#myPopup').css("display", "block");
+        $('#myPopup').fadeOut(1500);
+        
+    }
+}
 //Clock functions//
 function startTime() {
     var today = new Date();

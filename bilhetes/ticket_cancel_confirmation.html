@@ -11,8 +11,8 @@
             $(document).ready(function() {
                 $('#popActivator').click(function() {
                     removeElement();
-                    $('#myPopup').fadeIn(1500);
-                    $('#myPopup').fadeOut(1000, function(){$(location).attr('href', 'ticket_on_load.html');});
+                    popUpSignal();
+                    $('#myPopup').fadeIn(1500, function(){$(location).attr('href', 'ticket_on_load.html');});
             });
         });
             

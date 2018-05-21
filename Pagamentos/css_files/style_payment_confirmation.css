@@ -245,6 +245,7 @@
     border-bottom-left-radius: 1.5in;
     
     overflow: hidden;
+    z-index: 2;
 }
 
 .confirmation_container {
@@ -266,6 +267,7 @@
     border-bottom-left-radius: 1.5in;
     
     overflow: hidden;
+    z-index: 2;
 }
 
 /* Tipos do texto:

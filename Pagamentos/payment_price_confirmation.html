@@ -11,8 +11,8 @@
             $(document).ready(function() {
                 $('#popActivator').click(function() {
                     addPayment();
-                    $('#myPopup').fadeIn(1500);
-                    $('#myPopup').fadeOut(1000, function(){$(location).attr('href', 'payment_menu.html');});
+                    popUpSignal();
+                    $('#myPopup').fadeIn(1500, function(){$(location).attr('href', 'payment_menu.html');});
             });
         });
         </script>
@@ -40,7 +40,7 @@
                             <span class="text" align="center">Confimar o</span>
                         </div>
                         <div id="question2">
-                            <span class="text" align="center">pagamento? asd</span>
+                            <span class="text" align="center">pagamento?</span>
                         </div>
                         <div id="hora"></div>
                     </div>

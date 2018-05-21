@@ -11,8 +11,8 @@
             $(document).ready(function() {
                 $('#popActivator').click(function() {
                     addBilhete();
-                    $('#myPopup').fadeIn(1500);
-                    $('#myPopup').fadeOut(1000, function(){$(location).attr('href', 'ticket_list.html');});
+                    popUpSignal();
+                    $('#myPopup').fadeIn(1500,function(){$(location).attr('href', 'ticket_list.html');});
             });
         });
             

@@ -150,20 +150,21 @@ function removeElement(){
     localStorage.setItem("Divertimentos", JSON.stringify(bilhetes));
 }
 
-function startTime() {
-    var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    m = checkTime(m);
-    document.getElementById('time').innerHTML =
-    h + ":" + m;
-    var t = setTimeout(startTime, 500);
+function loadTime(){
+    var time = divertimentoTime();
+    
+    var stuffStr = localStorage.getItem("Cenas");
+    
+    var stuff = JSON.parse(stuffStr);
+    
+    var bilhetesStr = localStorage.getItem("Divertimentos");
+    
+    var bilhetes = JSON.parse(bilhetesStr);
+    
+    stuff[0].hora= time;
+    
+    localStorage.setItem("Cenas", JSON.stringify(stuff));
 }
-function checkTime(i) {
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-    return i;
-}
-
 function loadTicketNumber(){    
     var bilhetes = document.getElementById('bilhete');
     
@@ -201,21 +202,37 @@ function divertimentoTime() {
     return j;
 }
 
-function loadTime(){
-    var time = divertimentoTime();
-    
-    var stuffStr = localStorage.getItem("Cenas");
-    
-    var stuff = JSON.parse(stuffStr);
-    
-    var bilhetesStr = localStorage.getItem("Divertimentos");
-    
-    var bilhetes = JSON.parse(bilhetesStr);
-    
-    stuff[0].hora= time;
-    
-    localStorage.setItem("Cenas", JSON.stringify(stuff));
+function popUpSignal(){
+    localStorage.setItem("popup",1);
 }
+
+function checkPopUp(){
+    var popUp = localStorage.getItem("popup");
+    
+    var popDiv = document.getElementById("myPopup");
+    if(popUp==1){
+        localStorage.setItem("popup", 0);
+        $('#myPopup').css("display", "block");
+        $('#myPopup').fadeOut(1500);
+        
+    }
+}
+
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    m = checkTime(m);
+    document.getElementById('time').innerHTML =
+    h + ":" + m;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+
+
 
 
 

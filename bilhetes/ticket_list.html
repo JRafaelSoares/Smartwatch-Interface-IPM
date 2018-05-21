@@ -9,14 +9,14 @@
         <script>
             $(document).ready(function() {
                 $('#PopUp').click(function() {
-                    $('#myPopup').fadeIn(800);
-                    $('#myPopup').fadeOut('slow');
+                    $('#ticketPopUp').fadeIn(1500);
+                    $('#ticketPopUp').fadeOut(1000);
             });
         });
         </script>
     </head>
     
-    <body style="font-family: sans-serif" onload="displayDivertimentos(); startTime();">
+    <body style="font-family: sans-serif" onload="checkPopUp(); displayDivertimentos(); startTime();">
         <div class="main">
             <img src="icones-pretos/relogio.jpg" id="relogio">
             <img onclick = "window.location.href='../template_main_menu.html'" src="icones-pretos/house-outline.png" id="home">
@@ -35,10 +35,18 @@
                     </div>
                 </div>
                 
+                <div class="popup" id="ticketPopUp">
+                    <div class="ticket_container">
+                        <div class = "confirmation">
+                            <span class="text">Já tem bilhete!</span>
+                        </div> 
+                    </div>
+                </div>
+                
                 <div class="popup" id="myPopup">
                     <div class="confirmation_container">
                         <div class = "confirmation">
-                            <span class="text">Já tem bilhete!</span>
+                            <span class="text">Confirmado</span>
                         </div> 
                     </div>
                 </div>
