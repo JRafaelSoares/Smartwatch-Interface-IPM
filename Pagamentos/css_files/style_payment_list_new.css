@@ -1,0 +1,434 @@
+/* Menus:
+    .main_menu: Frame principal.
+    .main_menu_top: Frame de cima, invisivel, usada para corar a circunferencia.
+    .main_menu_middle: Frame do meio, onde estara contido o conteudo do ecra.
+    .main_menu_bottom: Frame do fim, onde ira cortar a circunferencia e conter as horas.
+*/
+
+/* Outer Icons */
+#restaurant {
+    height: 120%;
+    
+    position: absolute;
+    bottom: 0;
+    left: 110%;
+}
+
+.total {
+    position: absolute;
+    left: 20%;
+}
+
+#relogio {
+    height: 4in;
+    max-height: 4in;
+    
+    position: absolute;
+    
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    
+    margin: auto;
+}
+
+#home {
+    height: 10%;
+    
+    position: absolute;
+    
+    left: 106%;
+    top: 0;
+    bottom: 0%;
+    
+    margin: auto;
+}
+
+#power {
+    height: 10%;
+    
+    position: absolute;
+    
+    left: 100%;
+    top: 35%;
+    bottom: 0;
+    
+    margin: auto;
+}
+
+#return_button {
+    height: 10%;
+    
+    position: absolute;
+    
+    left: 100%;
+    top: 0;
+    bottom: 35%;
+    
+    margin: auto;
+}
+
+.asd {
+    position: absolute;
+    
+    left: 0;
+    right:0;
+    top: 5%;
+    bottom: 37.5%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dsa {
+    position: absolute;
+    
+    left: 0;
+    right:0;
+    top: 70%;
+    bottom: 37.5%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    width: 3in;
+    max-width: 3in;
+    height: 3.5in;
+    max-height: 3.5in;
+    
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Menus */
+
+.main_menu { 
+    box-sizing: border-box;
+    
+    width: 1.7859in;
+    max-width: 1.7859in;
+    height: 1.7859in;
+    max-height: 1.7859in;
+    
+    position: absolute;
+    
+    top: 25%;
+    left: 35%;
+    right: 0;
+    bottom: 0;
+    
+    background: #36B824;
+    
+    border-radius: 50%;
+}
+
+.main_menu_top {
+    position: absolute;
+    
+    top: 4%;
+    left: 8%;
+    right: 8%;
+    bottom: 86%;
+}
+
+.main_menu_middle {
+    padding-left: 10%;
+    padding-right: 10%;
+    
+    position: absolute;
+    
+    top: 18%;
+    left: 8%;
+    right: 8%;
+    bottom: 18%;
+    
+    background: #36B824;
+
+    border-top-left-radius: 38.095238% 50%;
+    border-top-right-radius: 38.095238% 50%;
+    border-bottom-right-radius: 38.095238% 50%;
+    border-bottom-left-radius: 38.095238% 50%;
+    
+    overflow: hidden;
+}
+
+.main_menu_bottom {
+    position: absolute;
+    
+    top: 86%;
+    left: 8%;
+    right: 8%;
+    bottom: 4%;
+}
+
+/* Conteudos main_menu_middle:
+    .confirmation: Ecrã com o texto de confirmação.
+    .yes: Botão de confirmação.
+    .no: Botão de rejeição.
+*/
+
+.top_middle{
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 0%;
+    bottom: 37.5%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirmation {
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yes {
+    position: absolute;
+    
+    left: 2.780007%;
+    right: 52.38095238%;
+    top: 68.75%;
+    bottom: 0;
+    
+    background: #242424;
+    
+    border-top-left-radius: 3pt;
+    border-top-right-radius: 3pt;
+    border-bottom-right-radius: 3pt;
+    border-bottom-left-radius: 84.959524% 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no {
+    position: absolute;
+    
+    left: 52.38095238%;
+    right: 2.780007%;
+    top: 68.75%;
+    bottom: 0;
+    
+    background: #242424;
+    
+    border-top-left-radius: 3pt;
+    border-top-right-radius: 3pt;
+    border-bottom-right-radius: 84.959524% 100%;
+    border-bottom-left-radius: 3pt;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Popup: Utilizado para confirmar que um bilhete foi retirado.*/
+.popup{
+    display: none;
+    
+    position: absolute;
+    
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #36B824;/*#242424*/
+    
+    border-top-left-radius: 1.5in;
+    border-top-right-radius: 1.5in;
+    border-bottom-right-radius: 1.5in;
+    border-bottom-left-radius: 1.5in;
+    
+    overflow: hidden;
+    z-index: 2;
+}
+
+.confirmation_container {
+    
+    padding-left: 10%;
+    padding-right: 10%;
+    
+    position: absolute;
+    
+    left: 8%;
+    right: 8%;
+    top: 18%;
+    bottom: 18%;
+    background: green;/*#242424*/
+    
+    border-top-left-radius: 1.5in;
+    border-top-right-radius: 1.5in;
+    border-bottom-right-radius: 1.5in;
+    border-bottom-left-radius: 1.5in;
+    
+    overflow: hidden;
+    z-index: 2;
+}
+
+/* Tipos do texto:
+    .text: Texto generico, branco.
+    .text_yes: Texto posicionado para .yes .
+    .text_no: Texto posicionado para .no .
+*/
+
+.text {
+    color: white;
+    
+    font-size: 12pt;
+}
+
+.text_yes{
+    position:absolute;
+    
+    left: 40%;
+    color: white;
+    
+    font-size: 12pt;
+}
+
+.text_no{
+    position:absolute;
+    
+    right: 40%;
+    color: white;
+    
+    font-size: 12pt;
+}
+
+
+
+.top_margin {
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    
+    background: #242424;
+    
+    border-top-left-radius: 38.095238% 100%;
+    border-top-right-radius: 38.095238% 100%;
+}
+
+.middle_margin {
+    position: absolute;
+    
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: calc(37.5% + 2pt);
+
+    background: #242424;
+    
+    border-bottom-left-radius: 1.209682% 100%;
+    border-bottom-right-radius: 1.209682% 100%;
+}
+
+.middle_margin_rounded_corners {
+    position: absolute;
+    
+    top: calc(62.5% - 3pt);
+    left: 0.931985%;
+    right: 0.931985%;/*0.59678%*/
+    bottom: 37.5%;
+
+    background: #242424;
+    
+    border-bottom-left-radius: 3pt;
+    border-bottom-right-radius: 3pt;
+}
+
+.tirar_bilhete {
+    position: absolute;
+        
+    left: 2.780007%;
+    right: 2.780007%;
+    top: 68.75%;
+    bottom: 0;
+    
+    background: #242424;
+
+    border-top-left-radius: 3pt;
+    border-top-right-radius: 3pt;
+    border-bottom-right-radius: 38.095238% 100%;
+    border-bottom-left-radius: 38.095238% 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.entry {
+    height: 50%;
+    width: 100%;
+    
+    border-bottom: 2px solid white;
+    
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    position: absolute;
+    
+    padding-left: 10%;
+    padding-right: 10%;
+    
+    top: 0;
+    left: 0;
+    right: -17px;
+    bottom: 0;
+    
+    overflow-y: scroll;
+}
+
+.question_mark {
+    position: absolute;
+    
+    top: 0;
+    left: 45%;
+    right: 45%;
+    bottom: 0;
+}
+
+#help {
+    height: 100%;
+    
+    position: absolute;
+    
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    
+    margin: auto;
+}
+
+#hora {
+    position: absolute;
+    left: 30%;
+    bottom: 7%;
+}

@@ -193,6 +193,11 @@
 /* Text Definition*/
 .text {
     color: white;
+    
+    position: absolute;
+    top: 25%;
+    right: 0;
+    
 }
 
 .popup{
