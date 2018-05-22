@@ -139,6 +139,7 @@ function chooseDisplayLoad() {
     var displayStr = localStorage.getItem("Display");
     
     var display = JSON.parse(displayStr);
+    console.log(display);
     if(display[0].type == "Restaurante"){
         loadUnpaidRestaurant();
     }
