@@ -79,7 +79,7 @@ function loadPaymentRestaurante() {
     
     name.innerHTML = '<span class="text" align="center">' +stuff[0].nome + '</span>';
     
-    total.innerHTML = '<span class="text" align="center"> Total: ' + stuff[0].preco + '</span>';
+    total.innerHTML = '<span class="text" align="center"> Total: ' + stuff[0].preco + '€</span>';
 }
 
 function displayProductsPayments() {

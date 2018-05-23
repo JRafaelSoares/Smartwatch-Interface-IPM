@@ -26,7 +26,7 @@ function initializeButton(){
 
 function addButtonClick(){
     var clicks = localStorage.getItem("Counter");
-    if(clicks != null){
+    if(clicks == null){
         clicks++;
         console.log(clicks);
         localStorage.setItem("Counter", clicks);
