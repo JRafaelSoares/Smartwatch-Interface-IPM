@@ -10,15 +10,15 @@
     <body style="font-family: sans-serif" onload="displayFriends(); startTime();">
         <div class="main">
             <img src="relogio.jpg" id="relogio">
-            <img src="icones-pretos/house-outline.png" id="home" onclick="window.location.href = '../template_main_menu.html'">
-            <img src="icones-pretos/power.png" id="power" onclick="window.location.href = '../locked.html'">
-            <div class="return_button" onclick="window.location.href = 'friends_menu.html';">
+            <img src="icones-pretos/house-outline.png" id="home" onclick="addButtonClick();window.location.href = '../template_main_menu.html'">
+            <img src="icones-pretos/power.png" id="power" onclick="addButtonClick();window.location.href = '../locked.html'">
+            <div class="return_button" onclick="addButtonClick();window.location.href = 'friends_menu.html';">
                 <img src="icones-pretos/return.png" id="return_button">
             </div>
 
             <div class="main_menu">
                 <div class="main_menu_top">
-                    <div class="question_mark" onclick="window.location.href = 'help_list.html';"><img src="../icones-brancos/question.png" id="help"></div>    
+                    <div class="question_mark" onclick="addButtonClick();window.location.href = 'help_list.html';"><img src="../icones-brancos/question.png" id="help"></div>    
                 </div>
 
                 <div class="main_menu_middle">
@@ -27,7 +27,7 @@
                     <div class="middle_margin_rounded_corners"></div>
                     
                     <div class="margin">
-                        <div class="addFriend" onclick="window.location.href = 'friends_looking_for_friend.html';"> 
+                        <div class="addFriend" onclick="addButtonClick();window.location.href = 'friends_looking_for_friend.html';"> 
                             <span class="text" align="center">Adicionar Amigo</span> 
                         </div>
                     </div>

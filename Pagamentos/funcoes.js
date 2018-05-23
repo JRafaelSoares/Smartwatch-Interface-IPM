@@ -30,11 +30,11 @@ function displayPayments() {
         if(payment[i].flag != 0){
             tot += payment[i].preco;
             if(payment[i].type == "Restaurante"){
-                lista.innerHTML += '<div class="entry" onclick="addDisplayPayment(' +i +'); window.location.href = \'payment_restaurante.html\';"> <span class="text total" align="center">' + payment[i].nome + " " + payment[i].preco + '€<img src="icones-cores/restaurant.png" id="restaurant" align="right"></span></div>';
+                lista.innerHTML += '<div class="entry" onclick="addButtonClick();addDisplayPayment(' +i +'); window.location.href = \'payment_restaurante.html\';"> <span class="text total" align="center">' + payment[i].nome + " " + payment[i].preco + '€<img src="icones-cores/restaurant.png" id="restaurant" align="right"></span></div>';
             }
 
             if(payment[i].type == "Divertimento"){
-                lista.innerHTML += '<div class="entry" onclick="addDisplayPayment(' +i +'); window.location.href = \'payment_divertimento.html\';"> <span class="text total" align="center">' + payment[i].nome + " " + payment[i].preco + '€<img src="icones-cores/circus.png" id="restaurant" align="right"></span></div>';
+                lista.innerHTML += '<div class="entry" onclick="addButtonClick();addDisplayPayment(' +i +'); window.location.href = \'payment_divertimento.html\';"> <span class="text total" align="center">' + payment[i].nome + " " + payment[i].preco + '€<img src="icones-cores/circus.png" id="restaurant" align="right"></span></div>';
             }
         }
     }
@@ -130,7 +130,7 @@ function loadUnpaidRestaurant() {
     var total = document.getElementById("hora");
     var name = document.getElementById("nome");
     
-    name.innerHTML += '<span class="text" align="center" onclick="window.location.href = \'payment_onhold_product_list.html\'">Listar Produtos</span>' 
+    name.innerHTML += '<span class="text" align="center" onclick="addButtonClick();window.location.href = \'payment_onhold_product_list.html\'">Listar Produtos</span>' 
     total.innerHTML += '<span class="text total" align="left">Total: ' + stuff[0].preco + '€</span> <img src="icones-cores/restaurant.png" id="restaurant" align="right">';
     }
 
@@ -211,5 +211,17 @@ function checkTime(i) {
     return i;
 }
 
+function addButtonClick(){
+    var clicks = localStorage.getItem("Counter");
+    if(clicks != null){
+        clicks++;
+        console.log(clicks);
+        localStorage.setItem("Counter", clicks);
+    }
+}
+
+function printClicks(){
+    console.log(localStorage.getItem("Counter"));
+}
 
 

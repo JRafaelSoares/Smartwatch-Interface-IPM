@@ -56,10 +56,10 @@ function displayFriends() {
         if(amigos[i].added == 1){
             j++;
             if(amigos[i].favorito == 0){
-                lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend(' +i +'); window.location.href = \'Friend.html\';"> <span class="text" align="center">' + amigos[i].nome + " " + amigos[i].surname.charAt(0) + '.</span>  </div>';
+                lista.innerHTML += '<div class="entry" onclick="addButtonClick();addOnHoldFriend(' +i +'); window.location.href = \'Friend.html\';"> <span class="text" align="center">' + amigos[i].nome + " " + amigos[i].surname.charAt(0) + '.</span>  </div>';
             }
             else{
-                lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend(' +i +'); window.location.href = \'Friend.html\';"> <span class="text" align="center">' + amigos[i].nome + " " + amigos[i].surname.charAt(0) + '.</span> <img src="icones-pretos/star_yellow.png" id="favorite"></div>';
+                lista.innerHTML += '<div class="entry" onclick="addButtonClick();addOnHoldFriend(' +i +'); window.location.href = \'Friend.html\';"> <span class="text" align="center">' + amigos[i].nome + " " + amigos[i].surname.charAt(0) + '.</span> <img src="icones-pretos/star_yellow.png" id="favorite"></div>';
             }
         }
     }
@@ -82,7 +82,7 @@ function displayFavorites(){
     for (i; i < amigos.length; i++) {
         if(amigos[i].favorito == 1){
             empty = 1;
-            lista.innerHTML += '<div class="entry" onclick="addOnHoldFriend('+i+'); window.location.href = \'friend_favorite.html\';"> <span class="text" align="center">'+amigos[i].nome+ "." + amigos[i].surname.charAt(0) + '</span></div>';
+            lista.innerHTML += '<div class="entry" onclick="addButtonClick();addOnHoldFriend('+i+'); window.location.href = \'friend_favorite.html\';"> <span class="text" align="center">'+amigos[i].nome+ "." + amigos[i].surname.charAt(0) + '</span></div>';
         }
     }
     if(empty == 0){
@@ -283,5 +283,16 @@ function checkTime(i) {
     return i;
 }
 
+function addButtonClick(){
+    var clicks = localStorage.getItem("Counter");
+    if(clicks != null){
+        clicks++;
+        console.log(clicks);
+        localStorage.setItem("Counter", clicks);
+    }
+}
 
+function printClicks(){
+    console.log(localStorage.getItem("Counter"));
+}
 

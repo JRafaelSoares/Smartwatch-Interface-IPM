@@ -18,5 +18,23 @@ function checkTime(i) {
     return i;
 }
 
+function initializeButton(){
+    if(localStorage.getItem("Counter") == null){
+        localStorage.setItem("Counter", 0);
+    }
+}
+
+function addButtonClick(){
+    var clicks = localStorage.getItem("Counter");
+    if(clicks != null){
+        clicks++;
+        console.log(clicks);
+        localStorage.setItem("Counter", clicks);
+    }
+}
+
+function printClicks(){
+    console.log(localStorage.getItem("Counter"));
+}
 
 

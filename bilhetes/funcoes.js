@@ -42,14 +42,14 @@ function displayBilhetes() {
             empty = 1;
 
             if((hora == h && min-m < 15) || (hora > h && min+60-m < 15)){ //red
-                lista.innerHTML += '<div class="entry" onclick="addOnHoldDivertimento(' +i +'); window.location.href = \'ticket_cancel.html\';"> <span class="text" align="center">' + stuff[i].nome + "\xa0" + '</span><img src="../icones-cores/warning_red.png" id="warning"></div>';
+                lista.innerHTML += '<div class="entry" onclick="addButtonClick();addOnHoldDivertimento(' +i +'); window.location.href = \'ticket_cancel.html\';"> <span class="text" align="center">' + stuff[i].nome + "\xa0" + '</span><img src="../icones-cores/warning_red.png" id="warning"></div>';
             }
             else
                 if((hora == h && min-m < 30) || (hora > h && min+60-m < 30)){//yellow
-                    lista.innerHTML += '<div class="entry" onclick="addOnHoldDivertimento(' +i +'); window.location.href = \'ticket_cancel.html\';"> <span class="text" align="center">' + stuff[i].nome + "\xa0" + '</span><img src="../icones-cores/warning_yellow.png" id="warning"></div>';
+                    lista.innerHTML += '<div class="entry" onclick="addButtonClick();addOnHoldDivertimento(' +i +'); window.location.href = \'ticket_cancel.html\';"> <span class="text" align="center">' + stuff[i].nome + "\xa0" + '</span><img src="../icones-cores/warning_yellow.png" id="warning"></div>';
                 }
                  else{//green
-                     lista.innerHTML += '<div class="entry" onclick="addOnHoldDivertimento(' +i +'); window.location.href = \'ticket_cancel.html\';"> <span class="text" align="center">' + stuff[i].nome + "\xa0" + '</span></div>';
+                     lista.innerHTML += '<div class="entry" onclick="addButtonClick();addOnHoldDivertimento(' +i +'); window.location.href = \'ticket_cancel.html\';"> <span class="text" align="center">' + stuff[i].nome + "\xa0" + '</span></div>';
                  }   
         }
     }
@@ -70,7 +70,7 @@ function displayDivertimentos(){
     
     for (i; i < stuff.length; i++) {
         if(stuff[i].tirado==0){
-            lista.innerHTML += '<div class="entry" onclick="addOnHoldDivertimento('+i+'); window.location.href = \'ticket_chosen.html\';"> <span class="text" align="center">'+stuff[i].nome+'</span></div>';
+            lista.innerHTML += '<div class="entry" onclick="addButtonClick();addOnHoldDivertimento('+i+'); window.location.href = \'ticket_chosen.html\';"> <span class="text" align="center">'+stuff[i].nome+'</span></div>';
         }
         if(stuff[i].tirado!=0){
             lista.innerHTML += '<div class="entry" id="PopUp"> <span class="text" align="center">'+stuff[i].nome+'</span></div>';
@@ -232,6 +232,18 @@ function checkTime(i) {
     return i;
 }
 
+function addButtonClick(){
+    var clicks = localStorage.getItem("Counter");
+    if(clicks != null){
+        clicks++;
+        console.log(clicks);
+        localStorage.setItem("Counter", clicks);
+    }
+}
+
+function printClicks(){
+    console.log(localStorage.getItem("Counter"));
+}
 
 
 
